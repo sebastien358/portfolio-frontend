@@ -2,17 +2,27 @@
   <header class="px-3 px-lg-5 d-flex align-items-center flex-row justify-content-between z-1 position-fixed">
     <nav class="d-none d-lg-block">
       <ul class="list-inline m-0 d-flex align-items-center menu-desktop">
-        <li class="me-4">Expérience</li>
+        <li class="me-4">
+          <router-link :to="{name: 'experience'}" class="link">
+            Expérience
+          </router-link>
+        </li>
         <li class="me-4">Projets</li>
         <li class="me-4">Technologies</li>
-        <li>Formation</li>
+        <li>
+          <router-link :to="{name: 'formation'}" class="link">
+            Formation
+          </router-link>
+         </li>
       </ul>
     </nav>
 
     <nav class="d-none d-lg-block">
-      <ul class="list-inline m-0 d-flex align-items-center menu-desktop">
+      <ul class="list-inline m-0 p-0 d-flex align-items-center menu-desktop">
         <li class="me-3 icon">
-          CV
+          <router-link :to="{name: 'cv'}" class="link">
+            CV
+          </router-link>
         </li>
         <li class="me-3">
           <a href="https://www.linkedin.com/in/s%C3%A9bastien-petit-1874141b9">
@@ -52,6 +62,17 @@ header {
       font-size: 22px;
       color: var(--color-light);
       transition: all 250ms ease;
+      text-decoration: none;
+      &:hover {
+        color: var(--color-dark);
+      }
+    }
+    .link {
+      cursor: pointer;
+      font-size: 22px;
+      color: var(--color-light);
+      transition: all 250ms ease;
+      text-decoration: none;
       &:hover {
         color: var(--color-dark);
       }
@@ -62,7 +83,7 @@ header {
 .icon {
   font-size: 24px;
   color: var(--color-light);
-  transition: all 250ms ease;
+  //transition: all 250ms ease;
   &:hover {
     color: var(--color-dark);
   }
@@ -71,5 +92,9 @@ header {
 .icon-mobile {
   font-size: 27px;
   color: var(--color-light);
+}
+
+a.router-link-active {
+  text-decoration: underline;
 }
 </style>

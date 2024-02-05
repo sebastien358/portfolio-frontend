@@ -33,7 +33,7 @@ import Footer from "@/components/footer/views/Footer.vue";
 }
 
 .components {
-  background: white;
+  background: var(--background-body);
   grid-area: components;
 }
 
