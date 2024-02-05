@@ -1,0 +1,22 @@
+/* color palette from <https://github.com/vuejs/theme> */
+
+:root {
+    --background-body: rgb(239, 244, 245);
+    --background-logo--opacity: rgba(239, 244, 245, .98);
+    --color-dark: rgb(12, 121, 158);
+    --color-light: rgb(169, 197, 202);
+    --background-card-dark: rgba(12, 121, 158, .5);
+    --background-card-light: rgba(169, 197, 202, .8);
+    --color-card-dark: rgb(9, 29, 43);
+    --color-card-light: rgb(239, 244, 245);
+    --background-headband-dark: rgba(9, 29, 43, .85);
+    --color-subcard: #000;
+    --dark: rgb(12, 121, 158);
+    --light: rgb(169, 197, 202);
+    --background-dark: rgba(12, 121, 158, .5);
+    --background-light: rgba(169, 197, 202, .8);
+    --main-marge: 50px;
+    --marge: 15px;
+    --min-marge: 10px;
+    --width-page: 1800px;
+}
