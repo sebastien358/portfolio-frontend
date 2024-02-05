@@ -8,7 +8,7 @@
           </router-link>
         </li>
         <li class="me-4">
-          <router-link :to="{name: 'project'}" class="link">
+          <router-link :to="{name: 'projects'}" class="link">
             Projets
           </router-link>
         </li>

@@ -2,14 +2,14 @@
   <BaseTemplate>
     <div class="bg-page h-100">
       <div class="container h-100">
-        <h1 class="text-center text-white pt-5">Ma formation</h1>
+        <h1 class="text-center pt-5">Ma formation</h1>
         <div class="row d-flex flex-wrap align-items-center justify-content-center h-100">
           <div class="card-portfolio">
             <div class="card-inner">
               <div class="card-front">
-                <h6 class="card-title mb-3">2023-2024 (1 an)</h6>
-                <h1 class="fs-2 mb-3">Titre profesionnel</h1>
-                <h3 class="fs-4">Développeur web</h3>
+                <h3 class="card-title mb-3">2023-2024 (1 an)</h3>
+                <h2 class="fs-2 mb-3">Titre professionnel</h2>
+                <h4 class="fs-4">Développeur web</h4>
                 <div class="d-flex flex-wrap justify-content-center mt-4">
                   <img src="@/assets/images/studi.jpg" height="120" width="120">
                 </div>
@@ -23,8 +23,44 @@
                 <p class="card-text fs-5">Plus d'info...</p>
               </div>
               <div class="card-back">
-                <h5 class="card-title text-start w-100">Missions</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <div class="techno">
+                  <span class="text-uppercase">html 5</span>
+                </div>
+                <div class="techno">
+                  <span class="text-uppercase">css 3</span>
+                </div>
+                <div class="techno">
+                  <span class="mb-1">Images</span>
+                  <span class="mb-1">sons</span>
+                  <span>vidéos</span>
+                </div>
+
+                <div class="techno">
+                  <span>JavaScript</span>
+                </div>
+                <div class="techno">
+                  <span>Vue.js</span>
+                  <span>Pinia</span>
+                </div>
+                <div class="techno">
+                  <span class="mb-1">Composant</span>
+                  <span class="mb-1">router</span>
+                  <span class="mb-1">Props</span>
+                  <span class="mb-1">Evénements</span>
+                  <span class="mb-1">Vuex</span>
+                </div>
+
+                <div class="techno">
+                  <span class="text-uppercase">php</span>
+                </div>
+                <div class="techno">
+                  <span>Symfony</span>
+                </div>
+                <div class="techno">
+                  <span class="mb-1 text-center">Base de données</span>
+                  <span class="mb-1 text-center">Organiser et gérer</span>
+                  <span>vidéos</span>
+                </div>
               </div>
             </div>
           </div>
@@ -42,6 +78,12 @@ import BaseTemplate from "@/BaseTemplate.vue";
 .bg-page {
   background: linear-gradient(0deg, rgba(12, 121, 158, 0.9864146342130602) 0%, rgba(2, 0, 36, 1) 100%);
   height: calc(100vh - 110px);
+}
+
+h1 {
+  color: white;
+  font-size: 35px;
+  font-family: "Kalam", cursive;
 }
 
 .card-portfolio {
@@ -95,8 +137,23 @@ import BaseTemplate from "@/BaseTemplate.vue";
 
 .card-back {
   transform: rotateY(-180deg);
-  p {
-    font-size: 16px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  .techno {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: var(--background-light);
+    padding: 10px;
+    overflow: hidden;
+    width: auto;
+    span {
+      font-weight: 600;
+      font-size: 15px;
+    }
   }
 }
 </style>

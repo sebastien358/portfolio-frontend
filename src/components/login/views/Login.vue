@@ -61,9 +61,10 @@ import BaseTemplate from "@/BaseTemplate.vue";
   width: 420px;
   //border-radius: 0.75rem;
   border-radius: 6px;
-  background-color: rgba(17, 24, 39);
+  background-color: rgba(17, 24, 39, 0.20);
   padding: 2rem;
   color: rgba(243, 244, 246, 1);
+  border: 1px solid black;
 }
 
 .title {

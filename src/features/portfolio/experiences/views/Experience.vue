@@ -46,7 +46,7 @@
                 <p class="card-text fs-5">Plus d'info...</p>
               </div>
               <div class="card-back">
-                <h5 class="text-start mb-3 w-100"> Objet : Demande de stage (Madame, Monsieur),</h5>
+                <h3 class="text-start mb-3 w-100"> Objet : Demande de stage (Madame, Monsieur),</h3>
                 <p>Actuellement à la fin de mon parcours étudiant, Je suis disponible afin de suivre un stage. Ce stage pourrait me permettre de parfaire ma formation théorique par une expérience de terrain. Passionné depuis de nombreuses années, j'ai pris la décision de me reconvertir dans le domaine du web.</p>
                 <p>Rigoureux, dynamique, doté du sens des responsabilités et ouvert aux autres, je n'ai aucune crainte sur ma capacité à m'adapter rapidement à votre entreprise et au travail en équipe. Je serais par ailleurs ravi de pouvoir contribuer au développement de votre activité en y apportant un regard neuf et constructif.</p>
                 <p> Je me tiens à votre disposition pour toute demande d'informations supplémentaires.</p>
@@ -72,6 +72,10 @@ import BaseTemplate from "@/BaseTemplate.vue";
     height: auto;
     width: 100%;
     padding: 45px 0 80px 0;
+  }
+  h5 {
+    font-size: 35px;
+    font-family: "Kalam", cursive;
   }
   .dev-web {
     display: flex;
@@ -149,6 +153,9 @@ import BaseTemplate from "@/BaseTemplate.vue";
     }
     .card-back {
       transform: rotateY(-180deg);
+      h3 {
+        font-size: 20px;
+      }
       p {
         font-size: 16px;
       }
