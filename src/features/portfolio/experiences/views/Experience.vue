@@ -1,7 +1,7 @@
 <template>
   <BaseTemplate>
     <div class="home">
-      <div class="d-flex align-items-center justify-content-center ">
+      <div class="d-flex align-items-center justify-content-center">
         <!-- Image bannière -->
         <img src="@/assets/images/laptop-5673901_1280.jpg" class="w-100 h-100 object-fit-cover position-relative">
 
@@ -14,7 +14,6 @@
               <b>P</b><b>E</b><b>T</b><b>I</b><b>T</b>
             </div>
           </div>
-
           <div class="mt-4">
             <h3 class="text-center text-uppercase">Développeur web</h3>
             <h4 class="text-center">Portfolio</h4>
@@ -25,7 +24,7 @@
 
       <div class="home__experience">
         <!-- Title de la page -->
-        <div class="d-flex justify-content-center pb-5 w-100">
+        <div class="d-flex justify-content-center pb-4 pb-lg-5 w-100">
           <h5 class="text-white">Mon expérience</h5>
         </div>
         <!-- Card expériences -->
@@ -36,7 +35,7 @@
                 <h6 class="mb-3">2024</h6>
                 <h3>Stage en entreprise</h3>
                 <div class="d-flex flex-wrap justify-content-center mt-4">
-                  <img src="@/assets/images/success-4578800_640.jpg" height="150" width="150">
+                  <img src="@/assets/images/success-4578800_640.jpg" class="img-card-front">
                 </div>
                 <div class="d-flex align-items-center flex-row justify-content-center mt-5 mb-4">
                   <img src="@/assets/images/js.png" class="icon">
@@ -64,7 +63,6 @@
 
 <script setup lang="ts">
 import BaseTemplate from "@/BaseTemplate.vue";
-
 </script>
 
 <style scoped lang="scss">
@@ -72,22 +70,29 @@ import BaseTemplate from "@/BaseTemplate.vue";
 
 .home {
   &__experience {
-    background: linear-gradient(0deg, rgba(12, 121, 158, 0.9864146342130602) 0%, rgba(2, 0, 36, 1) 100%);
-    height: auto;
+    background: var(--bg-page);
+    height: 100%;
     width: 100%;
-    padding: 45px 0 80px 0;
-    @include m.md {
-      height: 100vh;
+    padding-top: 50px;
+    @include m.lg {
+      height: 100%;
+      padding-top: 40px;
+    }
+    @include m.sm {
+      height: 100%;
+      padding-top: 30px;
     }
   }
+
   h5 {
     font-size: 35px;
     font-family: "Kalam", cursive;
     white-space: nowrap;
     @include m.sm {
-      width: 30px;
+      width: 25px;
     }
   }
+
   .dev-web {
     display: flex;
     align-items: center;
@@ -127,65 +132,87 @@ import BaseTemplate from "@/BaseTemplate.vue";
   }
 }
 
+// animation card
+
 .card-portfolio {
   width: 500px;
   height: 650px;
-  margin: 0 10px 0 10px;
+  margin: 0 10px 60px 10px;
   @include m.sm {
     width: 100%;
+    height: 550px;
+    margin: 0 10px 30px 10px;
   }
-  .card-inner {
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.999s;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  .card-front,
+  .card-back {
+    position: absolute;
     width: 100%;
     height: 100%;
-    position: relative;
-    transform-style: preserve-3d;
-    transition: transform 0.999s;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-    .card-front,
-    .card-back {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-color: var(--background-card-dark);
-      font-size: 24px;
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      backface-visibility: hidden;
-      padding: 20px;
+    background-color: var(--background-card-dark);
+    font-size: 24px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+    padding: 20px;
+  }
+}
+
+.card-front {
+  transform: rotateY(0deg);
+  overflow: hidden;
+  h6 {
+    font-size: 18px;
+  }
+  h3 {
+    font-size: 26px;
+    @include m.sm {
+      font-size: 23px;
     }
-    .card-front {
-      transform: rotateY(0deg);
-      overflow: hidden;
-      h6 {
-        font-size: 18px;
-      }
-      h3 {
-        font-size: 26px;
-      }
-      .icon {
-        width: 60px;
-        height: 60px;
-        margin: 0 6px;
-      }
+  }
+  .img-card-front {
+    height: 120px;
+    width: 120px;
+    @include m.sm {
+      height: 110px;
+      width: 110px;
     }
-    .card-back {
-      transform: rotateY(-180deg);
-      overflow: hidden;
-      h3 {
-        font-size: 20px;
-        @include m.sm {
-          font-size: 17px;
-        }
-      }
-      p {
-        font-size: 15px;
-        @include m.sm {
-          font-size: 14px;
-        }
-      }
+  }
+  .icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 6px;
+    @include m.sm {
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
+
+.card-back {
+  transform: rotateY(-180deg);
+  overflow: hidden;
+  h3 {
+    font-size: 20px;
+    @include m.sm {
+      font-size: 17px;
+    }
+  }
+  p {
+    font-size: 15px;
+    @include m.sm {
+      font-size: 14px;
     }
   }
 }
@@ -193,6 +220,8 @@ import BaseTemplate from "@/BaseTemplate.vue";
 .card-portfolio:hover .card-inner {
   transform: rotateY(-180deg);
 }
+
+// title animation
 
 #txt{
   display:flex;

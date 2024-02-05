@@ -61,8 +61,8 @@ h1 {
     gap: 70px;
   }
   img {
-    width: 230px;
-    height: 230px;
+    width: 210px;
+    height: 210px;
     transition: all 380ms ease-in-out;
     @include m.lg {
       width: 180px;

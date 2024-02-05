@@ -1,8 +1,8 @@
 <template>
   <BaseTemplate>
     <div class="bg-page">
-      <h1 class="text-center text-uppercase">Ma formation</h1>
-      <div class="d-flex justify-content-center align-items-center h-100">
+      <h1 class="text-center text-uppercase m-0">Ma formation</h1>
+      <div class="d-flex justify-content-center align-items-center container-formation">
         <div class="card-portfolio">
           <div class="card-inner">
             <div class="card-front">
@@ -96,6 +96,14 @@ h1 {
   font-family: "Kalam", cursive;
   @include m.sm {
     font-size: 30px;
+  }
+}
+
+.container-formation {
+  height: 100%;
+  @include m.sm {
+    height: auto;
+    margin-top: 40px;
   }
 }
 

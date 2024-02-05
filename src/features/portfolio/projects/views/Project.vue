@@ -13,14 +13,20 @@ import BaseTemplate from "@/BaseTemplate.vue";
 </script>
 
 <style scoped lang="scss">
+@use '@/assets/css/mixins' as m;
+
 .bg-page {
-  background: linear-gradient(0deg, rgba(12, 121, 158, 0.9864146342130602) 0%, rgba(2, 0, 36, 1) 100%);
+  background: var(--bg-page);
   height: calc(100vh - 110px);
   h1 {
     padding-top: 70px;
     font-family: "Kalam", cursive;
     color: var(--color-light);
     font-size: 35px;
+    @include m.sm {
+      padding-top: 40px;
+      font-size: 30px;
+    }
   }
 }
 </style>
