@@ -7,7 +7,11 @@
             Expérience
           </router-link>
         </li>
-        <li class="me-4">Projets</li>
+        <li class="me-4">
+          <router-link :to="{name: 'project'}" class="link">
+            Projets
+          </router-link>
+        </li>
         <li class="me-4">Technologies</li>
         <li>
           <router-link :to="{name: 'formation'}" class="link">
@@ -29,10 +33,15 @@
             <font-awesome-icon icon="fa-brands fa-linkedin-in" class="icon" />
           </a>
         </li>
-        <li>
+        <li class="me-3">
           <a href="https://github.com/sebastien358">
             <font-awesome-icon icon="fa-brands fa-github" class="icon" />
           </a>
+        </li>
+        <li>
+          <router-link :to="{name: 'login'}">
+            <font-awesome-icon icon="fa-solid fa-right-to-bracket" class="text-success icon" />
+          </router-link>
         </li>
       </ul>
     </nav>
@@ -40,7 +49,8 @@
     <nav class="d-block d-lg-none">
       <font-awesome-icon icon="fa-solid fa-bars" class="icon-mobile" />
       <ul class="list-inline m-0 d-flex align-items-center menu-mobile">
-        <li></li>
+        <li>
+        </li>
       </ul>
     </nav>
   </header>
@@ -62,17 +72,16 @@ header {
       font-size: 22px;
       color: var(--color-light);
       transition: all 250ms ease;
-      text-decoration: none;
       &:hover {
         color: var(--color-dark);
       }
     }
     .link {
+      text-decoration: none;
       cursor: pointer;
       font-size: 22px;
       color: var(--color-light);
       transition: all 250ms ease;
-      text-decoration: none;
       &:hover {
         color: var(--color-dark);
       }
@@ -83,7 +92,6 @@ header {
 .icon {
   font-size: 24px;
   color: var(--color-light);
-  //transition: all 250ms ease;
   &:hover {
     color: var(--color-dark);
   }
@@ -92,9 +100,5 @@ header {
 .icon-mobile {
   font-size: 27px;
   color: var(--color-light);
-}
-
-a.router-link-active {
-  text-decoration: underline;
 }
 </style>

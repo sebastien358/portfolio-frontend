@@ -10,7 +10,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 
 /* import font awesome icon component */
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import {faBars} from "@fortawesome/free-solid-svg-icons";
+import {faBars, faRightToBracket} from "@fortawesome/free-solid-svg-icons";
 import {
     faCss3Alt,
     faGithub,
@@ -18,11 +18,11 @@ import {
     faLinkedinIn,
     faPhp,
     faSymfony,
-    faVuejs
+    faVuejs,
 } from "@fortawesome/free-brands-svg-icons";
 
 /* add icons to the library */
-library.add( faBars, faLinkedinIn, faGithub, faHtml5, faCss3Alt, faSymfony, faVuejs, faPhp)
+library.add( faBars, faLinkedinIn, faGithub, faHtml5, faCss3Alt, faSymfony, faVuejs, faPhp, faRightToBracket)
 
 const app = createApp(App)
 

@@ -20,3 +20,19 @@
     --min-marge: 10px;
     --width-page: 1800px;
 }
+
+body {
+    font-family: "Barlow", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    text-decoration: none;
+}
+
+a.router-link-active {
+    text-decoration: underline;
+}

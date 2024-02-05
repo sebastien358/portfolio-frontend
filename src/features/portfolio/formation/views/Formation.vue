@@ -8,7 +8,8 @@
             <div class="card-inner">
               <div class="card-front">
                 <h6 class="card-title mb-3">2023-2024 (1 an)</h6>
-                <h3 class="fs-2">Développeur Full-Stack</h3>
+                <h1 class="fs-2 mb-3">Titre profesionnel</h1>
+                <h3 class="fs-4">Développeur web</h3>
                 <div class="d-flex flex-wrap justify-content-center mt-4">
                   <img src="@/assets/images/studi.jpg" height="120" width="120">
                 </div>

@@ -1,10 +1,11 @@
 <template>
   <BaseTemplate>
     <div class="home">
-      <div class="d-flex align-items-center justify-content-center">
+      <div class="d-flex align-items-center justify-content-center ">
+        <!-- Image bannière -->
         <img src="@/assets/images/laptop-5673901_1280.jpg" class="w-100 h-100 position-relative">
-        <div class="position-absolute dev-web">
 
+        <div class="position-absolute dev-web">
           <div class="d-flex flex-column align-items-center">
             <div class="txt" id="txt">
               <b>S</b><b>E</b><b>B</b><b>A</b><b>S</b><b>T</b><b>I</b><b>E</b><b>N</b>
@@ -46,7 +47,7 @@
               </div>
               <div class="card-back">
                 <h5 class="text-start mb-3 w-100"> Objet : Demande de stage (Madame, Monsieur),</h5>
-                <p>Actuellement à la fin de mon parcours étudiant, Je suis disponible afin de suivre un stage en entreprise. Ce stage pourrait me permettre de parfaire ma formation théorique par une expérience de terrain. Passionné depuis de nombreuses années, j'ai pris la décision de me reconvertir dans le domaine du web.</p>
+                <p>Actuellement à la fin de mon parcours étudiant, Je suis disponible afin de suivre un stage. Ce stage pourrait me permettre de parfaire ma formation théorique par une expérience de terrain. Passionné depuis de nombreuses années, j'ai pris la décision de me reconvertir dans le domaine du web.</p>
                 <p>Rigoureux, dynamique, doté du sens des responsabilités et ouvert aux autres, je n'ai aucune crainte sur ma capacité à m'adapter rapidement à votre entreprise et au travail en équipe. Je serais par ailleurs ravi de pouvoir contribuer au développement de votre activité en y apportant un regard neuf et constructif.</p>
                 <p> Je me tiens à votre disposition pour toute demande d'informations supplémentaires.</p>
                 <p>Dans l'attente de vous lire, Je vous prie d'agréer, (Madame, Monsieur), l'expression de mes sentiments les meilleurs.</p>
