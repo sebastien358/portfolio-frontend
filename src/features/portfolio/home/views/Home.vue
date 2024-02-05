@@ -24,16 +24,25 @@
 
       <div class="home__experience">
         <!-- Title de la page -->
-        <h1 class="text-center text-white pb-5">Mon expérience</h1>
+        <h5 class="text-center text-white pb-5">Mon expérience</h5>
         <!-- Card expériences -->
         <div class="d-flex flex-wrap align-items-center justify-content-center">
           <div class="card-portfolio">
             <div class="card-inner">
               <div class="card-front">
-                <h5 class="card-title mb-3">2023-2024 (1 an)</h5>
+                <h6 class="card-title mb-3">2023-2024 (1 an)</h6>
                 <h3 class="fs-2">Développeur Full-Stack</h3>
                 <div class="d-flex flex-wrap justify-content-center my-5">
                   <img src="@/assets/images/studi.jpg" height="100" width="100">
+                </div>
+                <div class="d-flex align-items-center flex-row justify-content-center mb-4">
+                  <!--<font-awesome-icon icon="fa-brands fa-html5" class="icon" />
+                  <font-awesome-icon icon="fa-brands fa-css3-alt" class="icon" />-->
+                  <font-awesome-icon icon="fa-brands fa-vuejs" class="icon" />
+                  <font-awesome-icon icon="fa-brands fa-php" class="icon" />
+                  <font-awesome-icon icon="fa-brands fa-symfony" class="icon" />
+                  <!--<font-awesome-icon icon="fa-brands fa-sass" />
+                  <font-awesome-icon icon="fa-brands fa-bootstrap" />-->
                 </div>
                 <p class="card-text fs-5">Plus d'info...</p>
               </div>
@@ -109,7 +118,6 @@ import BaseTemplate from "@/BaseTemplate.vue";
   position: relative;
   transform-style: preserve-3d;
   transition: transform 0.999s;
-
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
@@ -134,6 +142,11 @@ import BaseTemplate from "@/BaseTemplate.vue";
 
 .card-front {
   transform: rotateY(0deg);
+  .icon {
+    color: white;
+    font-size: 55px;
+    margin: 0 15px;
+  }
 }
 
 .card-back {
