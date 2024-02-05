@@ -15,7 +15,7 @@
           </div>
 
           <div class="mt-4">
-            <h3 class="text-center text-uppercase">Développeuse web</h3>
+            <h3 class="text-center text-uppercase">Développeur web</h3>
             <h4 class="text-center">Portfolio</h4>
           </div>
           <a href="mailto:sebastienpetit27330@gmail.com" class="button">Contactez-moi !</a>
