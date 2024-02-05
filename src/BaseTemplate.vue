@@ -17,8 +17,9 @@ import Footer from "@/components/footer/views/Footer.vue";
 
 <style scoped lang="scss">
 .base-template {
-  background-color: var(--background-body);
-  min-height: 100vh;
+  background-color: var(--plain-page);
+  min-height: 100dvh;
+  width: 100%;
 }
 
 .app-container {

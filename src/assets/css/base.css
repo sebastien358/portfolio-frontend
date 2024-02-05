@@ -15,6 +15,8 @@
     --light: rgb(169, 197, 202);
     --background-dark: rgba(12, 121, 158, .5);
     --background-light: rgba(169, 197, 202, .8);
+    --bg-page: linear-gradient(0deg, rgba(12, 121, 158, 0.9864146342130602) 0%, rgba(2, 0, 36, 1) 100%);
+    --plain-page: #f1f2f6;
     --main-marge: 50px;
     --marge: 15px;
     --min-marge: 10px;

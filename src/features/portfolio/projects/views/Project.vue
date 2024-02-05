@@ -1,7 +1,7 @@
 <template>
   <BaseTemplate>
     <div class="bg-page">
-      <div class="row pt-5">
+      <div class="row">
         <h1 class="text-center text-uppercase">Mes projets principaux</h1>
       </div>
     </div>
@@ -17,6 +17,7 @@ import BaseTemplate from "@/BaseTemplate.vue";
   background: linear-gradient(0deg, rgba(12, 121, 158, 0.9864146342130602) 0%, rgba(2, 0, 36, 1) 100%);
   height: calc(100vh - 110px);
   h1 {
+    padding-top: 70px;
     font-family: "Kalam", cursive;
     color: var(--color-light);
     font-size: 35px;

@@ -51,9 +51,55 @@
     </nav>
 
     <nav class="d-block d-lg-none">
-      <font-awesome-icon icon="fa-solid fa-bars" class="icon-mobile" />
-      <ul class="list-inline m-0 d-flex align-items-center menu-mobile">
+      <font-awesome-icon @click="state.open = !state.open" icon="fa-solid fa-bars" class="icon-mobile" />
+      <Transition>
+        <ul v-if="state.open" class="list-inline m-0 d-flex flex-column menu-mobile">
+          <li class="mb-2">
+            <router-link :to="{name: 'experience'}" class="link">
+              Expérience
+            </router-link>
+          </li>
+          <li class="mb-2">
+            <router-link :to="{name: 'projects'}" class="link">
+              Projets
+            </router-link>
+          </li>
+          <li class="mb-2">
+            <router-link :to="{name: 'techno'}" class="link">
+              Technologies
+            </router-link>
+          </li>
+          <li class="mb-2">
+            <router-link :to="{name: 'formation'}" class="link">
+              Formation
+            </router-link>
+          </li>
+          <li class="mb-2 icon">
+            <router-link :to="{name: 'cv'}" class="link">
+              CV
+            </router-link>
+          </li>
+          <li class="mb-2">
+            <a href="https://www.linkedin.com/in/s%C3%A9bastien-petit-1874141b9">
+              <font-awesome-icon icon="fa-brands fa-linkedin-in" class="icon" />
+            </a>
+          </li>
+          <li class="mb-2">
+            <a href="https://github.com/sebastien358">
+              <font-awesome-icon icon="fa-brands fa-github" class="icon" />
+            </a>
+          </li>
+        </ul>
+      </Transition>
+
+    </nav>
+
+    <nav class="d-block d-lg-none">
+      <ul class="list-inline m-0 p-0">
         <li>
+          <router-link :to="{name: 'login'}">
+            <font-awesome-icon icon="fa-solid fa-right-to-bracket" class="text-success icon-login" />
+          </router-link>
         </li>
       </ul>
     </nav>
@@ -61,10 +107,20 @@
 </template>
 
 <script setup lang="ts">
+import {reactive} from "vue";
+
+const state = reactive<{
+  open: boolean
+}>({
+  open: false
+})
 </script>
 
 <style scoped lang="scss">
+@use '@/assets/css/mixins' as m;
+
 header {
+  position: relative;
   background-color: var(--background-headband-dark);
   color: white;
   max-width: var(--width-page);
@@ -86,6 +142,9 @@ header {
       font-size: 22px;
       color: var(--color-light);
       transition: all 250ms ease;
+      @include m.xl {
+        font-size: 20px;
+      }
       &:hover {
         color: var(--color-dark);
       }
@@ -96,13 +155,61 @@ header {
 .icon {
   font-size: 24px;
   color: var(--color-light);
+  @include m.xl {
+    font-size: 22px;
+  }
   &:hover {
     color: var(--color-dark);
   }
 }
 
 .icon-mobile {
+  cursor: pointer;
   font-size: 27px;
   color: var(--color-light);
 }
+
+.icon-login {
+  font-size: 24px;
+  color: green;
+  @include m.lg {
+    font-size: 27px;
+  }
+}
+
+// menu mobile
+
+.menu-mobile {
+  position: absolute;
+  padding: 20px 60px 20px 15px;
+  top: 60px;
+  background-color: var(--background-headband-dark);
+  left: 0;
+  .link {
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 22px;
+    color: var(--color-light);
+    transition: all 250ms ease;
+    font-weight: 200;
+    &:hover {
+      color: var(--color-dark);
+    }
+  }
+}
+
+/* we will explain what these classes do next! */
+
+.v-enter-active,
+.v-leave-active {
+  transition: all 700ms ease-in-out;
+  opacity: 1;
+}
+
+.v-enter-from,
+.v-leave-to {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
 </style>
