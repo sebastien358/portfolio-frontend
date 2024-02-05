@@ -45,8 +45,11 @@
                 <p class="card-text fs-5">Plus d'info...</p>
               </div>
               <div class="card-back">
-                <h5 class="card-title text-start w-100">Missions</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <h5 class="text-start mb-3 w-100"> Objet : Demande de stage (Madame, Monsieur),</h5>
+                <p>Actuellement à la fin de mon parcours étudiant, Je suis disponible afin de suivre un stage en entreprise. Ce stage pourrait me permettre de parfaire ma formation théorique par une expérience de terrain. Passionné depuis de nombreuses années, j'ai pris la décision de me reconvertir dans le domaine du web.</p>
+                <p>Rigoureux, dynamique, doté du sens des responsabilités et ouvert aux autres, je n'ai aucune crainte sur ma capacité à m'adapter rapidement à votre entreprise et au travail en équipe. Je serais par ailleurs ravi de pouvoir contribuer au développement de votre activité en y apportant un regard neuf et constructif.</p>
+                <p> Je me tiens à votre disposition pour toute demande d'informations supplémentaires.</p>
+                <p>Dans l'attente de vous lire, Je vous prie d'agréer, (Madame, Monsieur), l'expression de mes sentiments les meilleurs.</p>
               </div>
             </div>
           </div>
@@ -135,7 +138,7 @@ import BaseTemplate from "@/BaseTemplate.vue";
         font-size: 18px;
       }
       h3 {
-        font-size: 10px;
+        font-size: 26px;
       }
       .icon {
         width: 60px;
