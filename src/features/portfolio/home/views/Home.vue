@@ -32,23 +32,20 @@
               <div class="card-front">
                 <h6 class="card-title mb-3">2023-2024 (1 an)</h6>
                 <h3 class="fs-2">Développeur Full-Stack</h3>
-                <div class="d-flex flex-wrap justify-content-center my-5">
-                  <img src="@/assets/images/studi.jpg" height="100" width="100">
+                <div class="d-flex flex-wrap justify-content-center mt-4">
+                  <img src="@/assets/images/studi.jpg" height="120" width="120">
                 </div>
-                <div class="d-flex align-items-center flex-row justify-content-center mb-4">
-                  <!--<font-awesome-icon icon="fa-brands fa-html5" class="icon" />
-                  <font-awesome-icon icon="fa-brands fa-css3-alt" class="icon" />-->
-                  <font-awesome-icon icon="fa-brands fa-vuejs" class="icon" />
-                  <font-awesome-icon icon="fa-brands fa-php" class="icon" />
-                  <font-awesome-icon icon="fa-brands fa-symfony" class="icon" />
-                  <!--<font-awesome-icon icon="fa-brands fa-sass" />
-                  <font-awesome-icon icon="fa-brands fa-bootstrap" />-->
+                <div class="d-flex align-items-center flex-row justify-content-center mt-5 mb-4">
+                  <img src="@/assets/images/js.png" class="icon">
+                  <img src="@/assets/images/vueJS_logo-22e665fe.png" class="icon">
+                  <img src="@/assets/images/logo.svg" class="icon">
+                  <img src="@/assets/images/php_logo.png" class="icon">
+                  <img src="@/assets/images/symfony_logo.png" class="icon">
                 </div>
                 <p class="card-text fs-5">Plus d'info...</p>
               </div>
               <div class="card-back">
-                <h5 class="card-title">2023-2024 (1 an)</h5>
-                <h3>Développeur web junior</h3>
+                <h5 class="card-title text-start w-100">Missions</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               </div>
             </div>
@@ -138,19 +135,29 @@ import BaseTemplate from "@/BaseTemplate.vue";
   align-items: center;
   justify-content: center;
   backface-visibility: hidden;
+  padding: 20px;
 }
 
 .card-front {
   transform: rotateY(0deg);
+  h6 {
+    font-size: 18px;
+  }
+  h3 {
+    font-size: 16px;
+  }
   .icon {
-    color: white;
-    font-size: 55px;
-    margin: 0 15px;
+    width: 60px;
+    height: 60px;
+    margin: 0 6px;
   }
 }
 
 .card-back {
   transform: rotateY(-180deg);
+  p {
+    font-size: 16px;
+  }
 }
 
 
