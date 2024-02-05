@@ -24,10 +24,10 @@
               </div>
               <div class="card-back">
                 <div class="techno">
-                  <span class="text-uppercase">html 5</span>
+                  <span class="text-uppercase">html5</span>
                 </div>
                 <div class="techno">
-                  <span class="text-uppercase">css 3</span>
+                  <span class="text-uppercase">css3</span>
                 </div>
                 <div class="techno">
                   <span class="mb-1">Images</span>
@@ -38,16 +38,23 @@
                 <div class="techno">
                   <span>JavaScript</span>
                 </div>
-                <div class="techno">
-                  <span>Vue.js</span>
-                  <span>Pinia</span>
+                <div class="d-flex flex-column align-items-center techno">
+                  <!--<span>Vue.js</span>
+                  <span>Pinia</span>-->
+                  <span class="text-uppercase">js</span>
+                  <span class="text-uppercase">dom</span>
                 </div>
                 <div class="techno">
-                  <span class="mb-1">Composant</span>
-                  <span class="mb-1">router</span>
-                  <span class="mb-1">Props</span>
+                  <!--<span class="mb-1">Composants</span>
+                  <span class="mb-1">Router</span>
+                  <span class="mb-1">Props</span>-->
+                  <span class="mb-1">Variables</span>
+                  <span class="mb-1">Tableau</span>
+                  <span class="mb-1">Object</span>
+                  <span class="mb-1">Boucle for, while</span>
                   <span class="mb-1">Evénements</span>
-                  <span class="mb-1">Vuex</span>
+                  <!--<span class="mb-1">Vuex</span>
+                  <span class="mb-1">Store</span>-->
                 </div>
 
                 <div class="techno">
@@ -59,7 +66,6 @@
                 <div class="techno">
                   <span class="mb-1 text-center">Base de données</span>
                   <span class="mb-1 text-center">Organiser et gérer</span>
-                  <span>vidéos</span>
                 </div>
               </div>
             </div>
@@ -151,8 +157,8 @@ h1 {
     overflow: hidden;
     width: auto;
     span {
-      font-weight: 600;
-      font-size: 15px;
+      font-weight: 500;
+      font-size: 14px;
     }
   }
 }

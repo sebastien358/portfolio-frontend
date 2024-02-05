@@ -12,7 +12,11 @@
             Projets
           </router-link>
         </li>
-        <li class="me-4">Technologies</li>
+        <li class="me-4">
+          <router-link :to="{name: 'techno'}" class="link">
+            Technologies
+          </router-link>
+        </li>
         <li>
           <router-link :to="{name: 'formation'}" class="link">
             Formation
