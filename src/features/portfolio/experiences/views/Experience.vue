@@ -34,7 +34,7 @@
               <div class="card-front">
                 <h6 class="mb-3">2024</h6>
                 <h3>Stage en entreprise</h3>
-                <div class="d-flex flex-wrap justify-content-center mt-4">
+                <div class="d-flex flex-wrap justify-content-center mt-5 mb-2">
                   <img src="@/assets/images/success-4578800_640.jpg" class="img-card-front">
                 </div>
                 <div class="d-flex align-items-center flex-row justify-content-center mt-5 mb-4">
