@@ -5,8 +5,12 @@ import Project from "@/features/portfolio/projects/views/Project.vue";
 import Formation from "@/features/portfolio/formation/views/Formation.vue";
 import Login from "@/components/login/views/Login.vue";
 import Technos from "@/features/portfolio/technos/views/Technos.vue";
-import NotFound from "@/notFound/views/NotFound.vue";
-import Registration from "@/components/registration/views/Registration.vue";
+import NotFound from "@/components/notFound/views/NotFound.vue";
+import Admin from "@/features/admin/Admin.vue";
+import {useUserAdminStore} from "@/stores/admin/UserAdminStore";
+import {ADMIN_ROUTES} from "@/features/admin/router/admin.routes";
+import RequestPassword from "@/components/resetPassword/views/requestPassword.vue";
+import ResetPassword from "@/components/resetPassword/views/ResetPassword.vue";
 
 export const router = createRouter({
     history: createWebHistory(),
@@ -19,6 +23,15 @@ export const router = createRouter({
         {path: '/formation', name: 'formation', component: Formation},
         {path: '/login', name: 'login', component: Login},
         {path: '/:notFound(.*)*', component: NotFound},
-        {path: '/registration', component: Registration}
+        {path: '/admin', name: 'admin', meta: {isAdmin: true}, component: Admin, children: ADMIN_ROUTES},
+        {path: '/request-password', name: 'request-password', component: RequestPassword},
+        {path: '/reset-password/:token', component: ResetPassword},
     ]
+})
+
+// GOOD
+router.beforeEach((to, from, next) => {
+    const userAdminStore = useUserAdminStore()
+    if (to.meta.isAdmin && !userAdminStore.isLogged()) next({ name: 'login' })
+    else next()
 })

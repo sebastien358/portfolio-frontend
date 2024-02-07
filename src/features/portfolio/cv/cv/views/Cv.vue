@@ -15,12 +15,17 @@ import BaseTemplate from "@/BaseTemplate.vue";
 </script>
 
 <style scoped lang="scss">
+@use '@/assets/css/mixins' as m;
+
 .bg-page {
   background: var(--bg-page);
   height: calc(100vh - 110px);
 }
 
 .img-cv {
-  width: 900px;
+  max-width: 900px;
+  @include m.lg {
+    width: 100%;
+  }
 }
 </style>

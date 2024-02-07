@@ -15,7 +15,7 @@
               <div class="d-flex align-items-center flex-row justify-content-center mt-5 mb-4">
                 <img src="@/assets/images/js.png" class="icon">
                 <!--<img src="@/assets/images/vueJS_logo-22e665fe.png" class="icon">-->
-                <!--<img src="@/assets/images/logo.svg" class="icon">-->
+                <!--<img src="@/assets/images/sass.svg" class="icon">-->
                 <img src="@/assets/images/php_logo.png" class="mx-3 icon">
                 <img src="@/assets/images/symfony_logo.png" class="icon">
               </div>

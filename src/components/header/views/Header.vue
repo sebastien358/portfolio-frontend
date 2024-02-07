@@ -17,11 +17,16 @@
             Technologies
           </router-link>
         </li>
-        <li>
+        <li class="me-4">
           <router-link :to="{name: 'formation'}" class="link">
             Formation
           </router-link>
          </li>
+        <li v-if="userAdminStore.isLogged()">
+          <router-link :to="{name: 'admin'}" class="link">
+            Administration
+          </router-link>
+        </li>
       </ul>
     </nav>
 
@@ -42,9 +47,14 @@
             <font-awesome-icon icon="fa-brands fa-github" class="icon" />
           </a>
         </li>
-        <li>
+        <li v-if="!userAdminStore.isLogged()">
           <router-link :to="{name: 'login'}">
             <font-awesome-icon icon="fa-solid fa-right-to-bracket" class="text-success icon" />
+          </router-link>
+        </li>
+        <li v-else>
+          <router-link to="#">
+            <font-awesome-icon @click="onClickDisconnect" icon="fa-solid fa-right-from-bracket" class="text-danger icon" />
           </router-link>
         </li>
       </ul>
@@ -91,14 +101,18 @@
           </li>
         </ul>
       </Transition>
-
     </nav>
 
     <nav class="d-block d-lg-none">
       <ul class="list-inline m-0 p-0">
-        <li>
+        <li v-if="!userAdminStore.isLogged()">
           <router-link :to="{name: 'login'}">
             <font-awesome-icon icon="fa-solid fa-right-to-bracket" class="text-success icon-login" />
+          </router-link>
+        </li>
+        <li v-else>
+          <router-link to="#">
+            <font-awesome-icon icon="fa-solid fa-right-from-bracket" class="text-danger icon-logout" />
           </router-link>
         </li>
       </ul>
@@ -108,12 +122,23 @@
 
 <script setup lang="ts">
 import {reactive} from "vue";
+import {useUserAdminStore} from "@/stores/admin/UserAdminStore";
+import {useRouter} from "vue-router";
 
 const state = reactive<{
   open: boolean
 }>({
   open: false
 })
+
+const userAdminStore = useUserAdminStore()
+
+const router = useRouter()
+
+const onClickDisconnect = () => {
+  userAdminStore.logout()
+  router.push({name: 'login'})
+}
 </script>
 
 <style scoped lang="scss">
@@ -171,6 +196,13 @@ header {
 .icon-login {
   font-size: 24px;
   color: green;
+  @include m.lg {
+    font-size: 27px;
+  }
+}
+
+.icon-logout {
+  font-size: 24px;
   @include m.lg {
     font-size: 27px;
   }

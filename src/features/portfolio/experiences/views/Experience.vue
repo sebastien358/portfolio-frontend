@@ -70,7 +70,7 @@ import BaseTemplate from "@/BaseTemplate.vue";
 
 .home {
   .img-banniere {
-    height: 1700px;
+    max-height: 1600px;
   }
   &__experience {
     background: var(--bg-page);
@@ -167,8 +167,8 @@ import BaseTemplate from "@/BaseTemplate.vue";
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    backface-visibility: hidden;
     padding: 20px;
+    backface-visibility: hidden;
   }
 }
 
@@ -227,12 +227,6 @@ import BaseTemplate from "@/BaseTemplate.vue";
 
 // title animation
 
-*{
-  padding:0;
-  margin:0;
-  box-sizing:border-box;
-}
-
 #txt{
   display:flex;
   align-items:center;
@@ -279,12 +273,11 @@ import BaseTemplate from "@/BaseTemplate.vue";
   animation-delay:1.25s;
 }
 #txt>b:nth-child(7){
-  animation-delay:1.50s;
+  animation-delay:1.5s;
 }
 #txt>b:nth-child(8){
   animation-delay:1.75s;
 }
-
 @keyframes getUp{
   10%,50%{
     transform:rotateX(0);

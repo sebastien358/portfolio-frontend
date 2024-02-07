@@ -6,6 +6,7 @@
           <div class="techno">
             <img src="@/assets/images/html.png">
             <img src="@/assets/images/css.png">
+            <img src="@/assets/images/sass.svg">
             <img src="@/assets/images/bootstrap_logo-07788d6d.svg">
             <img src="@/assets/images/js.png">
             <img src="@/assets/images/vueJS_logo-22e665fe.png">

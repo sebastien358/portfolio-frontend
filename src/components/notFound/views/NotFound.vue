@@ -1,6 +1,6 @@
 <template>
   <BaseTemplate>
-    <div class="bg-page h-100">
+    <div class="bg-page">
       <div class="d-flex align-items-center justify-content-center h-100">
         <h3>Cette page n'existe pas !</h3>
       </div>
