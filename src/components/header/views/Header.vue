@@ -123,7 +123,6 @@ header {
   position: relative;
   background-color: var(--background-headband-dark);
   color: white;
-  max-width: var(--width-page);
   width: 100%;
   height: 60px;
   .menu-desktop {

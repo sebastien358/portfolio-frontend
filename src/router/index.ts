@@ -5,6 +5,8 @@ import Project from "@/features/portfolio/projects/views/Project.vue";
 import Formation from "@/features/portfolio/formation/views/Formation.vue";
 import Login from "@/components/login/views/Login.vue";
 import Technos from "@/features/portfolio/technos/views/Technos.vue";
+import NotFound from "@/notFound/views/NotFound.vue";
+import Registration from "@/components/registration/views/Registration.vue";
 
 export const router = createRouter({
     history: createWebHistory(),
@@ -16,6 +18,7 @@ export const router = createRouter({
         {path: '/cv', name: 'cv', component: Cv},
         {path: '/formation', name: 'formation', component: Formation},
         {path: '/login', name: 'login', component: Login},
-
+        {path: '/:notFound(.*)*', component: NotFound},
+        {path: '/registration', component: Registration}
     ]
 })

@@ -2,10 +2,10 @@
   <BaseTemplate>
     <div class="bg-page pb-5 pb-md-0 px-2">
       <h1 class="text-uppercase text-center">Mes technos</h1>
-        <div class="d-flex justify-content-center w-100 mt-5 pt-2 pt-md-5">
+        <div class="d-flex justify-content-center w-100 container-techno">
           <div class="techno">
             <img src="@/assets/images/html.png">
-            <img src="@/assets/images/css-3.webp">
+            <img src="@/assets/images/css.png">
             <img src="@/assets/images/bootstrap_logo-07788d6d.svg">
             <img src="@/assets/images/js.png">
             <img src="@/assets/images/vueJS_logo-22e665fe.png">
@@ -43,10 +43,14 @@ h1 {
   }
 }
 
+.container-techno {
+  margin-top: 130px;
+}
+
 .techno {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 80px;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 60px;
   @include m.xl {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -61,15 +65,15 @@ h1 {
     gap: 70px;
   }
   img {
-    width: 180px;
-    height: 180px;
-    transition: all 380ms ease-in-out;
+    transition: all 1s ease;
+    width: 170px;
+    height: 170px;
     @include m.sm {
-      width: 150px;
-      height: 150px;
+      width: 140px;
+      height: 140px;
     }
     &:hover {
-      transform: scale(1.2);
+      transform: scale(2);
     }
   }
 }

@@ -3,7 +3,7 @@
     <div class="home">
       <div class="d-flex align-items-center justify-content-center">
         <!-- Image bannière -->
-        <img src="@/assets/images/laptop-5673901_1280.jpg" class="w-100 h-100 object-fit-cover position-relative">
+        <img src="@/assets/images/laptop-5673901_1280.jpg" class="w-100 object-fit-cover position-relative img-banniere">
 
         <div class="position-absolute dev-web">
           <div class="d-flex flex-column align-items-center">
@@ -14,9 +14,9 @@
               <b>P</b><b>E</b><b>T</b><b>I</b><b>T</b>
             </div>
           </div>
-          <div class="mt-4">
+          <div class="my-4">
             <h3 class="text-center text-uppercase">Développeur web</h3>
-            <h4 class="text-center">Portfolio</h4>
+            <h4 class="text-center mt-2">Portfolio</h4>
           </div>
           <a href="mailto:sebastienpetit27330@gmail.com" class="button">Contactez-moi !</a>
         </div>
@@ -48,9 +48,9 @@
               </div>
               <div class="card-back">
                 <h3 class="text-start mb-3 w-100"> Objet : Demande de stage (Madame, Monsieur),</h3>
-                <p>Actuellement à la fin de mon parcours étudiant, Je suis disponible afin de suivre un stage. Ce stage pourrait me permettre de parfaire ma formation théorique par une expérience de terrain. Passionné depuis de nombreuses années, j'ai pris la décision de me reconvertir dans le domaine du web.</p>
-                <p>Rigoureux, dynamique, doté du sens des responsabilités et ouvert aux autres, je n'ai aucune crainte sur ma capacité à m'adapter rapidement à votre entreprise et au travail en équipe. Je serais par ailleurs ravi de pouvoir contribuer au développement de votre activité en y apportant un regard neuf et constructif.</p>
-                <p> Je me tiens à votre disposition pour toute demande d'informations supplémentaires.</p>
+                <p class="mb-2">Actuellement à la fin de mon parcours étudiant, Je suis disponible afin de suivre un stage. Ce stage pourrait me permettre de parfaire ma formation théorique par une expérience de terrain. Passionné depuis de nombreuses années, j'ai pris la décision de me reconvertir dans le domaine du web.</p>
+                <p class="mb-2">Rigoureux, dynamique, doté du sens des responsabilités et ouvert aux autres, je n'ai aucune crainte sur ma capacité à m'adapter rapidement à votre entreprise et au travail en équipe. Je serais par ailleurs ravi de pouvoir contribuer au développement de votre activité en y apportant un regard neuf et constructif.</p>
+                <p class="mb-2">Je me tiens à votre disposition pour toute demande d'informations supplémentaires.</p>
                 <p>Dans l'attente de vous lire, Je vous prie d'agréer, (Madame, Monsieur), l'expression de mes sentiments les meilleurs.</p>
               </div>
             </div>
@@ -69,6 +69,9 @@ import BaseTemplate from "@/BaseTemplate.vue";
 @use '@/assets/css/mixins' as m;
 
 .home {
+  .img-banniere {
+    height: 1700px;
+  }
   &__experience {
     background: var(--bg-page);
     height: 100%;
@@ -99,8 +102,8 @@ import BaseTemplate from "@/BaseTemplate.vue";
     flex-direction: column;
     justify-content: center;
     background-color: rgba(255, 255, 255, 0.40);
-    height: 300px;
-    width: 500px;
+    height: 350px;
+    width: 600px;
     padding: 20px;
     overflow: hidden;
     @include m.sm {
@@ -211,6 +214,7 @@ import BaseTemplate from "@/BaseTemplate.vue";
   }
   p {
     font-size: 15px;
+    line-height: 24px;
     @include m.sm {
       font-size: 14px;
     }
@@ -222,6 +226,12 @@ import BaseTemplate from "@/BaseTemplate.vue";
 }
 
 // title animation
+
+*{
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
+}
 
 #txt{
   display:flex;
@@ -269,11 +279,12 @@ import BaseTemplate from "@/BaseTemplate.vue";
   animation-delay:1.25s;
 }
 #txt>b:nth-child(7){
-  animation-delay:1.5s;
+  animation-delay:1.50s;
 }
 #txt>b:nth-child(8){
   animation-delay:1.75s;
 }
+
 @keyframes getUp{
   10%,50%{
     transform:rotateX(0);

@@ -1,12 +1,10 @@
 <template>
-  <div class="d-flex justify-content-center base-template">
-    <div class="app-container">
-      <Header class="header" />
-      <div class="components">
-        <slot />
-      </div>
-      <Footer class="footer" />
+  <div class="app-container">
+    <Header class="header" />
+    <div class="components">
+      <slot />
     </div>
+    <Footer class="footer" />
   </div>
 </template>
 
@@ -23,7 +21,6 @@ import Footer from "@/components/footer/views/Footer.vue";
 }
 
 .app-container {
-  width: var(--width-page);
   display: grid;
   grid-template-areas: 'header' 'components' 'footer';
   grid-template-rows: 60px 1fr 50px;

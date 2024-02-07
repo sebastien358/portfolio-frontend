@@ -3,20 +3,24 @@
     <div class="bg-page w-100">
       <div v-if="!isLoading" class="d-flex align-items-center justify-content-center mx-2 h-100">
         <div class="form-container">
-          <p class="title">Login</p>
-          <form class="form">
-            <div @submit.prevent="onSubmit" class="input-group mb-3">
+          <p class="title">Register</p>
+          <form @submit.prevent="onSubmit" class="form">
+            <div class="input-group mb-3">
               <label for="username">Username</label>
-              <input v-model="editLogin.username" type="text" name="username" id="username">
+              <input v-model="editRegistration.email" type="email" name="username" id="username">
             </div>
             <div class="input-group">
               <label for="password">Password</label>
-              <input v-model="editLogin.password" type="password" name="password" id="password" placeholder="">
+              <input v-model="editRegistration.password" type="password" name="password" id="password">
+            </div>
+            <div class="input-group">
+              <label for="password">Confir</label>
+              <input v-model="editRegistration.confirm" type="password" name="password" id="password">
               <div class="forgot">
                 <a rel="noopener noreferrer" href="#">Forgot Password ?</a>
               </div>
             </div>
-            <button type="submit" class="sign">Sign in</button>
+            <button type="submit" class="sign">Sign up</button>
           </form>
         </div>
       </div>
@@ -26,22 +30,22 @@
 
 <script setup lang="ts">
 import BaseTemplate from "@/BaseTemplate.vue";
-import {useLoginStore} from "@/stores/loginStore";
+import {useRegistrationStore} from "@/stores/registrationStore";
 import {storeToRefs} from "pinia";
 import {onMounted, ref} from "vue";
 
 const isLoading = ref(true)
 
-const loginStore = useLoginStore()
-const { editLogin } = storeToRefs(loginStore)
+const registrationStore = useRegistrationStore()
+const { editRegistration } = storeToRefs(registrationStore)
 
 onMounted(async () => {
-  await loginStore.initLogin()
+  await registrationStore.initRegistration()
   isLoading.value = false
 })
 
 const onSubmit = async () => {
-  console.log('yes')
+  await registrationStore.createRegistration()
 }
 </script>
 

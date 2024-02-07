@@ -1,8 +1,32 @@
 <template>
   <BaseTemplate>
     <div class="bg-page">
-        <h1 class="text-center text-uppercase">Mes projets principaux</h1>
-        <!-- Projets réalisé -->
+      <h1 class="text-center text-uppercase">Mes projets principaux</h1>
+      <!-- Projets réalisé -->
+      <div class="d-flex justify-content-center my-5 py-3">
+        <div class="project">
+          <div class="d-flex flex-column align-items-center">
+            <div class="d-flex align-items-center justify-content-center project__title">
+              <h3>Portfolio</h3>
+            </div>
+            <div class="project__completed">
+              <img src="@/assets/images/portfolio.png">
+            </div>
+            <div class="d-flex align-items-center justify-content-center project__logo">
+              <img src="@/assets/images/js.png" class="icon">
+              <img src="@/assets/images/vueJS_logo-22e665fe.png" class="icon">
+              <img src="@/assets/images/pinia.svg" class="icon">
+              <img src="@/assets/images/php_logo.png" class="icon-php">
+              <img src="@/assets/images/symfony_logo.png" class="icon-symfony">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-page">
+      <div>
+        <h1 class="text-center text-uppercase">Mes autres projets</h1>
         <div class="d-flex justify-content-center my-5 py-3">
           <div class="project">
             <div class="d-flex flex-column align-items-center">
@@ -23,6 +47,7 @@
           </div>
         </div>
       </div>
+    </div>
   </BaseTemplate>
 </template>
 
@@ -35,7 +60,8 @@ import BaseTemplate from "@/BaseTemplate.vue";
 
 .bg-page {
   background: var(--bg-page);
-  height: calc(100vh - 110px);
+  //height: calc(100vh - 110px);
+  height: 100vh;
   h1 {
     padding-top: 70px;
     font-family: "Kalam", cursive;
