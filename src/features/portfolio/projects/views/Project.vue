@@ -3,7 +3,7 @@
     <div class="bg-page">
       <h1 class="text-center text-uppercase">Mes projets principaux</h1>
       <!-- Projets réalisé -->
-      <div class="d-flex justify-content-center my-5 py-3">
+      <div class="d-flex justify-content-center mx-2 my-5 py-0 py-lg-3">
         <div class="project">
           <div class="d-flex flex-column align-items-center">
             <div class="d-flex align-items-center justify-content-center project__title">
@@ -81,6 +81,9 @@ import BaseTemplate from "@/BaseTemplate.vue";
   width: 550px;
   background-color: white;
   transition: 600ms ease-in-out;
+  @include m.sm {
+    width: 100%;
+  }
   &__title {
     height: 65px;
     background-color: rgba(169, 197, 202, 0.60);
@@ -124,5 +127,8 @@ import BaseTemplate from "@/BaseTemplate.vue";
 
 .project:hover {
   transform: scale(1.2);
+  @include m.sm {
+    transform: scale(1.1);
+  }
 }
 </style>

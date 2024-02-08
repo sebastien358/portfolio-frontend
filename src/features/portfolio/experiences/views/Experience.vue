@@ -141,7 +141,7 @@ import BaseTemplate from "@/BaseTemplate.vue";
   width: 500px;
   height: 650px;
   margin: 0 10px 60px 10px;
-  @include m.sm {
+  @include m.lg {
     width: 100%;
     height: 550px;
     margin: 0 10px 30px 10px;

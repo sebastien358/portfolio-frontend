@@ -6,7 +6,11 @@
           <form @submit.prevent="onSubmit" class="form">
             <div class="input-group mb-1">
               <label for="resetPassword mb-3">Enter password</label>
-              <input ref="password" type="password" name="password" id="username" required>
+              <input ref="password" type="password" name="password" id="password" required>
+            </div>
+            <div class="input-group">
+              <label for="resetPassword mb-3">Confirmation</label>
+              <input ref="confirm" type="password" name="password" id="confirm" required>
             </div>
             <button type="submit" class="sign">Reset password</button>
           </form>
@@ -20,21 +24,29 @@
 import BaseTemplate from "@/BaseTemplate.vue";
 import {ref} from "vue";
 import {useUserStore} from "@/stores/UserStore";
-import {useRouter} from "vue-router";
+import {useRoute, useRouter} from "vue-router";
 
 const password = ref(null)
+const confirm = ref(null)
 
 const userStore = useUserStore()
 
+const route = useRoute()
 const router = useRouter()
 
 const onSubmit = async () => {
-  await userStore.requestPassword(password.value.value)
+  if (password.value.value !== confirm.value.value) {
+    console.log('Les mot de passe ne correspondent pas')
+    return
+  }
+  await userStore.resetPassword(password.value.value, confirm.value.value, route.params.token)
   await router.push({name: 'login'})
 }
 </script>
 
 <style scoped lang="scss">
+@use '@/assets/css/mixins' as m;
+
 .bg-page {
   background: var(--bg-page);
   height: calc(100vh - 110px);
@@ -42,7 +54,10 @@ const onSubmit = async () => {
 
 .form-container {
   width: 650px;
-  padding: 10px;
+  padding: 10px 10px 20px 10px;
+  @include m.md {
+    width: 100%;
+  }
   .input-group {
     #username {
       border-radius: 3px;
@@ -53,8 +68,9 @@ const onSubmit = async () => {
 .sign {
   font-size: 13px;
   width: auto;
-  padding: 8px 12px;
+  padding: 8px 25px;
   position: relative;
   left: 2px;
+  top: 5px;
 }
 </style>
