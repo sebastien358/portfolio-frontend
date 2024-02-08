@@ -23,7 +23,7 @@
 
 <script setup lang="ts">
 import {onMounted, ref} from "vue";
-import {useUserAdminStore} from "@/stores/admin/UserAdminStore";
+import {useUserAdminStore} from "@/stores/admin/userAdminStore";
 import {storeToRefs} from "pinia";
 import {useRoute} from "vue-router";
 

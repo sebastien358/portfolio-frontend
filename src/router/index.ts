@@ -7,7 +7,7 @@ import Login from "@/components/login/views/Login.vue";
 import Technos from "@/features/portfolio/technos/views/Technos.vue";
 import NotFound from "@/components/notFound/views/NotFound.vue";
 import Admin from "@/features/admin/Admin.vue";
-import {useUserAdminStore} from "@/stores/admin/UserAdminStore";
+import {useUserAdminStore} from "@/stores/admin/userAdminStore";
 import {ADMIN_ROUTES} from "@/features/admin/router/admin.routes";
 import RequestPassword from "@/components/resetPassword/views/requestPassword.vue";
 import ResetPassword from "@/components/resetPassword/views/ResetPassword.vue";

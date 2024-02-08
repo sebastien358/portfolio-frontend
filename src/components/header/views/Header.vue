@@ -122,7 +122,7 @@
 
 <script setup lang="ts">
 import {reactive} from "vue";
-import {useUserAdminStore} from "@/stores/admin/UserAdminStore";
+import {useUserAdminStore} from "@/stores/admin/userAdminStore";
 import {useRouter} from "vue-router";
 
 const state = reactive<{

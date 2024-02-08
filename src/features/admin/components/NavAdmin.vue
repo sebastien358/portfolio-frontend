@@ -14,8 +14,13 @@
     <nav>
       <ul class="list-inline">
         <h3>Expériences</h3>
-        <li>
+        <li class="mb-2">
           Mes expériences
+        </li>
+        <li>
+          <router-link :to="{name: 'admin-experience-create'}" class="link">
+            Ajouter expérience
+          </router-link>
         </li>
       </ul>
     </nav>
@@ -30,7 +35,6 @@
 
 .nav-admin {
   background-color: rgba(255, 255, 255, 0.20);
-
   min-width: 230px;
   padding: 25px 15px;
   @include m.lg {
@@ -40,7 +44,7 @@
   ul {
     h3 {
       color: white;
-      font-size: 16px;
+      font-size: 17px;
     }
     li {
       color: white;
