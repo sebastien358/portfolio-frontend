@@ -2,7 +2,7 @@
   <BaseTemplate>
     <div class="bg-page">
       <div class="container h-100">
-        <div class="d-flex align-items-center justify-content-center py-4 h-100">
+        <div class="d-flex align-items-center justify-content-center py-0 py-md-4 h-100">
           <img src="@/assets/images/CV_2024-01-11_Sébastien_Petit_page-0001.jpg" class="img-cv">
         </div>
       </div>
@@ -24,6 +24,10 @@ import BaseTemplate from "@/BaseTemplate.vue";
 
 .img-cv {
   max-width: 900px;
+  transition: 1s ease;
+  &:hover {
+    transform: scale(1.05);
+  }
   @include m.lg {
     width: 100%;
   }

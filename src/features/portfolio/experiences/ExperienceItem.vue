@@ -1,29 +1,27 @@
 <template>
-  <div class="d-flex flex-wrap align-items-center justify-content-center">
-    <div class="card-portfolio">
-      <div class="card-inner">
-        <div class="card-front">
-          <h6 class="mb-3">{{experience.year}}</h6>
-          <h3>{{experience.job}}</h3>
-          <div class="d-flex flex-wrap justify-content-center mt-5 mb-2">
-            <img v-if="experience.pictures[0]" :src="experience.pictures[0].url" class="img-card-front">
-          </div>
-          <div class="d-flex align-items-center flex-row justify-content-center mt-5 mb-4">
-            <img src="@/assets/images/js.png" class="icon">
-            <img src="@/assets/images/vueJS_logo-22e665fe.png" class="icon">
-            <img src="@/assets/images/pinia.svg" class="icon">
-            <img src="@/assets/images/php_logo.png" class="icon">
-            <img src="@/assets/images/symfony_logo.png" class="icon">
-          </div>
-          <p class="card-text fs-5">Plus d'info...</p>
+  <div class="card-portfolio">
+    <div class="card-inner">
+      <div class="card-front">
+        <h6 class="mb-3">{{experience.year}}</h6>
+        <h3>{{experience.job}}</h3>
+        <div class="d-flex flex-wrap justify-content-center mt-5 mb-2">
+          <img v-if="experience.pictures[0]" :src="experience.pictures[0].url" class="img-card-front">
         </div>
-        <div class="card-back">
-          <h3 class="text-start mb-3 w-100"> Objet : {{experience.subject}}</h3>
-          <p>{{experience.content[0]}}</p>
-          <p>{{experience.content[2]}}</p>
-          <p>{{experience.content[4]}}</p>
-          <p>{{experience.content[6]}}</p>
+        <div class="d-flex align-items-center flex-row justify-content-center mt-5 mb-4">
+          <img v-if="experience.pictures[1]" :src="experience.pictures[1].url" class="icon">
+          <img v-if="experience.pictures[2]" :src="experience.pictures[2].url" class="icon">
+          <img v-if="experience.pictures[3]" :src="experience.pictures[3].url" class="icon">
+          <img v-if="experience.pictures[4]" :src="experience.pictures[4].url" class="icon">
+          <img v-if="experience.pictures[5]" :src="experience.pictures[5].url" class="icon">
         </div>
+        <p class="card-text fs-5">Plus d'info...</p>
+      </div>
+      <div class="card-back">
+        <h3 class="text-start mb-3 w-100"> Objet : {{experience.subject}}</h3>
+        <p>{{experience.content[0]}}</p>
+        <p>{{experience.content[2]}}</p>
+        <p>{{experience.content[4]}}</p>
+        <p>{{experience.content[6]}}</p>
       </div>
     </div>
   </div>
@@ -47,7 +45,7 @@ defineProps<{
   width: 500px;
   height: 650px;
   margin: 0 10px 60px 10px;
-  @include m.lg {
+  @include m.sm {
     width: 100%;
     height: 550px;
     margin: 0 10px 30px 10px;

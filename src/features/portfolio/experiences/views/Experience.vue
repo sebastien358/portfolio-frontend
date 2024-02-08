@@ -24,11 +24,11 @@
 
       <div class="home__experience">
         <!-- Title de la page -->
-        <div class="d-flex justify-content-center pb-4 pb-lg-5 w-100">
-          <h5 class="text-white">Mon expérience</h5>
+        <div class="pb-4 pb-lg-5">
+          <h5 class="text-white text-center w-100">Mon expérience</h5>
         </div>
         <!-- Card expériences -->
-        <div v-if="!isLoading">
+        <div v-if="!isLoading" class="d-flex flex-wrap align-items-center justify-content-center">
           <ExperienceItem
             v-for="experience in experiences"
             :key="experience.id"
@@ -78,14 +78,13 @@ onMounted(async () => {
       height: 100%;
       padding-top: 30px;
     }
-  }
-
-  h5 {
-    font-size: 35px;
-    font-family: "Kalam", cursive;
-    white-space: nowrap;
-    @include m.sm {
-      width: 25px;
+    h5 {
+      font-size: 35px;
+      font-family: "Kalam", cursive;
+      white-space: nowrap;
+      @include m.sm {
+        width: 30px;
+      }
     }
   }
 
