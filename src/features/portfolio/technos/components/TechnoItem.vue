@@ -7,10 +7,10 @@
 </template>
 
 <script setup lang="ts">
-import type {TechnoInterfaces} from "@/interfaces";
+import type {TechnoInterface} from "@/interfaces";
 
 defineProps<{
-  techno: TechnoInterfaces
+  techno: TechnoInterface
 }>()
 </script>
 

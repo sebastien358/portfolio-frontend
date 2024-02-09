@@ -3,9 +3,11 @@
     <div v-if="!isLoading" class="bg-page">
       <div class="container h-100">
         <div class="d-flex align-items-center justify-content-center py-0 py-md-4 h-100">
-          <div v-for="pictureCv in cv">
-            <img :src="pictureCv.pictures[0].url" class="img-cv">
-          </div>
+          <CvItem
+            v-for="pictureCv in cv"
+            :key="pictureCv.id"
+            :pictureCv="pictureCv"
+          />
         </div>
       </div>
     </div>
@@ -17,6 +19,7 @@ import BaseTemplate from "@/BaseTemplate.vue";
 import {useCvStore} from "@/stores/cvStore";
 import {storeToRefs} from "pinia";
 import {onMounted, ref} from "vue";
+import CvItem from "@/features/portfolio/cv/components/CvItem.vue";
 
 const isLoading = ref(true)
 

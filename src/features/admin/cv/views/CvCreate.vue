@@ -32,7 +32,7 @@ const router = useRouter()
 
 const onSubmit = async () => {
   await cvAdminStore.cvCreate(pictures.value)
-  await router.push({name: 'admin-cv-list'})
+  await router.push({name: 'admin-components-list'})
 }
 
 const onClickInputFiles = () => {

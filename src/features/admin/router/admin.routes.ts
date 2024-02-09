@@ -20,6 +20,6 @@ export const ADMIN_ROUTES: RouteRecordRaw[] = [
     {path: '/admin/techno-list', name: 'admin-techno-list', meta: {isAdmin: true}, component: AdminTechnoList},
     {path: '/admin/techno-create', name: 'admin-techno-create', meta: {isAdmin: true}, component: TechnoCreate},
     {path: '/admin/techno-details/:id', name: 'admin-techno-details', meta: {isAdmin: true}, component: TechnoDetails},
-    {path: '/admin/cv-list', name: 'admin-cv-list', meta: {isAdmin: true}, component: CvList},
-    {path: '/admin/cv-create', name: 'admin-cv-create', meta: {isAdmin: true}, component: CvCreate}
+    {path: '/admin/components-list', name: 'admin-cv-list', meta: {isAdmin: true}, component: CvList},
+    {path: '/admin/components-create', name: 'admin-cv-create', meta: {isAdmin: true}, component: CvCreate}
 ]

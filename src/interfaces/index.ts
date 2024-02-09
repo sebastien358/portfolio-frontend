@@ -1,2 +1,3 @@
 export * from './Experience.interface'
-export * from './Techno.interfaces'
+export * from './Techno.interface'
+export * from './Cv.interface'
