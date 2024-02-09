@@ -37,7 +37,6 @@ onMounted(async () => {
 
 .bg-page {
   background: var(--bg-page);
-  height: calc(100vh - 110px);
 }
 
 .img-cv {

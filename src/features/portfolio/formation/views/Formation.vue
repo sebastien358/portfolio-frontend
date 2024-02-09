@@ -1,8 +1,8 @@
 <template>
   <BaseTemplate>
-    <div class="bg-page">
+    <div class="bg-page h-100">
       <h1 class="text-center text-uppercase m-0">Ma formation</h1>
-      <div class="d-flex justify-content-center align-items-center container-formation">
+      <div class="d-flex justify-content-center align-items-center container-formation h-100">
         <div class="card-portfolio">
           <div class="card-inner">
             <div class="card-front">
@@ -84,7 +84,7 @@ import BaseTemplate from "@/BaseTemplate.vue";
 .bg-page {
   padding-top: 70px;
   background: var(--bg-page);
-  height: calc(100vh - 110px);
+  min-height: 100%;
   @include m.sm {
     padding-top: 50px;
   }
@@ -95,15 +95,20 @@ h1 {
   font-size: 35px;
   font-family: "Kalam", cursive;
   @include m.sm {
-    font-size: 30px;
+    font-size: 27px;
   }
 }
 
 .container-formation {
   height: 100%;
-  @include m.sm {
+  padding: 40px 0 60px 0;
+  @include m.lg {
+    padding: 30px 0 50px 0;
     height: auto;
-    margin-top: 40px;
+  }
+  @include m.sm {
+    padding: 20px 0 50px 0;
+    height: auto;
   }
 }
 
