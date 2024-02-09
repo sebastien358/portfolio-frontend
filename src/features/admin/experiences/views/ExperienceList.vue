@@ -6,6 +6,7 @@
         <tr>
           <th scope="col">Job</th>
           <th scope="col">Subject</th>
+          <th scope="col">Création</th>
           <th scope="col">Year</th>
           <th scope="col">Actions</th>
         </tr>
@@ -14,6 +15,7 @@
         <tr>
           <td>{{experience.job}}</td>
           <td>{{experience.subject}}</td>
+          <td>{{new Date(experience.createdAt).toLocaleDateString('fr-FR')}}</td>
           <td>{{experience.year}}</td>
           <td>
             <font-awesome-icon icon="fa-solid fa-eye" class="text-muted icon" />
@@ -46,7 +48,6 @@ import {onMounted, ref} from "vue";
 
 <style scoped lang="scss">
 table {
-  //background-color: rgba(17, 24, 39, 0.30);
   .icon {
     cursor: pointer;
     margin: 0 3px;

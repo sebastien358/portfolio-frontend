@@ -1,6 +1,8 @@
 <template>
   <footer class="d-flex align-items-center justify-content-center">
-    <a href="#" class="fs-5">Sources des illustrations</a>
+    <router-link to="#" class="link">
+      Sources des illustrations
+    </router-link>
   </footer>
 </template>
 
@@ -11,9 +13,14 @@
 footer {
   background-color: var(--background-headband-dark);
   color: white;
-  a {
+  .link {
+    font-size: 20px;
     color: var(--color-light);
     text-decoration: none;
+    transition: all 250ms ease;
+    &:hover {
+      color: var(--color-dark);
+    }
   }
 }
 </style>

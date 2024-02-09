@@ -45,7 +45,7 @@ import BaseTemplate from "@/BaseTemplate.vue";
 import {useExperienceStore} from "@/stores/experienceStore";
 import {storeToRefs} from "pinia";
 import {onMounted, ref} from "vue";
-import ExperienceItem from "@/features/portfolio/experiences/ExperienceItem.vue";
+import ExperienceItem from "@/features/portfolio/experiences/components/ExperienceItem.vue";
 
 const isLoading = ref(true)
 

@@ -1,9 +1,11 @@
 <template>
   <BaseTemplate>
-    <div class="bg-page">
+    <div v-if="!isLoading" class="bg-page">
       <div class="container h-100">
         <div class="d-flex align-items-center justify-content-center py-0 py-md-4 h-100">
-          <img src="@/assets/images/CV_2024-01-11_Sébastien_Petit_page-0001.jpg" class="img-cv">
+          <div v-for="pictureCv in cv">
+            <img :src="pictureCv.pictures[0].url" class="img-cv">
+          </div>
         </div>
       </div>
     </div>
@@ -12,6 +14,19 @@
 
 <script setup lang="ts">
 import BaseTemplate from "@/BaseTemplate.vue";
+import {useCvStore} from "@/stores/cvStore";
+import {storeToRefs} from "pinia";
+import {onMounted, ref} from "vue";
+
+const isLoading = ref(true)
+
+const cvStore = useCvStore()
+const { cv } = storeToRefs(cvStore)
+
+onMounted(async () => {
+  await cvStore.getCv()
+  isLoading.value = false
+})
 </script>
 
 <style scoped lang="scss">
@@ -24,7 +39,7 @@ import BaseTemplate from "@/BaseTemplate.vue";
 
 .img-cv {
   max-width: 900px;
-  transition: 1s ease;
+  transition: 600ms ease;
   &:hover {
     transform: scale(1.05);
   }

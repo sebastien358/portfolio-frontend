@@ -26,6 +26,70 @@
         </li>
       </ul>
     </nav>
+
+    <nav>
+      <ul class="list-inline">
+        <h3>Projets</h3>
+        <li>
+          <router-link to="#" class="link">
+            Mes projets
+          </router-link>
+        </li>
+        <li>
+          <router-link to="#" class="link">
+            Ajouter un projet
+          </router-link>
+        </li>
+      </ul>
+    </nav>
+
+    <nav>
+      <ul class="list-inline">
+        <h3>Technologies</h3>
+        <li>
+          <router-link :to="{name: 'admin-techno-list'}" class="link">
+            Mes technos
+          </router-link>
+        </li>
+        <li>
+          <router-link :to="{name: 'admin-techno-create'}" class="link">
+            Ajouter une techno
+          </router-link>
+        </li>
+      </ul>
+    </nav>
+
+    <nav>
+      <ul class="list-inline">
+        <h3>Formations</h3>
+        <li>
+          <router-link to="#" class="link">
+            Les formations
+          </router-link>
+        </li>
+        <li>
+          <router-link to="#" class="link">
+            Ajouter une formation
+          </router-link>
+        </li>
+      </ul>
+    </nav>
+
+    <nav>
+      <ul class="list-inline">
+        <h3>Curriculum vitæ</h3>
+        <li>
+          <router-link :to="{name: 'admin-cv-list'}" class="link">
+            CV
+          </router-link>
+        </li>
+        <li>
+          <router-link :to="{name: 'admin-cv-create'}" class="link">
+            Ajouter CV
+          </router-link>
+        </li>
+      </ul>
+    </nav>
   </div>
 </template>
 
@@ -49,7 +113,7 @@ nav {
   margin-bottom: 35px;
   ul {
     h3 {
-      color: white;
+      color:#dfe6e9;
       font-size: 18px;
     }
     li {
@@ -58,7 +122,7 @@ nav {
       margin-bottom: 10px;
     }
     .link {
-      color: white;
+      color:#dfe6e9;
       font-size: 13px;
     }
   }
