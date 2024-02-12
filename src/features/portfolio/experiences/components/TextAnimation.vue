@@ -1,5 +1,5 @@
 <template>
-  <h2 data-text="Sébastien Petit">Sébastien</h2>
+  <h2 data-text="Sébastien..">Sébastien..</h2>
 </template>
 
 <script setup lang="js">
@@ -30,6 +30,12 @@ h2 {
   position: relative;
   text-transform: uppercase;
   -webkit-text-stroke: 0.3vw #f7f7fe;
+  @include m.lg {
+    font-size: 5vw;
+  }
+  @include m.md {
+    font-size: 6vw;
+  }
   @include m.sm {
     font-size: 8.5vw;
   }
