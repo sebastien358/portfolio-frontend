@@ -14,37 +14,16 @@ defineProps<{
 
 <style scoped lang="scss">
 @use '@/assets/css/mixins' as m;
+
 .cv-item {
-  width: 700px;
-  overflow-x: auto;
-}
-
-.img-cv {
-
-  height: 1000px;
-  transition: 600ms ease;
-  object-fit: cover;
-  width: 700px;
-  overflow-x: auto;
-  &:hover {
-    transform: scale(1.05);
-  }
-  @include m.xl {
-    overflow: auto;
+  .img-cv {
+    height: 1000px;
+    transition: 600ms ease;
+    object-fit: cover;
     width: 100%;
-  }
-  @include m.lg {
-    overflow: auto;
-    width: 100%;
-  }
-  @include m.md {
-    overflow: auto;
-    width: 100%;
-  }
-  @include m.sm {
-    //width: 700px;
-    overflow-x: auto;
-
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 }
 </style>
