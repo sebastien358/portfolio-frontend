@@ -1,7 +1,7 @@
 <template>
   <footer class="d-flex align-items-center justify-content-center">
     <router-link to="#" class="link">
-      Sources des illustrations
+      <p class="m-0">Sources des illustrations</p>
     </router-link>
   </footer>
 </template>
@@ -10,6 +10,8 @@
 </script>
 
 <style scoped lang="scss">
+@use '@/assets/css/mixins' as m;
+
 footer {
   background-color: var(--background-headband-dark);
   color: white;
@@ -18,8 +20,13 @@ footer {
     color: var(--color-light);
     text-decoration: none;
     transition: all 250ms ease;
-    &:hover {
-      color: var(--color-dark);
+    p {
+      &:hover {
+        color: var(--color-dark);
+      }
+      @include m.sm {
+        font-size: 18px;
+      }
     }
   }
 }

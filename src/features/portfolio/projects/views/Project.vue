@@ -60,7 +60,6 @@ import BaseTemplate from "@/BaseTemplate.vue";
 
 .bg-page {
   background: var(--bg-page);
-  //height: calc(100vh - 110px);
   height: 100vh;
   h1 {
     padding-top: 70px;
@@ -69,7 +68,7 @@ import BaseTemplate from "@/BaseTemplate.vue";
     font-size: 35px;
     @include m.sm {
       padding-top: 40px;
-      font-size: 30px;
+      font-size: 25px;
     }
   }
 }

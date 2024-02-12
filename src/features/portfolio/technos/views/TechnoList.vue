@@ -44,6 +44,7 @@ onMounted(async () => {
   height: calc(100vh - 110px);
   padding-top: 70px;
   @include m.sm {
+    padding-top: 40px;
     height: auto;
   }
 }
@@ -52,6 +53,9 @@ h1 {
   color: white;
   font-size: 35px;
   font-family: "Kalam", cursive;
+  @include m.sm {
+    font-size: 25px;
+  }
 }
 
 .container-techno {
@@ -78,6 +82,8 @@ h1 {
   @include m.sm {
     grid-template-columns: repeat(1, 1fr);
     margin-top: 40px;
+    gap: 50px;
+    margin-bottom: 40px;
   }
 }
 </style>

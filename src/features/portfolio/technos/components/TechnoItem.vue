@@ -1,7 +1,7 @@
 <template>
   <div class="techno">
     <div v-for="img in techno.pictures">
-      <img :src="img.url">
+      <img :src="img.url" class="img">
     </div>
   </div>
 </template>
@@ -18,13 +18,21 @@ defineProps<{
 @use '@/assets/css/mixins' as m;
 
 .techno {
-  img {
+  .img {
     transition: all 1s ease;
     width: 160px;
     height: 160px;
-    @include m.sm {
+    @include m.xl {
       width: 130px;
       height: 130px;
+    }
+    @include m.lg {
+      width: 130px;
+      height: 130px;
+    }
+    @include m.sm {
+      width: 100px;
+      height: 100px;
     }
     &:hover {
       transform: scale(2);

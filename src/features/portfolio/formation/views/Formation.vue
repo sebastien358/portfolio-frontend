@@ -95,7 +95,7 @@ h1 {
   font-size: 35px;
   font-family: "Kalam", cursive;
   @include m.sm {
-    font-size: 27px;
+    font-size: 25px;
   }
 }
 

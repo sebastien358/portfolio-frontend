@@ -3,18 +3,18 @@
     <div class="card-inner">
       <div class="card-front">
         <h6 class="mb-3">{{experience.year}}</h6>
-        <h3>{{experience.job}}</h3>
-        <div class="d-flex flex-wrap justify-content-center mt-5 mb-2">
+        <h3 class="m-0">{{experience.job}}</h3>
+        <div class="d-flex flex-wrap justify-content-center container-image">
           <img v-if="experience.pictures[0]" :src="experience.pictures[0].url" class="img-card-front">
         </div>
-        <div class="d-flex align-items-center flex-row justify-content-center mt-5 mb-4">
+        <div class="d-flex align-items-center flex-row justify-content-center">
           <img v-if="experience.pictures[1]" :src="experience.pictures[1].url" class="icon">
           <img v-if="experience.pictures[2]" :src="experience.pictures[2].url" class="icon">
           <img v-if="experience.pictures[3]" :src="experience.pictures[3].url" class="icon">
           <img v-if="experience.pictures[4]" :src="experience.pictures[4].url" class="icon">
           <img v-if="experience.pictures[5]" :src="experience.pictures[5].url" class="icon">
         </div>
-        <p class="card-text fs-5">Plus d'info...</p>
+        <p class="card-text mt-4">Plus d'info...</p>
       </div>
       <div class="card-back">
         <h3 class="text-start mb-3 w-100"> Objet : {{experience.subject}}</h3>
@@ -42,13 +42,13 @@ defineProps<{
 // animation card
 
 .card-portfolio {
-  width: 500px;
+  width: 480px;
   height: 650px;
-  margin: 0 10px 60px 10px;
+  margin: 0 20px 60px 20px;
   @include m.sm {
     width: 100%;
-    height: 550px;
-    margin: 0 10px 30px 10px;
+    height: 470px;
+    margin: 0 20px 20px 20px;
   }
 }
 
@@ -80,20 +80,29 @@ defineProps<{
   transform: rotateY(0deg);
   overflow: hidden;
   h6 {
-    font-size: 18px;
-  }
-  h3 {
-    font-size: 26px;
+    font-size: 16px;
     @include m.sm {
-      font-size: 23px;
+      font-size: 14px;
     }
   }
-  .img-card-front {
-    height: 120px;
-    width: 120px;
+  h3 {
+    font-size: 22px;
     @include m.sm {
-      height: 110px;
-      width: 110px;
+      font-size: 18px;
+    }
+  }
+  .container-image {
+    margin: 40px 0;
+    @include m.sm {
+      margin: 25px 0;
+    }
+    .img-card-front {
+      height: 120px;
+      width: 120px;
+      @include m.sm {
+        height: 100px;
+        width: 100px;
+      }
     }
   }
   .icon {
@@ -101,26 +110,34 @@ defineProps<{
     height: 60px;
     margin: 0 6px;
     @include m.sm {
-      width: 50px;
-      height: 50px;
+      width: 40px;
+      height: 40px;
+    }
+  }
+  p {
+    font-size: 17px;
+    @include m.sm {
+      font-size: 15px;
     }
   }
 }
 
 .card-back {
   transform: rotateY(-180deg);
-  overflow: hidden;
+  overflow-y: auto;
+  height: 100%;
   h3 {
     font-size: 20px;
     @include m.sm {
-      font-size: 17px;
+      font-size: 14px;
     }
   }
   p {
     font-size: 15px;
     line-height: 24px;
     @include m.sm {
-      font-size: 14px;
+      line-height: 20px;
+      font-size: 12px;
     }
   }
 }

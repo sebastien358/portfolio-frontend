@@ -166,7 +166,13 @@ header {
       font-size: 22px;
       color: var(--color-light);
       transition: all 250ms ease;
+      @include m.xxl {
+        font-size: 20px;
+      }
       @include m.xl {
+        font-size: 20px;
+      }
+      @include m.lg {
         font-size: 20px;
       }
       &:hover {
@@ -223,6 +229,9 @@ header {
     color: var(--color-light);
     transition: all 250ms ease;
     font-weight: 200;
+    @include m.sm {
+      font-size: 18px;
+    }
     &:hover {
       color: var(--color-dark);
     }

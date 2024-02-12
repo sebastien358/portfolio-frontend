@@ -1,8 +1,8 @@
 <template>
   <BaseTemplate>
-    <div v-if="!isLoading" class="bg-page">
+    <div v-if="!isLoading" class="bg-page h-100">
       <div class="container h-100">
-        <div class="d-flex align-items-center justify-content-center py-0 py-md-4 h-100">
+        <div class="d-flex align-items-center justify-content-center py-3 py-md-4 h-100">
           <CvItem
             v-for="pictureCv in cv"
             :key="pictureCv.id"
@@ -37,6 +37,7 @@ onMounted(async () => {
 
 .bg-page {
   background: var(--bg-page);
+  min-height: 100%;
 }
 
 .img-cv {
