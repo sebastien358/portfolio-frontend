@@ -19,7 +19,10 @@
 
       <div class="home__experience">
         <!-- Title de la page -->
-        <h1 class="text-white text-center w-100 title-h1">Mon expérience</h1>
+        <div class="title-h1">
+          <h1 class="text-white text-center w-100">Mon expérience</h1>
+        </div>
+
         <!-- Card expériences -->
         <div v-if="!isLoading" class="d-flex flex-wrap align-items-center justify-content-center">
           <ExperienceItem
@@ -89,26 +92,28 @@ onMounted(async () => {
       font-weight: 800;
     }
     .button {
-      border: 1px solid #9980FA;
-      color: #9980FA;
+      border: 1px solid #57606f;
+      color: #57606f;
       background-color: transparent;
       padding: 10px;
-      transition: background-color 180ms ease;
+      transition: all 250ms ease;
       text-decoration: none;
       font-size: 13px;
-      &:hover {
-        border: 1px solid #01a3a4;
-        background-color: #9980FA;
-        color: white;
-      }
       @include m.sm {
-        padding: 8px;
-        border: 1px solid #9980FA;
-        font-size: 13px;
-        color: #9980FA;
+        padding: 7px;
+        font-size: 12px;
+      }
+      &:hover {
+        border: 1px solid #70a1ff;
+        background-color: #70a1ff;
+        color: white;
+        transform: scale(1.07);
       }
     }
   }
+}
+
+.home {
   &__experience {
     background: var(--bg-page);
     height: 100%;
@@ -123,19 +128,17 @@ onMounted(async () => {
       padding-top: 30px;
     }
     .title-h1 {
-      font-size: 35px;
-      font-family: "Kalam", cursive;
-      white-space: nowrap;
-      margin-bottom: 40px;
-      @include m.sm {
-        margin-bottom: 30px;
-        width: 20px;
+      h1 {
+        font-size: 35px;
+        font-family: "Kalam", cursive;
+        white-space: nowrap;
+        margin-bottom: 40px;
+        @include m.sm {
+          margin-bottom: 30px;
+          font-size: 25px;
+        }
       }
     }
   }
 }
-
-// title animation
-
-
 </style>
