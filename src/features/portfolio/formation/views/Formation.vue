@@ -8,7 +8,7 @@
             <div class="card-front">
               <h6 class="card-title m-0 mb-3">2023-2024 (1 an)</h6>
               <h3 class="m-0 mb-3">Titre professionnel</h3>
-              <h4 class="m-0 fs-4">Développeur web</h4>
+              <h4 class="m-0">Développeur web</h4>
               <div class="d-flex flex-wrap justify-content-center container-image">
                 <img src="@/assets/images/studi.jpg" class="img-card-front">
               </div>
@@ -19,7 +19,6 @@
               </div>
               <p class="card-text mt-4">Plus d'info...</p>
             </div>
-
 
             <div class="card-back">
               <div class="techno">
@@ -94,13 +93,13 @@ h1 {
 
 .container-formation {
   height: 100%;
-  padding: 40px 0 60px 0;
+  padding: 40px 0 40px 0;
   @include m.lg {
-    padding: 30px 0 50px 0;
+    padding: 30px 0 30px 0;
     height: auto;
   }
   @include m.sm {
-    padding: 20px 0 50px 0;
+    padding: 20px 0 20px 0;
     height: auto;
   }
 }
@@ -148,6 +147,10 @@ h1 {
 .card-front {
   transform: rotateY(0deg);
   overflow: hidden;
+  h4 {
+    font-size: 23px;
+    font-weight: 700;
+  }
   h6 {
     font-size: 16px;
     @include m.sm {
@@ -203,7 +206,7 @@ h1 {
     align-items: center;
     border-radius: 20px;
     background-color: var(--background-light);
-    padding: 20px 10px;
+    padding: 10px 10px;
     overflow: hidden;
     width: auto;
     @include m.sm {
@@ -211,10 +214,10 @@ h1 {
     }
     span {
       font-weight: 500;
-      font-size: 14px;
+      font-size: 13px;
       @include m.sm {
         font-weight: 400;
-        font-size: 13px;
+        font-size: 11px;
       }
     }
   }

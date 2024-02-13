@@ -24,7 +24,7 @@
         </div>
 
         <!-- Card expériences -->
-        <div v-if="!isLoading" class="d-flex flex-wrap align-items-center justify-content-center">
+        <div v-if="!isLoading" class="d-flex flex-wrap align-items-center justify-content-center experience-card">
           <ExperienceItem
             v-for="experience in experiences"
             :key="experience.id"
@@ -118,14 +118,14 @@ onMounted(async () => {
     background: var(--bg-page);
     height: 100%;
     width: 100%;
-    padding-top: 50px;
+    padding: 50px 20px 40px 20px;
     @include m.lg {
       height: 100%;
-      padding-top: 40px;
+      padding: 40px 20px 30px 20px;
     }
     @include m.sm {
       height: 100%;
-      padding-top: 30px;
+      padding: 30px 20px 20px 20px;
     }
     .title-h1 {
       h1 {
@@ -138,6 +138,9 @@ onMounted(async () => {
           font-size: 25px;
         }
       }
+    }
+    .experience-card {
+      gap: 20px;
     }
   }
 }

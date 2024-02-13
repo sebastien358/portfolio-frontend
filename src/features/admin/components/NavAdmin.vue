@@ -31,12 +31,12 @@
       <ul class="list-inline">
         <h3>Projets</h3>
         <li>
-          <router-link to="#" class="link">
+          <router-link :to="{name: 'admin-project-list'}" class="link">
             Mes projets
           </router-link>
         </li>
         <li>
-          <router-link to="#" class="link">
+          <router-link :to="{name: 'admin-project-create'}" class="link">
             Ajouter un projet
           </router-link>
         </li>

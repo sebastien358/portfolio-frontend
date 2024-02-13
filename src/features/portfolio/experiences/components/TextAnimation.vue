@@ -26,18 +26,21 @@ body {
 
 h2 {
   color: #c19bf5;
-  font-size: 3vw;
+  font-size: 2vw;
   position: relative;
   text-transform: uppercase;
-  -webkit-text-stroke: 0.3vw #f7f7fe;
+  -webkit-text-stroke: 0.2vw #f7f7fe;
   @include m.lg {
-    font-size: 5vw;
+    font-size: 4vw;
+    -webkit-text-stroke: 0.4vw #f7f7fe;
   }
   @include m.md {
     font-size: 6vw;
+    -webkit-text-stroke: 0.6vw #f7f7fe;
   }
   @include m.sm {
     font-size: 8.5vw;
+    -webkit-text-stroke: 0.85vw #f7f7fe;
   }
 }
 

@@ -44,11 +44,9 @@ defineProps<{
 .card-portfolio {
   width: 480px;
   height: 650px;
-  margin: 0 20px 40px 20px;
   @include m.sm {
     width: 100%;
     height: 470px;
-    margin: 0 20px 20px 20px;
   }
 }
 

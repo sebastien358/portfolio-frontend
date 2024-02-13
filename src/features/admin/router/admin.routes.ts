@@ -9,6 +9,9 @@ import TechnoDetails from "@/features/admin/technos/views/TechnoDetails.vue";
 import CvCreate from "@/features/admin/cv/views/CvCreate.vue";
 import CvList from "@/features/admin/cv/views/CvList.vue";
 import AdminTechnoList from "@/features/admin/technos/views/AdminTechnoList.vue";
+import ProjectCreate from "@/features/admin/projects/views/ProjectCreate.vue";
+import ProjectList from "@/features/admin/projects/views/ProjectList.vue";
+import ProjectUpdate from "@/features/admin/projects/views/ProjectUpdate.vue";
 
 export const ADMIN_ROUTES: RouteRecordRaw[] = [
     {path: '', redirect: '/admin/profile'},
@@ -21,5 +24,8 @@ export const ADMIN_ROUTES: RouteRecordRaw[] = [
     {path: '/admin/techno-create', name: 'admin-techno-create', meta: {isAdmin: true}, component: TechnoCreate},
     {path: '/admin/techno-details/:id', name: 'admin-techno-details', meta: {isAdmin: true}, component: TechnoDetails},
     {path: '/admin/components-list', name: 'admin-cv-list', meta: {isAdmin: true}, component: CvList},
-    {path: '/admin/components-create', name: 'admin-cv-create', meta: {isAdmin: true}, component: CvCreate}
+    {path: '/admin/components-create', name: 'admin-cv-create', meta: {isAdmin: true}, component: CvCreate},
+    {path: '/admin/project-create', name: 'admin-project-create', meta: {isAdmin: true}, component: ProjectCreate},
+    {path: '/admin/project-list', name: 'admin-project-list', meta: {isAdmin: true}, component: ProjectList},
+    {path: '/admin/project-update/:id', name: 'admin-project-update', meta: {isAdmin: true}, component: ProjectUpdate}
 ]
