@@ -16,7 +16,7 @@ import TechnoList from "@/features/portfolio/technos/views/TechnoList.vue";
 export const router = createRouter({
     history: createWebHistory(),
     routes: [
-       // {path: '/', redirect: '/experience'},
+        {path: '/', redirect: '/experience'},
         {path: '/experience', name: 'experience', component: Experience},
         {path: '/projects', name: 'projects', component: Project},
         {path: '/project-details/:id', name: 'project-details', component: ProjectDetails},

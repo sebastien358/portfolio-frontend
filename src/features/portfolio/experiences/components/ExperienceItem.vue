@@ -44,6 +44,10 @@ defineProps<{
 .card-portfolio {
   width: 480px;
   height: 650px;
+  @include m.xxl {
+    width: 420px;
+    height: 610px;
+  }
   @include m.sm {
     width: 100%;
     height: 470px;
@@ -79,14 +83,20 @@ defineProps<{
   overflow: hidden;
   h6 {
     font-size: 16px;
+    @include m.xxl {
+      font-size: 15px;
+    }
     @include m.sm {
-      font-size: 14px;
+      font-size: 13px;
     }
   }
   h3 {
     font-size: 22px;
+    @include m.xxl {
+      font-size: 17px;
+    }
     @include m.sm {
-      font-size: 18px;
+      font-size: 16px;
     }
   }
   .container-image {
@@ -97,9 +107,9 @@ defineProps<{
     .img-card-front {
       height: 120px;
       width: 120px;
-      @include m.sm {
-        height: 100px;
+      @include m.xxl {
         width: 100px;
+        height: 100px;
       }
     }
   }
@@ -107,15 +117,22 @@ defineProps<{
     width: 60px;
     height: 60px;
     margin: 0 6px;
+    @include m.xxl {
+      width: 45px;
+      height: 45px;
+    }
     @include m.sm {
-      width: 40px;
-      height: 40px;
+      width: 35px;
+      height: 35px;
     }
   }
   p {
     font-size: 17px;
-    @include m.sm {
+    @include m.xxl {
       font-size: 15px;
+    }
+    @include m.sm {
+      font-size: 13px;
     }
   }
 }
@@ -126,16 +143,23 @@ defineProps<{
   height: 100%;
   h3 {
     font-size: 20px;
+    @include m.xxl {
+      font-size: 16px;
+    }
     @include m.sm {
-      font-size: 14px;
+      font-size: 13px;
     }
   }
   p {
     font-size: 15px;
     line-height: 24px;
-    @include m.sm {
+    @include m.xxl {
       line-height: 20px;
-      font-size: 12px;
+      font-size: 13px;
+    }
+    @include m.sm {
+      line-height: 18px;
+      font-size: 11px;
     }
   }
 }

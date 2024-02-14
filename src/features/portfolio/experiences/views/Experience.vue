@@ -133,9 +133,12 @@ onMounted(async () => {
         font-family: "Kalam", cursive;
         white-space: nowrap;
         margin-bottom: 40px;
+        @include m.xxl {
+          font-size: 25px;
+        }
         @include m.sm {
           margin-bottom: 30px;
-          font-size: 25px;
+          font-size: 22px;
         }
       }
     }
