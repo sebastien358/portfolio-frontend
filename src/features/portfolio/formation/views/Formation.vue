@@ -10,7 +10,7 @@
               <h3 class="m-0 mb-3">Titre professionnel</h3>
               <h4 class="m-0">Développeur web</h4>
               <div class="d-flex flex-wrap justify-content-center container-image">
-                <img src="@/assets/images/studi.jpg" class="img-card-front">
+                <img src="@/assets/images/STUDI-logo%20copie.png" class="img-card-front">
               </div>
               <div class="d-flex align-items-center flex-row justify-content-center">
                 <img src="@/assets/images/js.png" class="icon">
@@ -148,19 +148,31 @@ h1 {
   transform: rotateY(0deg);
   overflow: hidden;
   h4 {
-    font-size: 23px;
+    font-size: 20px;
     font-weight: 700;
+    @include m.xxl {
+      font-size: 20px;
+    }
+    @include m.sm {
+      font-size: 18px;
+    }
   }
   h6 {
-    font-size: 16px;
+    font-size: 14px;
+    @include m.xxl {
+      font-size: 13px;
+    }
     @include m.sm {
-      font-size: 14px;
+      font-size: 13px;
     }
   }
   h3 {
-    font-size: 22px;
+    font-size: 16px;
+    @include m.xxl {
+      font-size: 15px;
+    }
     @include m.sm {
-      font-size: 18px;
+      font-size: 14px;
     }
   }
   .container-image {
@@ -169,11 +181,12 @@ h1 {
       margin: 25px 0;
     }
     .img-card-front {
-      height: 120px;
-      width: 120px;
+      height: 65px;
+      width: auto;
       @include m.sm {
-        height: 100px;
-        width: 100px;
+        color: white;
+        height: 50px;
+        width: auto;
       }
     }
   }
@@ -189,7 +202,7 @@ h1 {
   p {
     font-size: 17px;
     @include m.sm {
-      font-size: 15px;
+      font-size: 14px;
     }
   }
 }

@@ -41,11 +41,10 @@ onMounted(async () => {
 
 .bg-page {
   background: var(--bg-page);
-  height: 100%;
+  height: calc(100vh - 110px);
   padding-top: 70px;
   @include m.sm {
     padding-top: 40px;
-    height: auto;
   }
 }
 
@@ -81,8 +80,7 @@ h1 {
   }
   @include m.sm {
     grid-template-columns: repeat(1, 1fr);
-    margin-top: 40px;
-    gap: 50px;
+    margin-top: 0;
     margin-bottom: 40px;
   }
 }

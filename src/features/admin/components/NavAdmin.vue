@@ -1,5 +1,5 @@
 <template>
-  <div class="nav-admin">
+  <div v-if="open" class="nav-admin z-1">
     <nav>
       <ul class="list-inline">
         <h3>Profile</h3>
@@ -9,9 +9,7 @@
           </router-link>
         </li>
       </ul>
-    </nav>
 
-    <nav>
       <ul class="list-inline">
         <h3>Expériences</h3>
         <li>
@@ -25,9 +23,7 @@
           </router-link>
         </li>
       </ul>
-    </nav>
 
-    <nav>
       <ul class="list-inline">
         <h3>Projets</h3>
         <li>
@@ -41,9 +37,7 @@
           </router-link>
         </li>
       </ul>
-    </nav>
 
-    <nav>
       <ul class="list-inline">
         <h3>Technologies</h3>
         <li>
@@ -57,9 +51,7 @@
           </router-link>
         </li>
       </ul>
-    </nav>
 
-    <nav>
       <ul class="list-inline">
         <h3>Formations</h3>
         <li>
@@ -73,9 +65,7 @@
           </router-link>
         </li>
       </ul>
-    </nav>
 
-    <nav>
       <ul class="list-inline">
         <h3>Curriculum vitæ</h3>
         <li>
@@ -94,6 +84,9 @@
 </template>
 
 <script setup lang="ts">
+defineProps<{
+  open: boolean
+}>()
 </script>
 
 <style scoped lang="scss">
@@ -103,27 +96,47 @@
   background-color: rgba(255, 255, 255, 0.20);
   min-width: 200px;
   padding: 25px 15px;
+  height: calc(100vh - 110px);
   @include m.lg {
     position: fixed;
+    background-color: rgba(0, 0, 0, 0.40);
+    height: initial;
+    top: 60px;
+  }
+  @include m.lg {
+    background-color: rgba(0, 0, 0, 0.40);
+    min-width: 170px;
     top: 60px;
   }
 }
 
 nav {
-  margin-bottom: 35px;
   ul {
+    margin-bottom: 35px;
+    @include m.sm {
+      margin-bottom: 25px;
+    }
     h3 {
       color:#dfe6e9;
       font-size: 18px;
+      @include m.sm {
+        font-size: 14px;
+      }
     }
     li {
       color: white;
       font-size: 13px;
       margin-bottom: 10px;
+      @include m.sm {
+        margin-bottom: 2px;
+      }
     }
     .link {
       color:#dfe6e9;
       font-size: 13px;
+      @include m.sm {
+        font-size: 11px;
+      }
     }
   }
 }

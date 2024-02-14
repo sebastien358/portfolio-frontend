@@ -19,6 +19,12 @@
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 700;
+  @include m.lg {
+    font-size: 1.3rem;
+  }
+  @include m.sm {
+    font-size: 1rem;
+  }
 }
 
 .form {
@@ -35,6 +41,12 @@
   display: block;
   color: rgba(156, 163, 175, 1);
   margin-bottom: 4px;
+  @include m.lg {
+    font-size: 14px;
+  }
+  @include m.sm {
+    font-size: 13px;
+  }
 }
 
 .input-group input, textarea {
@@ -45,10 +57,16 @@
   background-color: rgba(17, 24, 39, 1);
   padding: 0.75rem 1rem;
   color: rgba(243, 244, 246, 1);
+  @include m.lg {
+    padding: 0.55rem 1rem;
+  }
 }
 
 .input-group textarea {
   height: 130px;
+  @include m.lg {
+    height: 100px;
+  }
 }
 
 .input-group input:focus {

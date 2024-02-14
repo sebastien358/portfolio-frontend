@@ -1,5 +1,5 @@
 <template>
-  <header class="px-3 px-lg-5 d-flex align-items-center flex-row justify-content-between z-1 position-fixed">
+  <header class="px-3 px-lg-4 px-xl-4 px-xxl-5 d-flex align-items-center flex-row justify-content-between z-1 position-fixed">
     <nav class="d-none d-lg-block">
       <ul class="list-inline m-0 d-flex align-items-center menu-desktop">
         <li class="me-4">
@@ -167,13 +167,13 @@ header {
       color: var(--color-light);
       transition: all 250ms ease;
       @include m.xxl {
-        font-size: 20px;
+        font-size: 19px;
       }
       @include m.xl {
-        font-size: 20px;
+        font-size: 19px;
       }
       @include m.lg {
-        font-size: 20px;
+        font-size: 18px;
       }
       &:hover {
         color: var(--color-dark);

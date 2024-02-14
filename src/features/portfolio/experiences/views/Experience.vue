@@ -83,8 +83,14 @@ onMounted(async () => {
     }
     h3 {
       color: white;
-      font-size: 20px;
       font-weight: 900;
+      font-size: 22px;
+      @include m.xxl {
+        font-size: 17px;
+      }
+      @include m.sm {
+        font-size: 16px;
+      }
     }
     h4 {
       color: white;

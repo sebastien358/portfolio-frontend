@@ -10,17 +10,17 @@
 
         <div class="mt-5 project-details__objectif">
           <h2>Objectif</h2>
-          <div class="d-flex flex-row align-items-center justify-content-between">
-            <div class="d-flex flex-column">
-              <p v-if="editProject.objectif[0]" class="m-0">{{editProject.objectif[0]}}</p>
-              <p v-if="editProject.objectif[1]" class="m-0">{{editProject.objectif[1]}}</p>
+          <div class="d-flex flex-column flex-lg-row align-items-lg-center justify-content-between">
+            <div class="d-flex flex-column mb-5 mb-lg-0">
+              <p v-if="editProject.objectif[0]" class="m-0 mb-1">{{editProject.objectif[0]}}</p>
+              <p v-if="editProject.objectif[1]" class="m-0 mb-1">{{editProject.objectif[1]}}</p>
               <p v-if="editProject.objectif[2]" class="m-0">{{editProject.objectif[2]}}</p>
             </div>
 
             <div class="d-flex align-items-center flex-row">
               <div class="d-flex flex-column">
                 <h2 class="mb-3">Technologies utilisées</h2>
-                <img :src="editProject.pictures[1].url">
+                <img :src="editProject.pictures[1].url" class="logo-techno">
               </div>
             </div>
           </div>
@@ -50,8 +50,8 @@
           </div>
         </div>
 
-        <nav class="d-flex align-items-center flex-row justify-content-around mt-5">
-          <ul class="list-inline fonctionnality">
+        <nav class="d-flex flex-column align-items-lg-center flex-lg-row justify-content-lg-around mt-5">
+          <ul class="list-inline mb-4 mb-lg-0 fonctionnality">
             <h2>Fonctionnalités</h2>
             <li v-if="editProject.fonctionnality[0]">
               {{editProject.fonctionnality[0]}}
@@ -115,17 +115,37 @@ onMounted(async () => {
 </script>
 
 <style scoped lang="scss">
+@use '@/assets/css/mixins' as m;
+
 .bg-page {
   background: var(--bg-page);
   width: 100%;
   min-height: 100%;
-  padding: 70px 200px 40px 200px;
+  padding: 70px 100px 40px 100px;
+  @include m.xxl {
+    padding: 70px 20px 40px 20px;
+  }
+  @include m.xl {
+    padding: 40px 20px 40px 20px;
+  }
+  @include m.lg {
+    padding: 30px 20px 40px 20px;
+  }
+  @include m.sm {
+    padding: 30px 10px 40px 10px;
+  }
 }
 
 .project-details {
   h1 {
     color: white;
     font-size: 35px;
+    @include m.xxl {
+      font-size: 25px;
+    }
+    @include m.sm {
+      font-size: 22px;
+    }
   }
   &__objectif {
     h2, p {
@@ -134,24 +154,73 @@ onMounted(async () => {
     h2 {
       font-weight: 700;
       font-size: 24px;
+      @include m.xxl {
+        font-size: 18px;
+      }
+      @include m.sm {
+        font-size: 16px;
+      }
     }
     p {
       font-size: 18px;
+      @include m.xxl {
+        font-size: 16px;
+      }
+      @include m.lg {
+        font-size: 14px;
+      }
+      @include m.sm {
+        font-size: 13px;
+      }
     }
     img {
       height: 50px;
       width: 50px;
+      @include m.lg {
+        height: 40px;
+        width: 40px;
+      }
+      @include m.sm {
+        height: 35px;
+        width: 35px;
+      }
     }
   }
   &__carousel {
     width: 100%;
     .carousel {
-      height: 1000px;
-      width: 70%;
+      height: 1100px;
+      width: 100%;
+      @include m.xxl {
+        width: 100%;
+        height: 700px;
+      }
+      @include m.xl {
+        height: 600px;
+      }
+      @include m.lg {
+        height: 500px;
+      }
+      @include m.sm {
+        height: 500px;
+      }
       img {
         object-fit: cover;
-        height: 1000px;
-        width: 70%;
+        height: 1100px;
+        width: 100%;
+        @include m.xxl {
+          width: 100%;
+          height: 700px;
+        }
+        @include m.xl {
+          height: 600px;
+        }
+        @include m.lg {
+          height: 500px;
+        }
+        @include m.sm {
+          height: 500px;
+        }
       }
     }
   }
@@ -163,6 +232,12 @@ onMounted(async () => {
   font-size: 22px;
   color: var(--color-light);
   text-decoration: none;
+  @include m.xxl {
+    font-size: 20px;
+  }
+  @include m.sm {
+    font-size: 18px;
+  }
   &:hover {
     text-decoration: underline;
   }
@@ -170,6 +245,9 @@ onMounted(async () => {
     font-size: 16px;
     margin-left: 5px;
     color: var(--color-light);
+    @include m.xxl {
+      font-size: 14px;
+    }
   }
 }
 
@@ -177,13 +255,28 @@ nav {
   .fonctionnality,
   .competence {
     h2 {
+      color: white;
       font-weight: 700;
       font-size: 24px;
-      color: white;
+      @include m.xxl {
+        font-size: 18px;
+      }
+      @include m.sm {
+        font-size: 16px;
+      }
     }
     li {
       font-size: 18px;
       color: white;
+      @include m.xxl {
+        font-size: 16px;
+      }
+      @include m.lg {
+        font-size: 14px;
+      }
+      @include m.sm {
+        font-size: 13px;
+      }
     }
   }
 }
