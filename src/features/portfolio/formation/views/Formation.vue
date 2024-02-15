@@ -10,7 +10,7 @@
               <h3 class="m-0 mb-3">Titre professionnel</h3>
               <h4 class="m-0">Développeur web</h4>
               <div class="d-flex flex-wrap justify-content-center container-image">
-                <img src="@/assets/images/STUDI-logo%20copie.png" class="img-card-front">
+                <img src="@/assets/images/Studi_logo.svg.png" class="img-card-front">
               </div>
               <div class="d-flex align-items-center flex-row justify-content-center">
                 <img src="@/assets/images/js.png" class="icon">
@@ -154,7 +154,7 @@ h1 {
       font-size: 20px;
     }
     @include m.sm {
-      font-size: 18px;
+      font-size: 17px;
     }
   }
   h6 {
@@ -178,14 +178,19 @@ h1 {
   .container-image {
     margin: 40px 0;
     @include m.sm {
-      margin: 25px 0;
+      margin: 35px 0;
     }
     .img-card-front {
       height: 65px;
       width: auto;
+      @include m.lg {
+        color: white;
+        height: 55px;
+        width: auto;
+      }
       @include m.sm {
         color: white;
-        height: 50px;
+        height: 42px;
         width: auto;
       }
     }
@@ -194,9 +199,13 @@ h1 {
     width: 60px;
     height: 60px;
     margin: 0 6px;
+    @include m.xxl {
+      width: 45px;
+      height: 45px;
+    }
     @include m.sm {
-      width: 40px;
-      height: 40px;
+      width: 35px;
+      height: 35px;
     }
   }
   p {

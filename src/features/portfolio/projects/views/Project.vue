@@ -52,7 +52,7 @@ onMounted(async () => {
 .container-project {
   padding: 40px 20px 0 20px;
   @include m.sm {
-    padding: 30px 20px 0 20px;
+    padding: 30px 10px 0 10px;
   }
 }
 
@@ -64,9 +64,12 @@ onMounted(async () => {
     font-family: "Kalam", cursive;
     color: var(--color-light);
     font-size: 35px;
-    @include m.sm {
+    @include m.lg {
       padding-top: 40px;
-      font-size: 25px;
+      font-size: 27px;
+    }
+    @include m.sm {
+      font-size: 20px;
     }
   }
 }

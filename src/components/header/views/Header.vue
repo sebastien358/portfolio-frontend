@@ -229,6 +229,9 @@ header {
     color: var(--color-light);
     transition: all 250ms ease;
     font-weight: 200;
+    @include m.lg {
+      font-size: 19px;
+    }
     @include m.sm {
       font-size: 18px;
     }

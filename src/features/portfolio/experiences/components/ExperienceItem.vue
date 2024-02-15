@@ -48,6 +48,14 @@ defineProps<{
     width: 420px;
     height: 610px;
   }
+  @include m.lg {
+    width: 360px;
+    height: 530px;
+  }
+  @include m.md {
+    width: 380px;
+    height: 550px;
+  }
   @include m.sm {
     width: 100%;
     height: 470px;

@@ -36,6 +36,12 @@ defineProps<{
   width: 550px;
   background-color: white;
   transition: 600ms ease-in-out;
+  @include m.xxl {
+    width: 470px;
+  }
+  @include m.lg {
+    width: 450px;
+  }
   @include m.sm {
     width: 100%;
   }
@@ -58,10 +64,28 @@ defineProps<{
   &__completed {
     width: 100%;
     height: 300px;
+    @include m.xxl {
+      height: 270px;
+    }
+    @include m.lg {
+      height: 250px;
+    }
+    @include m.sm {
+      height: 230px;
+    }
     img {
       height: 300px;
       width: 100%;
       object-fit: cover;
+      @include m.xxl {
+        height: 270px;
+      }
+      @include m.lg {
+        height: 250px;
+      }
+      @include m.sm {
+        height: 230px;
+      }
     }
   }
   &__logo {

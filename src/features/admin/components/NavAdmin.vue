@@ -65,20 +65,6 @@
           </router-link>
         </li>
       </ul>
-
-      <ul class="list-inline">
-        <h3>Curriculum vitæ</h3>
-        <li>
-          <router-link :to="{name: 'admin-cv-list'}" class="link">
-            CV
-          </router-link>
-        </li>
-        <li>
-          <router-link :to="{name: 'admin-cv-create'}" class="link">
-            Ajouter CV
-          </router-link>
-        </li>
-      </ul>
     </nav>
   </div>
 </template>

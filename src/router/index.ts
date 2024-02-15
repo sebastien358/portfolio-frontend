@@ -1,5 +1,5 @@
 import {createRouter, createWebHistory} from "vue-router";
-import CvList from "@/features/portfolio/cv/views/CvList.vue";
+import Cv from "@/features/portfolio/cv/views/Cv.vue";
 import Experience from "@/features/portfolio/experiences/views/Experience.vue";
 import Project from "@/features/portfolio/projects/views/Project.vue";
 import ProjectDetails from "@/features/portfolio/projects/views/ProjectDetails.vue";
@@ -21,7 +21,7 @@ export const router = createRouter({
         {path: '/projects', name: 'projects', component: Project},
         {path: '/project-details/:id', name: 'project-details', component: ProjectDetails},
         {path: '/techno', name: 'techno', component: TechnoList},
-        {path: '/components', name: 'cv', component: CvList},
+        {path: '/components', name: 'cv', component: Cv},
         {path: '/formation', name: 'formation', component: Formation},
         {path: '/login', name: 'login', component: Login},
         {path: '/:notFound(.*)*', component: NotFound},
