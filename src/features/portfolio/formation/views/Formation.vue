@@ -181,11 +181,11 @@ h1 {
       margin: 35px 0;
     }
     .img-card-front {
-      height: 65px;
+      height: 55px;
       width: auto;
       @include m.lg {
         color: white;
-        height: 55px;
+        height: 50px;
         width: auto;
       }
       @include m.sm {
@@ -196,8 +196,8 @@ h1 {
     }
   }
   .icon {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     margin: 0 6px;
     @include m.xxl {
       width: 45px;

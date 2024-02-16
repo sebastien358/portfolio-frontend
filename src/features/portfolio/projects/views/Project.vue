@@ -1,19 +1,21 @@
 <template>
   <BaseTemplate>
-    <div v-if="!isLoading" class="bg-page">
-      <h1 class="text-center text-uppercase">Mes projets principaux</h1>
-      <!-- Projets réalisé -->
-      <div class="d-flex flex-wrap justify-content-center container-project">
-        <ProjectItem
-          v-for="project in projects"
-          :key="project.id"
-          :project="project"
-        />
+    <div class="bg-page">
+      <div v-if="!isLoading">
+        <h1 class="text-center text-uppercase">Mes projets principaux</h1>
+        <!-- Projets réalisé -->
+        <div class="d-flex flex-wrap justify-content-center container-project">
+          <ProjectItem
+            v-for="project in projects"
+            :key="project.id"
+            :project="project"
+          />
+        </div>
       </div>
     </div>
 
-    <div v-if="!isLoading" class="bg-page">
-      <div>
+    <div class="bg-page">
+      <div v-if="!isLoading">
         <h1 class="text-center text-uppercase">Mes autres projets</h1>
         <div class="d-flex justify-content-center container-project">
           <ProjectItem

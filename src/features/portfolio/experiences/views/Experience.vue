@@ -1,38 +1,40 @@
 <template>
   <BaseTemplate>
-    <div class="home">
-      <div class="d-flex align-items-center justify-content-center">
-        <!-- Image bannière -->
-        <img src="@/assets/images/laptop-5673901_1280.jpg" class="w-100 object-fit-cover position-relative img-banniere">
-
-        <div class="position-absolute dev-web">
-          <div class="d-flex flex-column align-items-center">
-            <TextAnimation />
+    <div class="bg-page">
+      <div class="home">
+        <div class="d-flex align-items-center justify-content-center">
+          <!-- Image bannière -->
+          <img src="@/assets/images/laptop-5673901_1280.jpg" class="w-100 object-fit-cover position-relative img-banniere">
+          <div class="position-absolute dev-web">
+            <div class="d-flex flex-column align-items-center">
+              <TextAnimation />
+            </div>
+            <div class="mt-2 mt-md-4 mb-4">
+              <h3 class="text-center text-uppercase">Développeur web</h3>
+              <h4 class="text-center mt-2">Portfolio</h4>
+            </div>
+            <a href="mailto:sebastienpetit27330@gmail.com" class="button">Contactez-moi !</a>
           </div>
-          <div class="mt-2 mt-md-4 mb-4">
-            <h3 class="text-center text-uppercase">Développeur web</h3>
-            <h4 class="text-center mt-2">Portfolio</h4>
-          </div>
-          <a href="mailto:sebastienpetit27330@gmail.com" class="button">Contactez-moi !</a>
-        </div>
-      </div>
-
-      <div class="home__experience">
-        <!-- Title de la page -->
-        <div class="title-h1">
-          <h1 class="text-white text-center w-100">Mon expérience</h1>
         </div>
 
-        <!-- Card expériences -->
-        <div v-if="!isLoading" class="d-flex flex-wrap align-items-center justify-content-center experience-card">
-          <ExperienceItem
-            v-for="experience in experiences"
-            :key="experience.id"
-            :experience="experience"
-          />
+        <div class="container-card">
+          <!-- Title de la page -->
+          <div class="title-h1">
+            <h1 class="text-white text-center w-100">Mon expérience</h1>
+          </div>
+
+          <!-- Card expériences -->
+          <div v-if="!isLoading" class="d-flex flex-wrap align-items-center justify-content-center experience-card">
+            <ExperienceItem
+              v-for="experience in experiences"
+              :key="experience.id"
+              :experience="experience"
+            />
+          </div>
         </div>
       </div>
     </div>
+
   </BaseTemplate>
 </template>
 
@@ -57,6 +59,18 @@ onMounted(async () => {
 
 <style scoped lang="scss">
 @use '@/assets/css/mixins' as m;
+
+.bg-page {
+  background: var(--bg-page);
+  padding: 50px 0 40px 0;
+  height: 100%;
+  @include m.lg {
+    padding: 40px 0 30px 0;
+  }
+  @include m.sm {
+    padding: 30px 0 20px 0;
+  }
+}
 
 .home {
   .img-banniere {
@@ -120,24 +134,14 @@ onMounted(async () => {
 }
 
 .home {
-  &__experience {
-    background: var(--bg-page);
-    height: 100%;
-    width: 100%;
-    padding: 50px 20px 40px 20px;
-    @include m.lg {
-      height: 100%;
-      padding: 40px 20px 30px 20px;
-    }
-    @include m.sm {
-      height: 100%;
-      padding: 30px 20px 20px 20px;
-    }
+  .container-card {
+    padding: 0 20px;
     .title-h1 {
       h1 {
         font-size: 35px;
         font-family: "Kalam", cursive;
         white-space: nowrap;
+        margin-top: 40px;
         margin-bottom: 40px;
         @include m.xxl {
           font-size: 25px;

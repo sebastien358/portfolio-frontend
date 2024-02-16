@@ -3,6 +3,7 @@
     <div class="card-inner">
       <div class="card-front">
         <h6 class="mb-3">{{experience.year}}</h6>
+        <h4 class="mb-3">{{experience.subject}}</h4>
         <h3 class="m-0">{{experience.job}}</h3>
         <div class="d-flex flex-wrap justify-content-center container-image">
           <img v-if="experience.pictures[0]" :src="experience.pictures[0].url" class="img-card-front">
@@ -17,11 +18,11 @@
         <p class="card-text mt-4">Plus d'info...</p>
       </div>
       <div class="card-back">
-        <h3 class="text-start mb-3 w-100"> Objet : {{experience.subject}}</h3>
-        <p>{{experience.content[0]}}</p>
+        <h3 class="text-start mb-3 w-100"> Objet : {{experience.content[0]}}</h3>
         <p>{{experience.content[2]}}</p>
         <p>{{experience.content[4]}}</p>
         <p>{{experience.content[6]}}</p>
+        <p>{{experience.content[8]}}</p>
       </div>
     </div>
   </div>
@@ -98,6 +99,15 @@ defineProps<{
       font-size: 13px;
     }
   }
+  h4 {
+    font-size: 17px;
+    @include m.xxl {
+      font-size: 16px;
+    }
+    @include m.sm {
+      font-size: 15px;
+    }
+  }
   h3 {
     font-size: 22px;
     @include m.xxl {
@@ -122,8 +132,8 @@ defineProps<{
     }
   }
   .icon {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     margin: 0 6px;
     @include m.xxl {
       width: 45px;

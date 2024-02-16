@@ -20,7 +20,13 @@
             <div class="d-flex align-items-center flex-row">
               <div class="d-flex flex-column">
                 <h2 class="mb-3">Technologies utilisées</h2>
-                <img :src="editProject.pictures[1].url" class="logo-techno">
+                <div class="d-flex flex-row align-content-center">
+                  <img v-if="editProject.pictures[1]" :src="editProject.pictures[1].url" class="logo-techno">
+                  <img v-if="editProject.pictures[2]" :src="editProject.pictures[2].url" class="logo-techno">
+                  <img v-if="editProject.pictures[3]" :src="editProject.pictures[3].url" class="logo-techno">
+                  <img v-if="editProject.pictures[4]" :src="editProject.pictures[4].url" class="logo-techno">
+                  <img v-if="editProject.pictures[5]" :src="editProject.pictures[5].url" class="logo-techno">
+                </div>
               </div>
             </div>
           </div>
@@ -174,15 +180,18 @@ onMounted(async () => {
       }
     }
     img {
-      height: 50px;
-      width: 50px;
+      height: 45px;
+      width: 45px;
+      margin: 0 10px;
       @include m.lg {
         height: 40px;
         width: 40px;
+        margin: 0 8px;
       }
       @include m.sm {
         height: 35px;
         width: 35px;
+        margin: 0 8px;
       }
     }
   }

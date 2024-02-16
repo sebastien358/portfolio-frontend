@@ -1,7 +1,7 @@
 <template>
   <BaseTemplate>
     <div class="bg-page w-100">
-      <div v-if="!isLoading" class="d-flex align-items-center justify-content-center mx-2 h-100">
+      <div v-if="!isLoading" class="d-flex align-items-center justify-content-center h-100">
         <div class="form-container">
           <p class="title">Login</p>
           <form @submit.prevent="onSubmit" class="form">
@@ -13,7 +13,7 @@
               <label for="password">Password</label>
               <input v-model="editLogin.password" type="password" name="password" id="password" required>
               <div class="forgot">
-                <router-link :to="{name: 'request-password'}">
+                <router-link :to="{name: 'request-password'}" class="link">
                   Forgot Password ?
                 </router-link>
               </div>
@@ -52,9 +52,30 @@ const onSubmit = async () => {
 </script>
 
 <style scoped lang="scss">
+@use '@/assets/css/mixins' as m;
+
 .bg-page {
   background: var(--bg-page);
   height: calc(100vh - 110px);
   width: 100%;
+  @include m.sm {
+    padding: 0 20px;
+  }
+}
+
+form {
+  .sign {
+    @include m.sm {
+      font-size: 13px;
+      padding: 8px;
+    }
+  }
+  .input-group {
+    .forgot a {
+      @include m.sm {
+        font-size: 12px;
+      }
+    }
+  }
 }
 </style>

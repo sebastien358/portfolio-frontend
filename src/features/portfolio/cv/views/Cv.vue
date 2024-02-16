@@ -5,9 +5,17 @@
         <div class="cv-container">
           <div class="left-column">
             <img class="portait" src="@/assets/images/sebastien.jpg" />
-            <div class="section">
+            <div class="d-flex flex-column section">
               <a href="https://www.linkedin.com/in/s%C3%A9bastien-petit-1874141b9/" target="_blank" class="text-white">
                 <font-awesome-icon icon="fa-brands fa-linkedin" class="text-white" />
+                Sébastien Petit
+              </a>
+              <a href="https://github.com/sebastien358" target="_blank" class="text-white">
+                <font-awesome-icon icon="fa-brands fa-github" class="text-white" />
+                Github
+              </a>
+              <a href="https://www.linkedin.com/in/s%C3%A9bastien-petit-1874141b9/" target="_blank" class="text-white">
+                <font-awesome-icon icon="fa-brands fa-google" class="text-white" />
                 Sébastien Petit
               </a>
             </div>
@@ -33,10 +41,6 @@
                 <li><i class="icon fas fa-check-circle text-darkblue"></i> MySQL</li>
                 <li><i class="icon fas fa-check-circle text-darkblue"></i> Git &#124; Github</li>
               </ul>
-            </div>
-            <div class="section">
-              <h2>Langues</h2>
-              <p>Français, langue maternelle</p>
             </div>
             <div class="section">
               <h2>Centres d'intérêt</h2>
@@ -67,29 +71,26 @@
               <div class="section">
                 <h2>Études <br><span class="text-blue">& formations</span></h2>
                 <p>
-                  <strong>2023 <i class="fas fa-long-arrow-alt-right"></i> 2024</strong>
+                  <strong>2023 <font-awesome-icon icon="fa-solid fa-right-long" /> 2024</strong>
                   <br>
+                  <em>Développeur web : </em> Studi
+                </p>
+                <p class="description-formation">
                   Autodidacte en développement web de niveau bac+2, je suis à la recherche d'un premier
                   emploi dans ce milieu qui me passionne. Impliqué et motivé, je souhaite acquérir de
                   l'expérience et des responsabilités afin de m'épanouir dans ma carrière. Les cours particuliers
-                  que j'ai suivis sur la plateforme Superprof.fr m'ont permis de monter en compétences et de
+                  que j'ai suivis sur la plateforme <a href="https://www.superprof.fr" class="superProf">Superprof.fr</a> m'ont permis de monter en compétences et de
                   me spécialiser avec Symfony, Vue.js
                 </p>
               </div>
               <div class="section">
                 <h2>Expériences <br><span class="text-blue">professionelles</span></h2>
                 <p>
-                  <strong>2015 <i class="fas fa-long-arrow-alt-right"></i> 2021</strong>
+                  <strong>2013 <font-awesome-icon icon="fa-solid fa-right-long" /> 2022</strong>
                   <br>
-                  Fullstack Developer à temps plein chez <em>Webadev SPRL</em>
+                  Chauffeur routier en national : <em>Transports Roselier</em>
                 </p>
                 <ul class="experience-list">
-                  <li>Réalisations de sites web, d’applications web sous Vue.js et Bootstrap, CSS3, SASS</li>
-                  <li>Intégration Figma</li>
-                  <li>Animations CSS / JS</li>
-                  <li>Responsive design</li>
-                  <li>UI / UX Design</li>
-                  <li>Utilisation quotidienne de Git et Github</li>
                 </ul>
               </div>
               <div class="section">
@@ -139,6 +140,9 @@ h1 {
   margin: 0 0 1rem;
   font-size: 2.5rem;
   margin-bottom: .5rem;
+  @include m.xxl {
+    font-size: 2.1rem;
+  }
   @include m.lg {
     font-size: 2.1rem;
   }
@@ -152,6 +156,9 @@ h2 {
   letter-spacing: 1px;
   text-transform: uppercase;
   font-size: 24px;
+  @include m.xxl {
+    font-size: 20px;
+  }
   @include m.lg {
     font-size: 20px
   }
@@ -203,8 +210,16 @@ h2 {
   }
   p {
     font-size: 16px;
+    @include m.xxl {
+      font-size: 15px;
+    }
     @include m.lg {
       font-size: 15px;
+    }
+  }
+  .section {
+    a {
+      margin-bottom: 5px;
     }
   }
 }
@@ -216,6 +231,14 @@ h2 {
   margin: auto;
   display: block;
   margin-bottom: 50px;
+  @include m.xxl {
+    width: 130px;
+    height: 130px;
+  }
+  @include m.lg {
+    width: 130px;
+    height: 130px;
+  }
 }
 
 .skills {
@@ -224,6 +247,9 @@ h2 {
   font-size: 1.1rem;
   letter-spacing: 1px;
   margin: 0 0 1rem;
+  @include m.xxl {
+    font-size: 1rem;
+  }
   @include m.lg {
     font-size: 1rem;
   }
@@ -281,6 +307,9 @@ h2 {
   }
   .section {
     p {
+      @include m.xxl {
+        font-size: 16px;
+      }
       @include m.lg {
         font-size: 16px;
       }
@@ -288,12 +317,24 @@ h2 {
         font-size: 15px;
       }
     }
+    .description-formation {
+      position: relative;
+      bottom: 8px;
+      .superProf {
+        color: #079992;
+      }
+    }
   }
 }
 
 .experience-list {
   list-style-type: circle;
+  position: relative;
+  bottom: 8px;
   li {
+    @include m.xxl {
+      font-size: 16px;
+    }
     @include m.lg {
       font-size: 16px;
     }

@@ -1,7 +1,7 @@
 <template>
   <BaseTemplate>
-    <div v-if="!isLoading">
-      <div class="bg-page">
+    <div class="bg-page">
+      <div v-if="!isLoading">
         <h1 class="text-uppercase text-center">Mes technos</h1>
         <div class="d-flex justify-content-center">
           <div class="container-techno">
@@ -41,9 +41,14 @@ onMounted(async () => {
 
 .bg-page {
   background: var(--bg-page);
-  height: calc(100vh - 110px);
   padding-top: 70px;
+  height: calc(100vh - 110px);
+  @include m.lg {
+    min-height: 100%;
+    padding-top: 40px;
+  }
   @include m.sm {
+    height: 100%;
     padding-top: 40px;
   }
 }
