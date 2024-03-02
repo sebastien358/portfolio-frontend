@@ -6,6 +6,7 @@
             <img :src="picture.url">
           </div>
         </div>
+      <button @click="onClickDelete" type="button" class="button">Supprimer</button>
     </div>
   </div>
 </template>
@@ -27,6 +28,10 @@ onMounted(async () => {
   await technoAdminStore.getCurrentTechno(route.params.id)
   isLoading.value = false
 })
+
+const onClickDelete = async () => {
+  await technoAdminStore.deleteTechno()
+}
 </script>
 
 <style scoped lang="scss">

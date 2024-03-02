@@ -1,8 +1,6 @@
 import {defineStore} from "pinia";
 import axios from "axios";
 
-const BASE_ADMIN_URL= 'https://127.0.0.1:8000/admin/experience'
-
 export const useExperienceAdminStore = defineStore('experienceAdminStore', {
     state: () => {
         return {
@@ -22,7 +20,7 @@ export const useExperienceAdminStore = defineStore('experienceAdminStore', {
         },
         async getExperiences() {
             try {
-                const response = await axios.get(`${BASE_ADMIN_URL}/list`, {
+                const response = await axios.get(`https://127.0.0.1:8000/admin/experience/list`, {
                     headers: {
                         Authorization: 'Bearer ' + sessionStorage.getItem('token')
                     }
@@ -34,7 +32,7 @@ export const useExperienceAdminStore = defineStore('experienceAdminStore', {
         },
         async getCurrentExperience(id: number) {
             try {
-                const response = await axios.get(`${BASE_ADMIN_URL}/details/${id}`, {
+                const response = await axios.get(`https://127.0.0.1:8000/admin/experience/details/${id}`, {
                     headers: {
                         Authorization: 'Bearer ' + sessionStorage.getItem('token')
                     }
@@ -55,7 +53,7 @@ export const useExperienceAdminStore = defineStore('experienceAdminStore', {
             }
 
             try {
-                await axios.post(`${BASE_ADMIN_URL}/new`, formData,{
+                await axios.post(`https://127.0.0.1:8000/admin/experience/new`, formData,{
                     headers: {
                         Authorization: 'Bearer ' + sessionStorage.getItem('token')
                     }
@@ -75,7 +73,7 @@ export const useExperienceAdminStore = defineStore('experienceAdminStore', {
             }
 
             try {
-                await axios.post(`${BASE_ADMIN_URL}/update/${id}`, formData,{
+                await axios.post(`https://127.0.0.1:8000/admin/experience/update/${id}`, formData,{
                     headers: {
                         Authorization: 'Bearer ' + sessionStorage.getItem('token')
                     }

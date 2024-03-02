@@ -1,8 +1,6 @@
 import {defineStore} from "pinia";
 import axios from "axios";
 
-const BASE_ADMIN_URL= 'https://127.0.0.1:8000/admin/techno'
-
 export const useTechnoAdminStore = defineStore('technoAdminStore', {
     state: () => {
         return {
@@ -13,7 +11,7 @@ export const useTechnoAdminStore = defineStore('technoAdminStore', {
     actions: {
         async getTechno() {
             try {
-                const response = await axios.get(`${BASE_ADMIN_URL}/list`, {
+                const response = await axios.get(`https://127.0.0.1:8000/admin/techno/list`, {
                     headers: {
                         Authorization: 'Bearer ' + sessionStorage.getItem('token')
                     }
@@ -25,7 +23,7 @@ export const useTechnoAdminStore = defineStore('technoAdminStore', {
         },
         async getCurrentTechno(id: number) {
             try {
-                const response = await axios.get(`${BASE_ADMIN_URL}/details/${id}`, {
+                const response = await axios.get(`https://127.0.0.1:8000/admin/techno/details/${id}`, {
                     headers: {
                         Authorization: 'Bearer ' + sessionStorage.getItem('token')
                     }
@@ -47,12 +45,23 @@ export const useTechnoAdminStore = defineStore('technoAdminStore', {
             }
 
             try {
-                await axios.post(`${BASE_ADMIN_URL}/new`, formData, {
+                await axios.post(`https://127.0.0.1:8000/admin/techno/new`, formData, {
                     headers: {
                         Authorization: 'Bearer ' + sessionStorage.getItem('token')
                     }
                 })
             } catch (e) {
+                console.error(e)
+            }
+        },
+        async deleteTechno() {
+            try {
+                await axios.delete(`https://127.0.0.1:8000/admin/techno/delete/${this.editTechno.id}`, {
+                    headers: {
+                        Authorization: 'Bearer ' + sessionStorage.getItem('token')
+                    }
+                })
+            } catch(e) {
                 console.error(e)
             }
         }

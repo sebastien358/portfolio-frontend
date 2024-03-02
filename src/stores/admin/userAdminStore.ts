@@ -1,8 +1,6 @@
 import {defineStore} from "pinia";
 import axios from "axios";
 
-const BASE_ADMIN_URL= 'https://127.0.0.1:8000/admin/user'
-
 export const useUserAdminStore = defineStore('userAdminStore', {
     state: () => {
         return {
@@ -13,7 +11,7 @@ export const useUserAdminStore = defineStore('userAdminStore', {
     actions: {
         async getMe() {
             try {
-                const response = await axios.get(`${BASE_ADMIN_URL}/me`, {
+                const response = await axios.get(`https://127.0.0.1:8000/admin/user/me`, {
                     headers: {
                         Authorization: 'Bearer ' + sessionStorage.getItem('token')
                     }
@@ -37,7 +35,7 @@ export const useUserAdminStore = defineStore('userAdminStore', {
         },
         async getCurrentUser(id: number) {
             try {
-                const response = await axios.get(`${BASE_ADMIN_URL}/details/${id}`, {
+                const response = await axios.get(`https://127.0.0.1:8000/admin/user/details/${id}`, {
                     headers: {
                         Authorization: 'Bearer ' + sessionStorage.getItem('token')
                     }
@@ -52,7 +50,7 @@ export const useUserAdminStore = defineStore('userAdminStore', {
             formData.append('email', this.editUser.email)
             formData.append('newPassword', this.editUser.newPassword)
             try {
-                await axios.post(`${BASE_ADMIN_URL}/edit/${id}`, formData, {
+                await axios.post(`https://127.0.0.1:8000/admin/user/edit/${id}`, formData, {
                     headers: {
                         Authorization: 'Bearer ' + sessionStorage.getItem('token')
                     }
