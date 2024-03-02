@@ -60,11 +60,11 @@ const router = useRouter()
 
 const onSubmit = async () => {
   await projectAdminStore.projectCreate(pictures.value)
+  await router.push({name: 'admin-project-list'})
 }
 
 const onClickInputFiles = () => {
   pictures.value = inputFiles.value.files
-  console.log(pictures.value)
 }
 </script>
 

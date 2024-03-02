@@ -2,11 +2,13 @@
   <div v-if="!isLoading" class="w-100">
     <div class="d-flex align-items-center justify-content-center h-100">
         <div class="d-flex flex-wrap justify-content-center mt-5 container-picture">
-          <div v-for="picture in editTechno.pictures">
-            <img :src="picture.url">
+          <div class="d-flex flex-column align-items-center">
+            <div v-for="picture in editTechno.pictures">
+              <img :src="picture.url">
+            </div>
+            <button @click="onClickDelete" type="button" class="button">Delete</button>
           </div>
         </div>
-      <button @click="onClickDelete" type="button" class="button">Supprimer</button>
     </div>
   </div>
 </template>
@@ -14,7 +16,7 @@
 <script setup lang="ts">
 import {onMounted, ref} from "vue";
 import {useTechnoAdminStore} from "@/stores/admin/technoAdminStore";
-import {useRoute} from "vue-router";
+import {useRoute, useRouter} from "vue-router";
 import {storeToRefs} from "pinia";
 
 const isLoading = ref(true)
@@ -29,8 +31,11 @@ onMounted(async () => {
   isLoading.value = false
 })
 
+const router = useRouter()
+
 const onClickDelete = async () => {
   await technoAdminStore.deleteTechno()
+  await router.push({name: 'admin-techno-list'})
 }
 </script>
 
@@ -88,7 +93,7 @@ input[type=file]::file-selector-button:hover {
 }
 
 button {
-  background-color: #a29bfe;
+  background-color: red;
   color: white;
   border: 0;
   outline: none;

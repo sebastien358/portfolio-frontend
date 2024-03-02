@@ -81,6 +81,7 @@ h1 {
   }
   @include m.md {
     grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
     margin-top: 40px;
   }
   @include m.sm {

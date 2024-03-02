@@ -11,7 +11,7 @@ export const useProjectAdminStore = defineStore('projectAdminStore', {
     actions: {
         async getProducts() {
             try {
-                const response = await axios.get('https://127.0.0.1:8000/admin/project/list', {
+                const response = await axios.get('https://api.dymawonder.fr/admin/project/list', {
                     headers: {
                         Authorization: 'Bearer ' + sessionStorage.getItem('token')
                     }
@@ -23,7 +23,7 @@ export const useProjectAdminStore = defineStore('projectAdminStore', {
         },
         async getCurrentProduct(id: number) {
             try {
-                const response = await axios.get(`https://127.0.0.1:8000/admin/project/details/${id}`, {
+                const response = await axios.get(`https://api.dymawonder.fr/admin/project/details/${id}`, {
                     headers: {
                         Authorization: 'Bearer ' + sessionStorage.getItem('token')
                     }
@@ -54,7 +54,7 @@ export const useProjectAdminStore = defineStore('projectAdminStore', {
                 formData.append(`pictures_${i}`, pictures[i])
             }
             try {
-                await axios.post('https://127.0.0.1:8000/admin/project/new', formData, {
+                await axios.post('https://api.dymawonder.fr/admin/project/new', formData, {
                     headers: {
                         Authorization: 'Bearer ' + sessionStorage.getItem('token')
                     },
@@ -75,7 +75,7 @@ export const useProjectAdminStore = defineStore('projectAdminStore', {
                 formData.append(`pictures_${i}`, pictures[i])
             }
             try {
-                await axios.post(`https://127.0.0.1:8000/admin/project/update/${id}`, formData, {
+                await axios.post(`https://api.dymawonder.fr/admin/project/update/${id}`, formData, {
                     headers: {
                         Authorization: 'Bearer ' + sessionStorage.getItem('token')
                     },

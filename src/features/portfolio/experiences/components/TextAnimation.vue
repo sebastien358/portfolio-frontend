@@ -2,7 +2,7 @@
   <h2 data-text="Sébastien..">Sébastien..</h2>
 </template>
 
-<script setup lang="js">
+<script setup lang="ts">
 </script>
 
 <style scoped lang="scss">

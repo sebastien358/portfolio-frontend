@@ -56,10 +56,12 @@ const router = useRouter()
 
 const onSubmit = async () => {
   await experienceAdminStore.experienceCreate(pictures.value)
+  await router.push({name: 'admin-experience-list'})
 }
 
 const onClickInputFiles = () => {
   pictures.value = inputFiles.value.files
+
 }
 </script>
 

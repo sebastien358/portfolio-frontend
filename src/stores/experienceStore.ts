@@ -10,7 +10,7 @@ export const useExperienceStore = defineStore('experienceStore', {
     actions: {
         async getExperiences() {
             try {
-                const response = await axios.get(`https://127.0.0.1:8000/experience/list`)
+                const response = await axios.get(`https://api.dymawonder.fr/experience/list`)
                 this.experiences = response.data
             } catch(e) {
                 console.log(e)

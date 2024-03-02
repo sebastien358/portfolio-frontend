@@ -9,11 +9,11 @@
           <img v-if="project.pictures[0]" :src="project.pictures[0].url">
         </div>
         <div class="d-flex align-items-center justify-content-center project__logo">
-          <img v-if="project.pictures[1]" :src="project.pictures[1].url" class="icon">
-          <img v-if="project.pictures[2]" :src="project.pictures[2].url" class="icon">
-          <img v-if="project.pictures[3]" :src="project.pictures[3].url" class="icon">
-          <img v-if="project.pictures[4]" :src="project.pictures[4].url" class="icon-php">
-          <img v-if="project.pictures[5]" :src="project.pictures[5].url" class="icon-symfony">
+          <img src="@/assets/images/js.png" class="icon">
+          <img src="@/assets/images/vueJS_logo-22e665fe.png" class="icon">
+          <img src="@/assets/images/pinia.svg" class="icon">
+          <img src="@/assets/images/php_logo.png" class="icon-php">
+          <img src="@/assets/images/symfony_logo.png" class="icon-symfony">
         </div>
       </div>
     </div>

@@ -9,11 +9,11 @@
           <img v-if="experience.pictures[0]" :src="experience.pictures[0].url" class="img-card-front">
         </div>
         <div class="d-flex align-items-center flex-row justify-content-center">
-          <img v-if="experience.pictures[1]" :src="experience.pictures[1].url" class="icon">
-          <img v-if="experience.pictures[2]" :src="experience.pictures[2].url" class="icon">
-          <img v-if="experience.pictures[3]" :src="experience.pictures[3].url" class="icon">
-          <img v-if="experience.pictures[4]" :src="experience.pictures[4].url" class="icon">
-          <img v-if="experience.pictures[5]" :src="experience.pictures[5].url" class="icon">
+          <img src="@/assets/images/js.png" class="icon">
+          <img src="@/assets/images/vueJS_logo-22e665fe.png" class="icon">
+          <img src="@/assets/images/pinia.svg" class="icon">
+          <img src="@/assets/images/php_logo.png" class="icon">
+          <img src="@/assets/images/symfony_logo.png" class="icon">
         </div>
         <p class="card-text mt-4">Plus d'info...</p>
       </div>

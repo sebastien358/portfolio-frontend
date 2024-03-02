@@ -15,17 +15,20 @@
               <p v-if="editProject.objectif[0]" class="m-0 mb-1">{{editProject.objectif[0]}}</p>
               <p v-if="editProject.objectif[1]" class="m-0 mb-1">{{editProject.objectif[1]}}</p>
               <p v-if="editProject.objectif[2]" class="m-0">{{editProject.objectif[2]}}</p>
+              <p v-if="editProject.objectif[3]" class="m-0">{{editProject.objectif[3]}}</p>
+              <p v-if="editProject.objectif[4]" class="m-0">{{editProject.objectif[4]}}</p>
+              <p v-if="editProject.objectif[5]" class="m-0">{{editProject.objectif[5]}}</p>
             </div>
 
             <div class="d-flex align-items-center flex-row">
               <div class="d-flex flex-column">
                 <h2 class="mb-3">Technologies utilisées</h2>
                 <div class="d-flex flex-row align-content-center">
-                  <img v-if="editProject.pictures[1]" :src="editProject.pictures[1].url" class="logo-techno">
-                  <img v-if="editProject.pictures[2]" :src="editProject.pictures[2].url" class="logo-techno">
-                  <img v-if="editProject.pictures[3]" :src="editProject.pictures[3].url" class="logo-techno">
-                  <img v-if="editProject.pictures[4]" :src="editProject.pictures[4].url" class="logo-techno">
-                  <img v-if="editProject.pictures[5]" :src="editProject.pictures[5].url" class="logo-techno">
+                  <img src="@/assets/images/js.png" class="logo-techno">
+                  <img src="@/assets/images/vueJS_logo-22e665fe.png" class="logo-techno">
+                  <img src="@/assets/images/pinia.svg" class="logo-techno">
+                  <img src="@/assets/images/php_logo.png" class="logo-techno">
+                  <img src="@/assets/images/symfony_logo.png" class="logo-techno">
                 </div>
               </div>
             </div>
