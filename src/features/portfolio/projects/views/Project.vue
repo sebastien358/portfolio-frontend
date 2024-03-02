@@ -14,10 +14,10 @@
       </div>
     </div>
 
-    <div class="bg-page">
+    <!--<div class="bg-page">
       <div v-if="!isLoading">
         <h1 class="text-center text-uppercase">Mes autres projets</h1>
-        <div class="d-flex justify-content-center container-project">
+        <div class="d-flex flex-wrap justify-content-center container-project">
           <ProjectItem
             v-for="project in projects"
             :key="project.id"
@@ -25,7 +25,7 @@
           />
         </div>
       </div>
-    </div>
+    </div>-->
   </BaseTemplate>
 </template>
 
@@ -53,14 +53,17 @@ onMounted(async () => {
 
 .container-project {
   padding: 40px 20px 0 20px;
+  gap: 30px;
   @include m.sm {
     padding: 30px 10px 0 10px;
+    gap: 25px;
   }
 }
 
 .bg-page {
   background: var(--bg-page);
-  height: 100vh;
+  //min-height: 100vh;
+  height: 100%;
   h1 {
     padding-top: 70px;
     font-family: "Kalam", cursive;

@@ -24,42 +24,22 @@
               <div class="d-flex flex-column">
                 <h2 class="mb-3">Technologies utilisées</h2>
                 <div class="d-flex flex-row align-content-center">
-                  <img src="@/assets/images/js.png" class="logo-techno">
-                  <img src="@/assets/images/vueJS_logo-22e665fe.png" class="logo-techno">
-                  <img src="@/assets/images/pinia.svg" class="logo-techno">
-                  <img src="@/assets/images/php_logo.png" class="logo-techno">
-                  <img src="@/assets/images/symfony_logo.png" class="logo-techno">
+                  <img v-if="editProject.pictures[1]" :src="editProject.pictures[1].url" class="logo-techno">
+                  <img v-if="editProject.pictures[2]" :src="editProject.pictures[2].url" class="logo-techno">
+                  <img v-if="editProject.pictures[3]" :src="editProject.pictures[3].url" class="logo-techno">
+                  <img v-if="editProject.pictures[4]" :src="editProject.pictures[4].url" class="logo-techno">
+                  <img v-if="editProject.pictures[5]" :src="editProject.pictures[5].url" class="logo-techno">
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="d-flex justify-content-center mt-5 pt-3 project-details__carousel">
-          <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img :src="editProject.pictures[0].url" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img :src="editProject.pictures[0].url" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img :src="editProject.pictures[0].url" class="d-block w-100" alt="...">
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-        </div>
+        <!--<div class="d-flex justify-content-center flex-column flex-lg-row my-5 py-5 container-images">
+          <img :src="editProject.pictures[0].url" class="image-project-details">
+        </div>-->
 
-        <nav class="d-flex flex-column align-items-lg-center flex-lg-row justify-content-lg-around mt-5">
+        <nav class="d-flex flex-column align-items-lg-center flex-lg-row justify-content-lg-around pt-5 mt-5">
           <ul class="list-inline mb-4 mb-lg-0 fonctionnality">
             <h2>Fonctionnalités</h2>
             <li v-if="editProject.fonctionnality[0]">
@@ -198,44 +178,6 @@ onMounted(async () => {
       }
     }
   }
-  &__carousel {
-    width: 100%;
-    .carousel {
-      height: 1100px;
-      width: 100%;
-      @include m.xxl {
-        width: 100%;
-        height: 700px;
-      }
-      @include m.xl {
-        height: 600px;
-      }
-      @include m.lg {
-        height: 500px;
-      }
-      @include m.sm {
-        height: 500px;
-      }
-      img {
-        object-fit: cover;
-        height: 1100px;
-        width: 100%;
-        @include m.xxl {
-          width: 100%;
-          height: 700px;
-        }
-        @include m.xl {
-          height: 600px;
-        }
-        @include m.lg {
-          height: 500px;
-        }
-        @include m.sm {
-          height: 500px;
-        }
-      }
-    }
-  }
 }
 
 .link {
@@ -290,6 +232,13 @@ nav {
         font-size: 13px;
       }
     }
+  }
+}
+
+.container-images {
+  .image-project-details {
+    width: 100%;
+    height: auto;
   }
 }
 </style>

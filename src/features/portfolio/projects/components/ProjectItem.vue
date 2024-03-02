@@ -9,11 +9,11 @@
           <img v-if="project.pictures[0]" :src="project.pictures[0].url">
         </div>
         <div class="d-flex align-items-center justify-content-center project__logo">
-          <img src="@/assets/images/js.png" class="icon">
-          <img src="@/assets/images/vueJS_logo-22e665fe.png" class="icon">
-          <img src="@/assets/images/pinia.svg" class="icon">
-          <img src="@/assets/images/php_logo.png" class="icon-php">
-          <img src="@/assets/images/symfony_logo.png" class="icon-symfony">
+          <img v-if="project.pictures[1]" :src="project.pictures[1].url" class="icon">
+          <img v-if="project.pictures[2]" :src="project.pictures[2].url" class="icon">
+          <img v-if="project.pictures[3]" :src="project.pictures[3].url" class="icon">
+          <img v-if="project.pictures[4]" :src="project.pictures[4].url" class="icon">
+          <img v-if="project.pictures[5]" :src="project.pictures[5].url" class="icon">
         </div>
       </div>
     </div>
@@ -43,7 +43,7 @@ defineProps<{
     width: 450px;
   }
   @include m.sm {
-    width: 100%;
+    min-width: 100%;
   }
   &__title {
     height: 65px;
@@ -85,6 +85,7 @@ defineProps<{
       }
       @include m.sm {
         height: 230px;
+        width: 100%;
       }
     }
   }
@@ -97,24 +98,13 @@ defineProps<{
       height: 60px;
     }
     .icon {
-      width: 40px;
+      width: auto;
       height: 40px;
       margin: 0 8px;
       object-fit: cover;
       @include m.sm {
-        width: 35px;
         height: 35px;
       }
-    }
-    .icon-php {
-      width: 60px;
-      height: 40px;
-      margin: 0 8px;
-    }
-    .icon-symfony {
-      width: 40px;
-      height: 45px;
-      margin: 0 8px;
     }
   }
 }
