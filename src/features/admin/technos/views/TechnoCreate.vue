@@ -3,7 +3,7 @@
     <div class="d-flex align-items-center justify-content-center h-100">
       <form @submit.prevent="onSubmit">
         <div class="d-flex flex-column">
-          <input @change="onClickInputFiles" ref="inputFiles" type="file" required />
+          <input @change="onClickInputFiles" ref="inputFiles" type="file" required>
           <button type="submit">Send</button>
         </div>
       </form>

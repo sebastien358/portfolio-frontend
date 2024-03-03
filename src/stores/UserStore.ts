@@ -10,7 +10,7 @@ export const useUserStore = defineStore('userStore', {
             const formData = new FormData()
             formData.append('email', email)
             try {
-                await axios.post(`https://api.dymawonder.fr/request/reset-password`, formData)
+                await axios.post(`https://127.0.0.1:8000/request/reset-password`, formData)
             } catch(e) {
                 console.error(e)
             }
@@ -20,7 +20,7 @@ export const useUserStore = defineStore('userStore', {
             formData.append('password[first]', password)
             formData.append('password[second]', confirm)
             try {
-                await axios.post(`https://api.dymawonder.fr/reset-password/${token}`, formData)
+                await axios.post(`https://127.0.0.1:8000/reset-password/${token}`, formData)
             } catch(e) {
                 console.error(e)
             }

@@ -14,6 +14,10 @@
               <input v-model="editProject.url" type="url" name="year" id="year" required>
             </div>
             <div class="input-group mb-3">
+              <label for="url">url</label>
+              <input v-model="editProject.url" type="url" name="year" id="year" required>
+            </div>
+            <div class="input-group mb-3">
               <label for="objectif">Objectif</label>
               <textarea v-model="editProject.objectif" name="content" id="content" required></textarea>
             </div>

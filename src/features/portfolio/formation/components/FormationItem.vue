@@ -2,8 +2,8 @@
   <div class="card-portfolio">
     <div class="card-inner">
       <div class="card-front">
-        <h6 class="card-title m-0 mb-3">{{formation.year}}</h6>
-        <h3 class="m-0 mb-3">{{formation.diploma}}</h3>
+        <h6 class="card-title m-0">{{formation.year}}</h6>
+        <h3 class="m-0 my-3">{{formation.diploma}}</h3>
         <h4 class="m-0">{{formation.job}}</h4>
         <div class="d-flex flex-wrap justify-content-center container-image">
           <img v-if="formation.pictures[0]" :src="formation.pictures[0].url" class="img-card-front">
@@ -163,8 +163,7 @@ defineProps<{
     }
   }
   .icon {
-    width: 50px;
-    height: 50px;
+    height: 42px;
     margin: 0 7px;
     @include m.xxl {
       width: 45px;

@@ -60,7 +60,7 @@ onMounted(async () => {
 
 h1 {
   color: white;
-  font-size: 35px;
+  font-size: 40px;
   font-family: "Kalam", cursive;
   @include m.sm {
     font-size: 25px;

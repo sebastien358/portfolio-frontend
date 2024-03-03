@@ -13,7 +13,7 @@ export const useTechnoStore = defineStore('technoStore', {
     actions: {
         async getTechno() {
             try {
-                const response = await axios.get('https://api.dymawonder.fr/techno/list')
+                const response = await axios.get('https://127.0.0.1:8000/techno/list')
                 this.technos = response.data
             } catch(e) {
                 console.error(e)

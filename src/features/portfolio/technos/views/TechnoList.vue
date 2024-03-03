@@ -3,14 +3,12 @@
     <div class="bg-page">
       <div v-if="!isLoading">
         <h1 class="text-uppercase text-center">Mes technos</h1>
-        <div class="d-flex justify-content-center">
-          <div class="container-techno">
-            <TechnoItem
-              v-for="techno in technos"
-              :key="techno.id"
-              :techno="techno"
-            />
-          </div>
+        <div class="d-flex flex-wrap justify-content-center w-100 container-pictures">
+          <TechnoItem
+            v-for="techno in technos"
+            :key="techno.id"
+            :techno="techno"
+          />
         </div>
       </div>
     </div>
@@ -41,7 +39,7 @@ onMounted(async () => {
 
 .bg-page {
   background: var(--bg-page);
-  padding-top: 70px;
+  padding: 70px 20px 20px 20px;
   height: calc(100vh - 110px);
   @include m.lg {
     min-height: 100%;
@@ -62,32 +60,17 @@ h1 {
   }
 }
 
-.container-techno {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 60px;
-  margin-top: 80px;
-  @include m.xxl {
-    grid-template-columns: repeat(5, 1fr);
-    margin-top: 50px;
-  }
-  @include m.xxl {
-    grid-template-columns: repeat(4, 1fr);
+.container-pictures {
+  margin-top: 70px;
+  gap: 50px;
+  @include m.xl {
     margin-top: 50px;
   }
   @include m.lg {
-    grid-template-columns: repeat(3, 1fr);
-    margin-top: 50px;
-  }
-  @include m.md {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 35px;
     margin-top: 40px;
   }
   @include m.sm {
-    grid-template-columns: repeat(1, 1fr);
-    margin-top: 0;
-    margin-bottom: 40px;
+    margin-top: 30px;
   }
 }
 </style>

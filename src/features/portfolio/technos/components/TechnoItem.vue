@@ -20,18 +20,14 @@ defineProps<{
 .techno {
   .img {
     transition: all 1s ease;
-    width: 160px;
-    height: 160px;
+    height: 150px;
     @include m.xl {
-      width: 130px;
       height: 130px;
     }
     @include m.lg {
-      width: 130px;
       height: 130px;
     }
     @include m.sm {
-      width: 100px;
       height: 100px;
     }
     &:hover {

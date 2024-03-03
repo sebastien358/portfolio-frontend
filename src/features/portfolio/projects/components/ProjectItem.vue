@@ -96,12 +96,11 @@ defineProps<{
       height: 60px;
     }
     .icon {
-      width: auto;
-      height: 40px;
+      height: 39px;
       margin: 0 8px;
       object-fit: cover;
       @include m.sm {
-        height: 35px;
+        height: 32px;
       }
     }
   }

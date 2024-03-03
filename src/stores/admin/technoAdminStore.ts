@@ -11,7 +11,7 @@ export const useTechnoAdminStore = defineStore('technoAdminStore', {
     actions: {
         async getTechno() {
             try {
-                const response = await axios.get(`https://api.dymawonder.fr/admin/techno/list`, {
+                const response = await axios.get(`https://127.0.0.1:8000/admin/techno/list`, {
                     headers: {
                         Authorization: 'Bearer ' + sessionStorage.getItem('token')
                     }
@@ -23,7 +23,7 @@ export const useTechnoAdminStore = defineStore('technoAdminStore', {
         },
         async getCurrentTechno(id: number) {
             try {
-                const response = await axios.get(`https://api.dymawonder.fr/admin/techno/details/${id}`, {
+                const response = await axios.get(`https://127.0.0.1:8000/admin/techno/details/${id}`, {
                     headers: {
                         Authorization: 'Bearer ' + sessionStorage.getItem('token')
                     }
@@ -45,7 +45,7 @@ export const useTechnoAdminStore = defineStore('technoAdminStore', {
             }
 
             try {
-                await axios.post(`https://api.dymawonder.fr/admin/techno/new`, formData, {
+                await axios.post(`https://127.0.0.1:8000/admin/techno/new`, formData, {
                     headers: {
                         Authorization: 'Bearer ' + sessionStorage.getItem('token')
                     }
@@ -56,7 +56,7 @@ export const useTechnoAdminStore = defineStore('technoAdminStore', {
         },
         async deleteTechno() {
             try {
-                await axios.delete(`https://api.dymawonder.fr/admin/techno/delete/${this.editTechno.id}`, {
+                await axios.delete(`https://127.0.0.1:8000/admin/techno/delete/${this.editTechno.id}`, {
                     headers: {
                         Authorization: 'Bearer ' + sessionStorage.getItem('token')
                     }
