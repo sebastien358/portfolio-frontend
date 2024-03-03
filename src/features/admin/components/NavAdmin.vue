@@ -55,12 +55,12 @@
       <ul class="list-inline">
         <h3>Formations</h3>
         <li>
-          <router-link to="#" class="link">
+          <router-link :to="{name: 'admin-formation-list'}" class="link">
             Les formations
           </router-link>
         </li>
         <li>
-          <router-link to="#" class="link">
+          <router-link :to="{name: 'admin-formation-create'}" class="link">
             Ajouter une formation
           </router-link>
         </li>

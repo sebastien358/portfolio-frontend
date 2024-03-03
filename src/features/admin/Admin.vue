@@ -47,6 +47,9 @@ const state = reactive<{
 
 .admin {
   height: calc(100vh - 110px);
+  @include m.sm {
+    height: 100%;
+  }
 }
 
 button {

@@ -11,7 +11,7 @@
         <div class="mt-5 project-details__objectif">
           <h2>Objectif</h2>
           <div class="d-flex flex-column flex-lg-row align-items-lg-center justify-content-between">
-            <div class="d-flex flex-column mb-5 mb-lg-0">
+            <div class="d-flex flex-column mb-5 mb-lg-0 me-0 me-lg-5">
               <p v-if="editProject.objectif[0]" class="m-0 mb-1">{{editProject.objectif[0]}}</p>
               <p v-if="editProject.objectif[1]" class="m-0 mb-1">{{editProject.objectif[1]}}</p>
               <p v-if="editProject.objectif[2]" class="m-0">{{editProject.objectif[2]}}</p>
@@ -39,7 +39,7 @@
           <img :src="editProject.pictures[0].url" class="image-project-details">
         </div>-->
 
-        <nav class="d-flex flex-column align-items-lg-center flex-lg-row justify-content-lg-around pt-5 mt-5">
+        <nav class="d-flex flex-column align-items-lg-center flex-lg-row justify-content-lg-around pt-2 pt-lg-5 mt-5">
           <ul class="list-inline mb-4 mb-lg-0 fonctionnality">
             <h2>Fonctionnalités</h2>
             <li v-if="editProject.fonctionnality[0]">

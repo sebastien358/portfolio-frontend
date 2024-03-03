@@ -6,7 +6,7 @@
           <h3 class="m-0">{{project.name}}</h3>
         </div>
         <div class="project__completed">
-          <img v-if="project.pictures[0]" :src="project.pictures[0].url">
+          <img v-if="project.pictures[0]" :src="project.pictures[0].url" class="img-project-item">
         </div>
         <div class="d-flex align-items-center justify-content-center project__logo">
           <img v-if="project.pictures[1]" :src="project.pictures[1].url" class="icon">
@@ -43,7 +43,7 @@ defineProps<{
     width: 450px;
   }
   @include m.sm {
-    min-width: 100%;
+    width: 340px;
   }
   &__title {
     height: 65px;
@@ -63,7 +63,6 @@ defineProps<{
   }
   &__completed {
     width: 100%;
-    height: 300px;
     @include m.xxl {
       height: 270px;
     }
@@ -73,10 +72,10 @@ defineProps<{
     @include m.sm {
       height: 230px;
     }
-    img {
+    .img-project-item {
       height: 300px;
-      width: 100%;
       object-fit: cover;
+      width: 100%;
       @include m.xxl {
         height: 270px;
       }
@@ -85,7 +84,6 @@ defineProps<{
       }
       @include m.sm {
         height: 230px;
-        width: 100%;
       }
     }
   }

@@ -6,8 +6,12 @@
           <p class="title">Project Create</p>
           <form @submit.prevent="onSubmit" class="form">
             <div class="input-group mb-3">
-              <label for="username">Year</label>
+              <label for="username">Name</label>
               <input v-model="editProject.name" type="text" name="year" id="year" required>
+            </div>
+            <div class="input-group mb-3">
+              <label for="url">url site</label>
+              <input v-model="editProject.urlSite" type="url" name="year-site" id="url-site" required>
             </div>
             <div class="input-group mb-3">
               <label for="url">url</label>

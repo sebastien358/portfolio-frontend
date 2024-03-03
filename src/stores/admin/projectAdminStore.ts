@@ -37,6 +37,7 @@ export const useProjectAdminStore = defineStore('projectAdminStore', {
             this.editProject = {
                 name: '',
                 url: '',
+                urlSite: '',
                 objectif: '',
                 fonctionnality: '',
                 competence: '',
@@ -47,6 +48,7 @@ export const useProjectAdminStore = defineStore('projectAdminStore', {
             const formData = new FormData()
             formData.append('name', this.editProject.name)
             formData.append('url', this.editProject.url)
+            formData.append('urlSite', this.editProject.urlSite)
             formData.append('objectif', this.editProject.objectif)
             formData.append('fonctionnality', this.editProject.fonctionnality)
             formData.append('competence', this.editProject.competence)
@@ -58,7 +60,7 @@ export const useProjectAdminStore = defineStore('projectAdminStore', {
                     headers: {
                         Authorization: 'Bearer ' + sessionStorage.getItem('token')
                     },
-                    'Content-type': 'multipart:form-data'
+                    'Content-type': 'multipart/form-data'
                 })
             } catch(e) {
                 console.error(e)
@@ -79,7 +81,7 @@ export const useProjectAdminStore = defineStore('projectAdminStore', {
                     headers: {
                         Authorization: 'Bearer ' + sessionStorage.getItem('token')
                     },
-                    'Content-type': 'multipart:form-data'
+                    'Content-type': 'multipart/form-data'
                 })
             } catch(e) {
                 console.error(e)

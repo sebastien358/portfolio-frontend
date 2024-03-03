@@ -74,7 +74,10 @@ onMounted(async () => {
 
 .home {
   .img-banniere {
-    max-height: 1600px;
+    max-height: 1300px;
+    @include m.sm {
+      height: auto;
+    }
   }
   .dev-web {
     display: flex;
@@ -112,9 +115,9 @@ onMounted(async () => {
       font-weight: 800;
     }
     .button {
-      border: 1px solid #57606f;
-      color: #57606f;
-      background-color: transparent;
+      border: 1px solid #70a1ff;
+      background-color: #70a1ff;
+      color: white;
       padding: 10px;
       transition: all 250ms ease;
       text-decoration: none;
@@ -125,7 +128,7 @@ onMounted(async () => {
       }
       &:hover {
         border: 1px solid #70a1ff;
-        background-color: #70a1ff;
+        background-color: transparent;
         color: white;
         transform: scale(1.07);
       }
@@ -147,6 +150,7 @@ onMounted(async () => {
           font-size: 25px;
         }
         @include m.sm {
+          margin-top: 30px;
           margin-bottom: 30px;
           font-size: 22px;
         }

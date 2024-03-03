@@ -13,19 +13,6 @@
         </div>
       </div>
     </div>
-
-    <!--<div class="bg-page">
-      <div v-if="!isLoading">
-        <h1 class="text-center text-uppercase">Mes autres projets</h1>
-        <div class="d-flex flex-wrap justify-content-center container-project">
-          <ProjectItem
-            v-for="project in projects"
-            :key="project.id"
-            :project="project"
-          />
-        </div>
-      </div>
-    </div>-->
   </BaseTemplate>
 </template>
 
@@ -55,15 +42,15 @@ onMounted(async () => {
   padding: 40px 20px 0 20px;
   gap: 30px;
   @include m.sm {
-    padding: 30px 10px 0 10px;
+    padding: 20px 10px 0 10px;
     gap: 25px;
   }
 }
 
 .bg-page {
   background: var(--bg-page);
-  //min-height: 100vh;
   height: 100%;
+  margin-bottom: 20px;
   h1 {
     padding-top: 70px;
     font-family: "Kalam", cursive;

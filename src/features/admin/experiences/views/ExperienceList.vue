@@ -11,7 +11,7 @@
           <th scope="col">Actions</th>
         </tr>
         </thead>
-        <tbody v-for="experience in experiences">
+        <tbody v-for="experience in experiences" :key="experience.id">
         <tr>
           <td>{{experience.job}}</td>
           <td>{{experience.subject}}</td>
