@@ -11,7 +11,7 @@ export const useProjectAdminStore = defineStore('projectAdminStore', {
     actions: {
         async getProducts() {
             try {
-                const response = await axios.get('https://127.0.0.1:8000/admin/project/list', {
+                const response = await axios.get('https://api.dymawonder.fr/admin/project/list', {
                     headers: {
                         Authorization: 'Bearer ' + sessionStorage.getItem('token')
                     }
@@ -23,7 +23,7 @@ export const useProjectAdminStore = defineStore('projectAdminStore', {
         },
         async getCurrentProduct(id: number) {
             try {
-                const response = await axios.get(`https://127.0.0.1:8000/admin/project/details/${id}`, {
+                const response = await axios.get(`https://api.dymawonder.fr/admin/project/details/${id}`, {
                     headers: {
                         Authorization: 'Bearer ' + sessionStorage.getItem('token')
                     }
@@ -56,7 +56,7 @@ export const useProjectAdminStore = defineStore('projectAdminStore', {
                 formData.append(`pictures_${i}`, pictures[i])
             }
             try {
-                await axios.post('https://127.0.0.1:8000/admin/project/new', formData, {
+                await axios.post('https://api.dymawonder.fr/admin/project/new', formData, {
                     headers: {
                         Authorization: 'Bearer ' + sessionStorage.getItem('token')
                     },
@@ -65,6 +65,8 @@ export const useProjectAdminStore = defineStore('projectAdminStore', {
             } catch(e) {
                 console.error(e)
             }
+
+            await this.getProducts()
         },
         async projectUpdate(id: number, pictures: Object) {
             const formData = new FormData()
@@ -78,15 +80,45 @@ export const useProjectAdminStore = defineStore('projectAdminStore', {
                 formData.append(`pictures_${i}`, pictures[i])
             }
             try {
-                await axios.post(`https://127.0.0.1:8000/admin/project/update/${id}`, formData, {
+                const response = await axios.post(`https://api.dymawonder.fr/admin/project/update/${id}`, formData, {
                     headers: {
                         Authorization: 'Bearer ' + sessionStorage.getItem('token')
                     },
                     'Content-type': 'multipart/form-data'
                 })
+                this.editProject.pictures = response.data.pictures
             } catch(e) {
                 console.error(e)
             }
+
+            await this.getProducts()
+        },
+        async deleteProject(id: number) {
+            try {
+                await axios.delete(`https://api.dymawonder.fr/admin/project/delete/${id}`, {
+                    headers: {
+                        Authorization: 'Bearer ' + sessionStorage.getItem('token')
+                    }
+                })
+            } catch(e) {
+                console.error(e)
+            }
+
+            await this.getProducts()
+        },
+        async deletePictureProject(id: number) {
+            try {
+                await axios.delete(`https://api.dymawonder.fr/admin/project/delete/picture/${id}`, {
+                    headers: {
+                        Authorization: 'Bearer ' + sessionStorage.getItem('token')
+                    }
+                })
+                this.editProject.pictures = this.editProject.pictures.filter(picture => picture.id !== id)
+            } catch(e) {
+                console.error(e)
+            }
+
+            await this.getProducts()
         }
     }
 })

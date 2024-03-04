@@ -44,8 +44,8 @@ defineProps<{
 // animation card
 
 .card-portfolio {
-  width: 480px;
-  height: 650px;
+  width: 450px;
+  height: 630px;
   @include m.xxl {
     width: 420px;
     height: 610px;

@@ -1,7 +1,7 @@
 <template>
   <BaseTemplate>
-    <div v-if="!isLoading" class="bg-page">
-      <div class="project-details">
+    <div class="bg-page">
+      <div v-if="!isLoading" class="project-details">
         <h1 class="text-center">{{editProject.name}}</h1>
         <a :href="editProject.url" target="_blank" class="mt-5 link">
           <font-awesome-icon icon="fa-solid fa-eye" />
@@ -39,7 +39,7 @@
           <img :src="editProject.pictures[0].url" class="image-project-details">
         </div>-->
 
-        <nav class="d-flex flex-column align-items-lg-center flex-lg-row justify-content-lg-around pt-2 pt-lg-5 mt-5">
+        <nav class="d-flex flex-column align-items-lg-center flex-lg-row justify-content-lg-around container-fonctionnality">
           <ul class="list-inline mb-4 mb-lg-0 fonctionnality">
             <h2>Fonctionnalités</h2>
             <li v-if="editProject.fonctionnality[0]">
@@ -239,6 +239,16 @@ nav {
   .image-project-details {
     width: 100%;
     height: auto;
+  }
+}
+
+.container-fonctionnality {
+  margin-top: 150px;
+  @include m.lg {
+    margin-top: 50px;
+  }
+  @include m.sm {
+    margin-top: 50px;
   }
 }
 </style>

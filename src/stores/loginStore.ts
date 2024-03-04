@@ -18,7 +18,7 @@ export const useLoginStore = defineStore('loginStore', {
     async login() {
       const userAdminStore = useUserAdminStore()
       try {
-        const response = await axios.post(`https://127.0.0.1:8000/api/login_check`, {
+        const response = await axios.post(`https://api.dymawonder.fr/api/login_check`, {
           username: this.editLogin.username,
           password: this.editLogin.password
         })

@@ -43,10 +43,11 @@ const state = reactive<{
 
 .bg-page {
   background: var(--bg-page);
+  height: 100%;
 }
 
 .admin {
-  height: calc(100vh - 110px);
+  height: 100%;
   @include m.sm {
     height: 100%;
   }

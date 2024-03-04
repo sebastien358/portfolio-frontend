@@ -61,6 +61,8 @@ export const useExperienceAdminStore = defineStore('experienceAdminStore', {
             } catch(e) {
                 console.error(e)
             }
+
+            await this.getExperiences()
         },
         async updateExperience(id: number, pictures: Object) {
             const formData = new FormData()
@@ -73,7 +75,21 @@ export const useExperienceAdminStore = defineStore('experienceAdminStore', {
             }
 
             try {
-                await axios.post(`https://127.0.0.1:8000/admin/experience/update/${id}`, formData,{
+                const response = await axios.post(`https://127.0.0.1:8000/admin/experience/update/${id}`, formData,{
+                    headers: {
+                        Authorization: 'Bearer ' + sessionStorage.getItem('token')
+                    }
+                })
+                this.editExperience.pictures = response.data.pictures
+            } catch(e) {
+                console.error(e)
+            }
+
+            await this.getExperiences()
+        },
+        async deleteExperience(id: number) {
+            try {
+                await axios.delete(`https://api.dymawonder.fr/admin/experience/delete/${id}`, {
                     headers: {
                         Authorization: 'Bearer ' + sessionStorage.getItem('token')
                     }
@@ -81,6 +97,22 @@ export const useExperienceAdminStore = defineStore('experienceAdminStore', {
             } catch(e) {
                 console.error(e)
             }
+
+            await this.getExperiences()
+        },
+        async deletePictureExperience(id: number) {
+            try {
+                await axios.delete(`https://api.dymawonder.fr/admin/experience/delete/picture/${id}`, {
+                    headers: {
+                        Authorization: 'Bearer ' + sessionStorage.getItem('token')
+                    }
+                })
+                this.editExperience.pictures = this.editExperience.pictures.filter(picture => picture.id !== id)
+            } catch(e) {
+                console.error(e)
+            }
+
+            await this.getExperiences()
         }
     }
 })

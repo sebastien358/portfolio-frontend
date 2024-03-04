@@ -17,7 +17,8 @@ import {
     faPenToSquare,
     faRightFromBracket,
     faRightLong,
-    faRightToBracket
+    faRightToBracket,
+    faTrash,
 } from "@fortawesome/free-solid-svg-icons";
 import {faGithub, faGoogle, faLinkedin, faLinkedinIn} from "@fortawesome/free-brands-svg-icons";
 
@@ -32,7 +33,8 @@ library.add(
     faEye,
     faLinkedin,
     faRightLong,
-    faGoogle
+    faGoogle,
+    faTrash
 )
 
 const app = createApp(App)

@@ -82,7 +82,8 @@ defineProps<{
   background-color: rgba(255, 255, 255, 0.20);
   min-width: 200px;
   padding: 25px 15px;
-  height: calc(100vh - 110px);
+  //height: calc(100vh - 110px);
+  height: 100%;
   @include m.lg {
     position: fixed;
     background-color: rgba(0, 0, 0, 0.40);

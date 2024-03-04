@@ -1,6 +1,6 @@
 <template>
   <footer class="d-flex align-items-center justify-content-center">
-    <router-link to="#" class="link">
+    <router-link :to="{name: 'illustration-source'}" class="link">
       <p class="m-0">Sources des illustrations</p>
     </router-link>
   </footer>

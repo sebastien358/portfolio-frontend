@@ -12,7 +12,7 @@ export const useFormationAdminStore = defineStore('formationAdminStore', {
     actions: {
         async getFormations() {
             try {
-                 const response = await axios.get('https://127.0.0.1:8000/admin/formation/list', {
+                 const response = await axios.get('https://api.dymawonder.fr/admin/formation/list', {
                     headers: {
                         Authorization: 'Bearer ' + sessionStorage.getItem('token')
                     }
@@ -24,7 +24,7 @@ export const useFormationAdminStore = defineStore('formationAdminStore', {
         },
         async getCurrentFormation(id: number){
             try {
-                const response = await axios.get(`https://127.0.0.1:8000/admin/formation/details/${id}`, {
+                const response = await axios.get(`https://api.dymawonder.fr/admin/formation/details/${id}`, {
                     headers: {
                         Authorization: 'Bearer ' + sessionStorage.getItem('token')
                     }
@@ -53,7 +53,7 @@ export const useFormationAdminStore = defineStore('formationAdminStore', {
                 formData.append(`pictures_${i}`, pictures[i])
             }
             try {
-                await axios.post('https://127.0.0.1:8000/admin/formation/new', formData, {
+                await axios.post('https://api.dymawonder.fr/admin/formation/new', formData, {
                     headers: {
                         Authorization: 'Bearer ' + sessionStorage.getItem('token')
                     },
@@ -75,12 +75,13 @@ export const useFormationAdminStore = defineStore('formationAdminStore', {
                 formData.append(`pictures_${i}`, pictures[i])
             }
             try {
-                await axios.post(`https://127.0.0.1:8000/admin/formation/update/${id}`, formData, {
+                const response = await axios.post(`https://api.dymawonder.fr/admin/formation/update/${id}`, formData, {
                     headers: {
                         Authorization: 'Bearer ' + sessionStorage.getItem('token')
                     },
                     'Content-type': 'multipart/form-data'
                 })
+                this.editFormation.pictures = response.data.pictures
             } catch(e) {
                 console.error(e)
             }
@@ -89,7 +90,7 @@ export const useFormationAdminStore = defineStore('formationAdminStore', {
         },
         async deleteFormation(id: number) {
             try {
-                await axios.delete(`https://127.0.0.1:8000/admin/formation/delete/${id}`, {
+                await axios.delete(`https://api.dymawonder.fr/admin/formation/delete/${id}`, {
                     headers: {
                         Authorization: 'Bearer ' + sessionStorage.getItem('token')
                     }
@@ -100,5 +101,19 @@ export const useFormationAdminStore = defineStore('formationAdminStore', {
 
             await this.getFormations()
         },
+        async deletePictureFormation(id: number) {
+            try {
+                await axios.delete(`https://api.dymawonder.fr/admin/formation/delete/picture/${id}`, {
+                    headers: {
+                        Authorization: 'Bearer ' + sessionStorage.getItem('token')
+                    }
+                })
+                this.editFormation.pictures = this.editFormation.pictures.filter(picture => picture.id !== id)
+            } catch(e) {
+                console.error(e)
+            }
+
+            await this.getFormations()
+        }
     }
 })

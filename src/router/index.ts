@@ -12,6 +12,7 @@ import {ADMIN_ROUTES} from "@/features/admin/router/admin.routes";
 import RequestPassword from "@/components/resetPassword/views/requestPassword.vue";
 import ResetPassword from "@/components/resetPassword/views/ResetPassword.vue";
 import TechnoList from "@/features/portfolio/technos/views/TechnoList.vue";
+import IllustrationSource from "@/components/illustrationSource/IllustrationSource.vue";
 
 export const router = createRouter({
     history: createWebHistory(),
@@ -28,6 +29,8 @@ export const router = createRouter({
         {path: '/admin', name: 'admin', meta: {isAdmin: true}, component: Admin, children: ADMIN_ROUTES},
         {path: '/request-password', name: 'request-password', component: RequestPassword},
         {path: '/reset-password/:token', component: ResetPassword},
+        {path: '/illustration-source', name: 'illustration-source', component: IllustrationSource}
+
     ]
 })
 

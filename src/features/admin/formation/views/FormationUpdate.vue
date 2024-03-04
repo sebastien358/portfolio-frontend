@@ -1,6 +1,6 @@
 <template>
   <div v-if="!isLoading" class="w-100 h-100">
-    <div class="d-flex justify-content-center flex-column align-items-center h-100">
+    <div class="d-flex justify-content-center flex-column align-items-center formation-update">
       <div class="d-flex justify-content-center align-items-center w-100">
         <div class="form-container">
           <p class="title">Formation Update</p>
@@ -32,12 +32,15 @@
 
       <div class="d-flex flex-wrap justify-content-center container-pictures">
         <div v-for="picture in editFormation.pictures">
-          <img :src="picture.url" class="pictures">
+          <div class="d-flex flex-column align-items-center">
+            <img :src="picture.url" class="pictures">
+            <font-awesome-icon @click="onClickDeletePicture(picture.id)" icon="fa-solid fa-trash" class="icon-delete-picture" />
+          </div>
         </div>
       </div>
 
-      <div class="d-flex justify-content-center">
-        <button @click="onClickDelete" class="button">Delete</button>
+      <div class="d-flex justify-content-center mb-3">
+        <button @click="onClickDelete" class="button-delete-pictures">Delete</button>
       </div>
     </div>
   </div>
@@ -80,10 +83,21 @@ const onClickDelete = async () => {
   await formationAdminStore.deleteFormation(route.params.id)
   await router.push({name: 'admin-formation-list'})
 }
+
+const onClickDeletePicture = async (id: number) => {
+  await formationAdminStore.deletePictureFormation(id)
+}
 </script>
 
 <style scoped lang="scss">
 @use '@/assets/css/mixins' as m;
+
+.formation-update {
+  height: 100%;
+  @include m.sm {
+    height: initial;
+  }
+}
 
 .form-container {
   width: 550px;
@@ -119,21 +133,30 @@ const onClickDelete = async () => {
 }
 
 .container-pictures {
-  gap: 15px;
-  margin: 25px 10px;
+  gap: 35px;
+  margin: 50px 10px;
+  @include m.sm {
+    margin: 40px 10px;
+  }
   .pictures {
-    height: 60px;
+    height: 80px;
     @include m.sm {
       height: 40px;
       width: 100%;
     }
   }
+  .icon-delete-picture {
+    cursor: pointer;
+    margin-top: 15px;
+    color: #d63031;
+  }
 }
 
-button {
+.button-delete-pictures {
   background: red;
   padding: 8px;
   font-size: 14px;
   color: white;
+  border: 0;
 }
 </style>

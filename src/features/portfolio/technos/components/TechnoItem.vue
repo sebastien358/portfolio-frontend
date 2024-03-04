@@ -25,10 +25,10 @@ defineProps<{
       height: 130px;
     }
     @include m.lg {
-      height: 130px;
+      height: 100px;
     }
     @include m.sm {
-      height: 100px;
+      height: 60px;
     }
     &:hover {
       transform: scale(2);

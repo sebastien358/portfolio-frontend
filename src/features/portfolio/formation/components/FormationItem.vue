@@ -74,8 +74,8 @@ defineProps<{
 @use '@/assets/css/mixins' as m;
 
 .card-portfolio {
-  width: 480px;
-  height: 650px;
+  width: 450px;
+  height: 600px;
   @include m.sm {
     width: 100%;
     height: 470px;
@@ -145,7 +145,7 @@ defineProps<{
   .container-image {
     margin: 40px 0;
     @include m.sm {
-      margin: 35px 0;
+      margin: 25px 0;
     }
     .img-card-front {
       height: 40px;

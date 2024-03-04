@@ -1,9 +1,8 @@
 <template>
-  <div v-if="!isLoading" class="w-100">
-    <div class="mx-2 h-100">
-      <div class="d-flex justify-content-center align-items-center w-100 h-100">
+  <div v-if="!isLoading" class="w-100 h-100">
+      <div class="d-flex flex-column justify-content-center align-items-center w-100 project-update">
         <div class="form-container">
-          <p class="title">Project Create</p>
+          <p class="title">Project Update</p>
           <form @submit.prevent="onSubmit" class="form">
             <div class="input-group mb-3">
               <label for="username">Year</label>
@@ -36,8 +35,20 @@
             <button type="submit" class="sign">Send</button>
           </form>
         </div>
+
+        <div class="d-flex flex-wrap justify-content-center container-pictures">
+          <div v-for="picture in editProject.pictures">
+            <div class="d-flex flex-column align-items-center">
+              <img :src="picture.url" class="img-update">
+              <font-awesome-icon @click="onClickDeletePicture(picture.id)" icon="fa-solid fa-trash" class="icon-delete-picture" />
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-center mb-4">
+          <button @click="onClickDelete" class="button-delete">Delete</button>
+        </div>
       </div>
-    </div>
   </div>
 </template>
 
@@ -72,10 +83,45 @@ const onSubmit = async () => {
 const onClickInputFiles = () => {
   pictures.value = inputFiles.value.files
 }
+
+const onClickDelete = async () => {
+  await projectAdminStore.deleteProject(route.params.id)
+  await router.push({name: 'admin-project-list'})
+}
+
+const onClickDeletePicture = async (id: number) => {
+  await projectAdminStore.deletePictureProject(id)
+}
 </script>
 
 <style scoped lang="scss">
 @use '@/assets/css/mixins' as m;
+
+.project-update {
+  height: 100%;
+  //margin: 0 20px 40px 20px;
+  @include m.sm {
+    //margin: 0 20px 40px 20px;
+    height: initial;
+    margin-right: 20px;
+  }
+  .container-pictures {
+    //margin: 40px 20px 40px 20px;
+    gap: 20px;
+    .img-update {
+      height: 300px;
+      width: 300px;
+      @include m.sm {
+        width: 100%;
+      }
+    }
+    .icon-delete-picture {
+      color: red;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+  }
+}
 
 .form-container {
   width: 550px;
@@ -83,5 +129,13 @@ const onClickInputFiles = () => {
   @include m.sm {
     width: 100%;
   }
+}
+
+.button-delete {
+  background-color: red;
+  color: white;
+  font-size: 13px;
+  padding: 7px;
+  border: 0;
 }
 </style>

@@ -11,7 +11,7 @@ export const useProjectStore = defineStore('projectStore', {
     actions: {
        async getProducts() {
            try {
-               const response = await axios.get('https://127.0.0.1:8000/project/list')
+               const response = await axios.get('https://api.dymawonder.fr/project/list')
                this.projects = response.data
            } catch(e) {
                console.error(e)
@@ -19,7 +19,7 @@ export const useProjectStore = defineStore('projectStore', {
        },
         async getCurrentProduct(id: number) {
             try {
-                const response = await axios.get(`https://127.0.0.1:8000/project/details/${id}`, {
+                const response = await axios.get(`https://api.dymawonder.fr/project/details/${id}`, {
                     headers: {
                         Authorization: 'Bearer ' + sessionStorage.getItem('token')
                     }
