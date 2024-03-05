@@ -9,8 +9,8 @@
               <input v-model="editProject.name" type="text" name="year" id="year" required>
             </div>
             <div class="input-group mb-3">
-              <label for="url">url</label>
-              <input v-model="editProject.url" type="url" name="year" id="year" required>
+              <label for="url">url site</label>
+              <input v-model="editProject.urlSite" type="url" name="year-site" id="url-site" required>
             </div>
             <div class="input-group mb-3">
               <label for="url">url</label>

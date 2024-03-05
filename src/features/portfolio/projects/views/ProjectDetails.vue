@@ -5,6 +5,11 @@
         <h1 class="text-center">{{editProject.name}}</h1>
         <a :href="editProject.url" target="_blank" class="mt-5 link">
           <font-awesome-icon icon="fa-solid fa-eye" />
+          <span>Voir le site internet</span>
+        </a>
+
+        <a :href="editProject.urlSite" target="_blank" class="mt-3 link">
+          <font-awesome-icon icon="fa-brands fa-github" />
           <span>Voir le dépot</span>
         </a>
 

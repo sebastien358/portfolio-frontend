@@ -1,7 +1,7 @@
 <template>
   <BaseTemplate>
     <div class="bg-page w-100">
-      <div class="d-flex align-items-center justify-content-center mx-2 h-100">
+      <div class="d-flex align-items-center justify-content-center h-100">
         <div class="form-container">
           <form @submit.prevent="onSubmit" class="form">
             <div class="input-group mb-2">
@@ -35,6 +35,8 @@ const onSubmit = async () => {
 </script>
 
 <style scoped lang="scss">
+@use '@/assets/css/mixins' as m;
+
 .bg-page {
   background: var(--bg-page);
   height: calc(100vh - 110px);
@@ -43,6 +45,10 @@ const onSubmit = async () => {
 .form-container {
   width: 650px;
   padding: 10px;
+  @include m.lg {
+    margin: 0 10px;
+    width: 100%;
+  }
   .input-group {
     #username {
       border-radius: 3px;

@@ -14,15 +14,11 @@
                 <font-awesome-icon icon="fa-brands fa-github" class="text-white" />
                 Github
               </a>
-              <a href="https://www.linkedin.com/in/s%C3%A9bastien-petit-1874141b9/" target="_blank" class="text-white">
-                <font-awesome-icon icon="fa-brands fa-google" class="text-white" />
-                Sébastien Petit
-              </a>
             </div>
             <div class="section">
               <h2>À PROPOS</h2>
               <p>
-                Le <strong>Front-end</strong> est une de mes passions : j’aime intégrer ou imaginer des interfaces modernes, les rendre responsive et les dynamiser avec des animations élégantes. Mes deux technos de coeur sont <strong>Vue.js</strong>, <strong>Bootstrap</strong>, <strong>CSS3</strong> et <strong>SASS</strong> que j’utilise depuis plus de 6 ans. Je suis aussi Fullstack : Symfony, PHP, MySQL, Doctrine…
+                Le <strong>Front-end</strong> est une de mes passions : j’aime intégrer ou imaginer des interfaces modernes, les rendre responsive et les dynamiser avec des animations élégantes. Mes technos de coeur sont <strong>Vue.js</strong>, <strong>Bootstrap</strong>, <strong>CSS3</strong> et <strong>SASS</strong> que j’utilise depuis plus de 2 ans. Je suis aussi Fullstack : Symfony, PHP, MySQL, Doctrine…
               </p>
               <p>
                 De nature débrouillard et indépendant dans mon travail, j’aime apprendre de nouvelles technologies, passer du temps à résoudre des problèmes et réaliser du code de qualité. Mes valeurs de travail : clean code, flexibilité, performance et sérieux.
@@ -76,7 +72,7 @@
                   <em>Développeur web : </em> Studi
                 </p>
                 <p class="description-formation">
-                  Autodidacte en développement web de niveau bac+2, je suis à la recherche d'un premier
+                  Autodidacte en développement web de niveau bac+3, je suis à la recherche d'un premier
                   emploi dans ce milieu qui me passionne. Impliqué et motivé, je souhaite acquérir de
                   l'expérience et des responsabilités afin de m'épanouir dans ma carrière. Les cours particuliers
                   que j'ai suivis sur la plateforme <a href="https://www.superprof.fr" class="superProf">Superprof.fr</a> m'ont permis de monter en compétences et de

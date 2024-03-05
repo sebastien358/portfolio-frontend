@@ -21,11 +21,12 @@ footer {
     text-decoration: none;
     transition: all 250ms ease;
     p {
+      font-size: 19px;
       @include m.lg {
-        font-size: 19px;
+        font-size: 18px;
       }
       @include m.sm {
-        font-size: 18px;
+        font-size: 16px;
       }
       &:hover {
         color: var(--color-dark);

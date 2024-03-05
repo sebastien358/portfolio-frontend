@@ -161,7 +161,7 @@ defineProps<{
   overflow-y: auto;
   height: 100%;
   h3 {
-    font-size: 20px;
+    font-size: 19px;
     @include m.xxl {
       font-size: 16px;
     }

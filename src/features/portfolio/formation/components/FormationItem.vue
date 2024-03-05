@@ -75,7 +75,7 @@ defineProps<{
 
 .card-portfolio {
   width: 450px;
-  height: 600px;
+  height: 630px;
   @include m.sm {
     width: 100%;
     height: 470px;

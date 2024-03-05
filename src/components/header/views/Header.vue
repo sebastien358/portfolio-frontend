@@ -124,6 +124,7 @@
 import {reactive} from "vue";
 import {useUserAdminStore} from "@/stores/admin/userAdminStore";
 import {useRouter} from "vue-router";
+import Calc from "@/components/calc/Calc.vue";
 
 const state = reactive<{
   open: boolean

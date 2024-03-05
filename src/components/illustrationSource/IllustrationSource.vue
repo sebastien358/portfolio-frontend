@@ -2,12 +2,12 @@
   <BaseTemplate>
     <div class="bg-page">
       <div class="mb-4 mb-lg-5">
-        <h3 class="text-white mb-3">Photos :</h3>
+        <h3 class="text-white mb-3">Photo :</h3>
         <p class="text-white">Photo fond, bannière : Image libre de droit <span>Pixabay</span></p>
       </div>
 
       <ul class="list-inline text-white">
-        <h3 class="mb-4">Logos :</h3>
+        <h3 class="mb-3">Logos :</h3>
         <li>
           • <span>Studi</span> Public domain, via Wikimedia Commons
         </li>
@@ -44,6 +44,9 @@
         <li>
           • <span>Symfony</span> Public domain, via Wikimedia Commons
         </li>
+        <li>
+          • <span>Superprof</span> Public domain, via Wikimedia Commons
+        </li>
       </ul>
     </div>
   </BaseTemplate>
@@ -68,14 +71,14 @@ import BaseTemplate from "@/BaseTemplate.vue";
 p {
   font-size: 19px;
   @include m.sm {
-    font-size: 14px;
+    font-size: 13px;
   }
 }
 
 h3 {
   font-size: 23px;
   @include m.sm {
-    font-size: 20px;
+    font-size: 19px;
   }
 }
 
@@ -87,14 +90,15 @@ ul {
   h3 {
     font-size: 23px;
     @include m.sm {
-      font-size: 20px;
+      font-size: 19px;
     }
   }
   li {
     font-size: 19px;
     margin-bottom: 15px;
     @include m.sm {
-      font-size: 14px;
+      font-size: 13px;
+      margin-bottom: 12px;
     }
     span {
       color: var(--background-card-light);

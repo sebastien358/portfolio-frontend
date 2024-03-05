@@ -34,7 +34,7 @@ library.add(
     faLinkedin,
     faRightLong,
     faGoogle,
-    faTrash
+    faTrash,
 )
 
 const app = createApp(App)

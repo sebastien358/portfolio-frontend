@@ -56,6 +56,7 @@ const onSubmit = async () => {
   width: 650px;
   padding: 10px 10px 20px 10px;
   @include m.md {
+    margin: 0 10px;
     width: 100%;
   }
   .input-group {

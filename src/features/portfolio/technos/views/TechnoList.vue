@@ -61,7 +61,7 @@ h1 {
 }
 
 .container-pictures {
-  margin-top: 70px;
+  margin-top: 90px;
   gap: 50px;
   @include m.xl {
     margin-top: 50px;
