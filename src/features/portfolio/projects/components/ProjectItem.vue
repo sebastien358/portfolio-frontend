@@ -45,6 +45,12 @@ defineProps<{
   @include m.sm {
     width: 340px;
   }
+  &:hover {
+    transform: scale(1.2);
+    @include m.sm {
+      transform: scale(1.1);
+    }
+  }
   &__title {
     height: 65px;
     background-color: rgba(169, 197, 202, 0.60);
@@ -103,13 +109,6 @@ defineProps<{
         height: 32px;
       }
     }
-  }
-}
-
-.project:hover {
-  transform: scale(1.2);
-  @include m.sm {
-    transform: scale(1.1);
   }
 }
 

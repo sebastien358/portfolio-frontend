@@ -23,6 +23,10 @@
             <h1 class="text-white text-center w-100">Mon expérience</h1>
           </div>
 
+          <!--<div v-if="isLoading">
+            <Spinner />
+          </div>-->
+
           <!-- Card expériences -->
           <div v-if="!isLoading" class="d-flex flex-wrap align-items-center justify-content-center experience-card">
             <ExperienceItem
@@ -45,6 +49,7 @@ import {storeToRefs} from "pinia";
 import {onMounted, ref} from "vue";
 import ExperienceItem from "@/features/portfolio/experiences/components/ExperienceItem.vue";
 import TextAnimation from "@/features/portfolio/experiences/components/TextAnimation.vue";
+import Spinner from "@/components/spinner/views/Spinner.vue"
 
 const isLoading = ref(true)
 
@@ -122,6 +127,7 @@ onMounted(async () => {
       transition: all 250ms ease;
       text-decoration: none;
       font-size: 13px;
+      border-radius: 4px;
       @include m.sm {
         padding: 7px;
         font-size: 12px;

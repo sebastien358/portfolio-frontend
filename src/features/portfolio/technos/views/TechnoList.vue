@@ -1,6 +1,6 @@
 <template>
   <BaseTemplate>
-    <div class="bg-page">
+    <div class="bg-page h-100">
       <div v-if="!isLoading">
         <h1 class="text-uppercase text-center">Mes technos</h1>
         <div class="d-flex flex-wrap justify-content-center w-100 container-pictures">

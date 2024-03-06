@@ -61,6 +61,7 @@
     </nav>
 
     <nav class="d-block d-lg-none">
+      <Calc @close="state.open = false" :open="state.open" :transparent="true" />
       <font-awesome-icon @click="state.open = !state.open" icon="fa-solid fa-bars" class="icon-mobile" />
       <Transition>
         <ul v-if="state.open" class="list-inline m-0 d-flex flex-column menu-mobile">
@@ -112,7 +113,7 @@
         </li>
         <li v-else>
           <router-link to="#">
-            <font-awesome-icon icon="fa-solid fa-right-from-bracket" class="text-danger icon-logout" />
+            <font-awesome-icon @click="onClickDisconnect" icon="fa-solid fa-right-from-bracket" class="text-danger icon-logout" />
           </router-link>
         </li>
       </ul>

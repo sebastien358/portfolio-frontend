@@ -75,7 +75,7 @@
                   Autodidacte en développement web de niveau bac+3, je suis à la recherche d'un premier
                   emploi dans ce milieu qui me passionne. Impliqué et motivé, je souhaite acquérir de
                   l'expérience et des responsabilités afin de m'épanouir dans ma carrière. Les cours particuliers
-                  que j'ai suivis sur la plateforme <a href="https://www.superprof.fr" class="superProf">Superprof.fr</a> m'ont permis de monter en compétences et de
+                  que j'ai suivis sur la plateforme <a href="https://www.superprof.fr" target="_blank" class="superProf">Superprof.fr</a> m'ont permis de monter en compétences et de
                   me spécialiser avec Symfony, Vue.js
                 </p>
               </div>

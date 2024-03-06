@@ -18,7 +18,7 @@
                 </router-link>
               </div>
             </div>
-            <button type="submit" class="sign">Sign in</button>
+            <button type="submit" class="sign">Signin</button>
           </form>
         </div>
       </div>

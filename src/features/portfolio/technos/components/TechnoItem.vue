@@ -22,7 +22,7 @@ defineProps<{
     transition: all 1s ease;
     height: 150px;
     @include m.xl {
-      height: 130px;
+      height: 100px;
     }
     @include m.lg {
       height: 100px;
