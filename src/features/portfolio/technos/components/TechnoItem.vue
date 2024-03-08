@@ -1,6 +1,6 @@
 <template>
   <div class="techno">
-    <div v-for="img in techno.pictures">
+    <div v-for="img in techno.pictures" :key="img.id">
       <img :src="img.url" class="img">
     </div>
   </div>
@@ -20,15 +20,13 @@ defineProps<{
 .techno {
   .img {
     transition: all 1s ease;
-    height: 150px;
-    @include m.xl {
-      height: 100px;
-    }
+    height: 100px;
     @include m.lg {
-      height: 100px;
+      height: 80px;
     }
     @include m.sm {
-      height: 60px;
+      transition: all 600ms ease;
+      height: 45px;
     }
     &:hover {
       transform: scale(2);

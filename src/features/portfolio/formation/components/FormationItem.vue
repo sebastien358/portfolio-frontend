@@ -20,10 +20,10 @@
 
       <div class="card-back">
         <div class="techno">
-          <span class="text-uppercase" v-if="formation.techno[0]">{{formation.techno[0]}}</span>
+          <span v-if="formation.techno[0]">{{formation.techno[0]}}</span>
         </div>
         <div class="techno">
-          <span v-if="formation.techno[1]" class="text-uppercase">{{formation.techno[1]}}</span>
+          <span v-if="formation.techno[1]">{{formation.techno[1]}}</span>
         </div>
         <div class="techno">
           <span v-if="formation.techno[2]" class="mb-1">{{formation.techno[2]}}</span>
@@ -35,8 +35,8 @@
           <span v-if="formation.techno[5]">{{formation.techno[5]}}</span>
         </div>
         <div class="d-flex flex-column align-items-center techno">
-          <span v-if="formation.techno[6]" class="text-uppercase">{{formation.techno[6]}}</span>
-          <span v-if="formation.techno[7]" class="text-uppercase">{{formation.techno[7]}}</span>
+          <span v-if="formation.techno[6]">{{formation.techno[6]}}</span>
+          <span v-if="formation.techno[7]">{{formation.techno[7]}}</span>
         </div>
         <div class="d-flex flex-column align-items-center techno">
           <span v-if="formation.techno[8]" class="mb-1">{{formation.techno[8]}}</span>
@@ -47,7 +47,7 @@
         </div>
 
         <div class="techno">
-          <span  v-if="formation.techno[13]" class="text-uppercase">{{formation.techno[13]}}</span>
+          <span  v-if="formation.techno[13]">{{formation.techno[13]}}</span>
         </div>
         <div class="techno">
           <span v-if="formation.techno[14]">{{formation.techno[14]}}</span>
@@ -60,7 +60,6 @@
     </div>
   </div>
 </template>
-
 
 <script setup lang="ts">
 import type {FormationInterface} from "@/interfaces";
@@ -76,6 +75,14 @@ defineProps<{
 .card-portfolio {
   width: 450px;
   height: 630px;
+  @include m.xxl {
+    width: 400px;
+    height: 560px;
+  }
+  @include m.xl {
+    width: 400px;
+    height: 560px;
+  }
   @include m.sm {
     width: 100%;
     height: 470px;

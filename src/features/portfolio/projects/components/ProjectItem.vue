@@ -43,7 +43,8 @@ defineProps<{
     width: 450px;
   }
   @include m.sm {
-    width: 340px;
+    transition: 300ms ease-in-out;
+    width: 350px;
   }
   &:hover {
     transform: scale(1.2);
@@ -63,6 +64,7 @@ defineProps<{
       color: black;
       font-weight: 200;
       @include m.sm {
+        font-weight: 300;
         font-size: 19px;
       }
     }

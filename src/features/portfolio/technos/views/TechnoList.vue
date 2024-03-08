@@ -1,6 +1,6 @@
 <template>
   <BaseTemplate>
-    <div class="bg-page h-100">
+    <div class="bg-page">
       <div v-if="!isLoading">
         <h1 class="text-uppercase text-center">Mes technos</h1>
         <div class="d-flex flex-wrap justify-content-center w-100 container-pictures">
@@ -61,7 +61,7 @@ h1 {
 }
 
 .container-pictures {
-  margin-top: 90px;
+  margin-top: 60px;
   gap: 50px;
   @include m.xl {
     margin-top: 50px;
@@ -70,7 +70,7 @@ h1 {
     margin-top: 40px;
   }
   @include m.sm {
-    margin-top: 30px;
+    margin-top: 35px;
   }
 }
 </style>

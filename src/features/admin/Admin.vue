@@ -3,6 +3,11 @@
     <div class="bg-page">
       <div class="d-flex flex-row admin">
         <div class="d-flex flex-column">
+          <Calc
+            @close="state.open = false"
+            :open="state.isMobile && state.open"
+            :transparent="true"
+          />
           <Transition>
             <NavAdmin
               :open="state.open"
@@ -10,12 +15,12 @@
           </Transition>
         </div>
         <div class="w-100">
-          <div class="d-flex justify-content-center pt-3">
+          <div class="d-flex justify-content-center pt-3 d-block d-lg-none">
             <button @click="state.open = !state.open" type="button">menu</button>
           </div>
           <div class="d-flex justify-content-center align-content-center h-100">
-            <router-view v-slot="{Component}">
-              <Component :is="Component" />
+            <router-view v-slot="{Component, route}">
+              <Component :is="Component" :key="route.fullPath" />
             </router-view>
           </div>
         </div>
@@ -28,14 +33,16 @@
 import BaseTemplate from "@/BaseTemplate.vue";
 import NavAdmin from "@/features/admin/components/NavAdmin.vue";
 import {reactive} from "vue";
+import Calc from "@/components/calc/Calc.vue";
 
 const state = reactive<{
-  open: boolean
-  isLoading: boolean
+  open: boolean;
+  isMobile: boolean;
 }>({
-  open: !matchMedia('max-width(max-width: 575.98px)').matches,
-  isLoading: matchMedia('max-width(max-width: 575.98px)').matches
-})
+  open: !matchMedia("(max-width: 991.98px)").matches,
+  isMobile: matchMedia("(max-width: 991.98px)").matches,
+});
+
 </script>
 
 <style scoped lang="scss">

@@ -4,7 +4,9 @@
       <div class="home">
         <div class="d-flex align-items-center justify-content-center">
           <!-- Image bannière -->
-          <img src="@/assets/images/laptop-5673901_1280.jpg" class="w-100 object-fit-cover position-relative img-banniere">
+          <div class="overflow-hidden w-100 container-banniere">
+            <img src="@/assets/images/laptop-5673901_1280%20copie%202.jpg" class="w-100 object-fit-cover position-relative img-banniere">
+          </div>
           <div class="position-absolute dev-web">
             <div class="d-flex flex-column align-items-center">
               <TextAnimation />
@@ -13,7 +15,7 @@
               <h3 class="text-center text-uppercase">Développeur web</h3>
               <h4 class="text-center mt-2">Portfolio</h4>
             </div>
-            <a href="mailto:sebastienpetit27330@gmail.com" class="button">Contactez-moi !</a>
+            <a @click="onClickTextButton" href="mailto:sebastienpetit27330@gmail.com" class="button">{{txt}}</a>
           </div>
         </div>
 
@@ -49,9 +51,19 @@ import {storeToRefs} from "pinia";
 import {onMounted, ref} from "vue";
 import ExperienceItem from "@/features/portfolio/experiences/components/ExperienceItem.vue";
 import TextAnimation from "@/features/portfolio/experiences/components/TextAnimation.vue";
-import Spinner from "@/components/spinner/views/Spinner.vue"
 
 const isLoading = ref(true)
+
+const txt = ref('')
+txt.value = 'Contactez-moi !'
+
+function onClickTextButton() {
+  txt.value = 'Merci !'
+  const timeout = setTimeout(() => {
+    txt.value = 'Contactez-moi !'
+    clearTimeout(timeout)
+  }, 2000)
+}
 
 const experienceStore = useExperienceStore()
 const { experiences } = storeToRefs(experienceStore)
@@ -73,15 +85,22 @@ onMounted(async () => {
     padding: 40px 0 30px 0;
   }
   @include m.sm {
-    padding: 30px 0 20px 0;
+    padding: 30px 0 30px 0;
   }
 }
 
 .home {
-  .img-banniere {
-    max-height: 1300px;
+  .container-banniere {
+    position: relative;
+    bottom: 40px;
     @include m.sm {
-      height: auto;
+      bottom: 30px;
+    }
+    .img-banniere {
+      max-height: 1300px;
+      @include m.sm {
+        height: auto;
+      }
     }
   }
   .dev-web {
@@ -131,6 +150,8 @@ onMounted(async () => {
       @include m.sm {
         padding: 7px;
         font-size: 12px;
+        position: relative;
+        bottom: 10px;
       }
       &:hover {
         border: 1px solid #70a1ff;
@@ -147,16 +168,15 @@ onMounted(async () => {
     padding: 0 20px;
     .title-h1 {
       h1 {
-        font-size: 35px;
+        font-size: 40px;
         font-family: "Kalam", cursive;
         white-space: nowrap;
-        margin-top: 40px;
         margin-bottom: 40px;
+
         @include m.xxl {
           font-size: 25px;
         }
         @include m.sm {
-          margin-top: 30px;
           margin-bottom: 30px;
           font-size: 22px;
         }

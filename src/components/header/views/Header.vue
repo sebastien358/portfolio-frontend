@@ -38,12 +38,12 @@
           </router-link>
         </li>
         <li class="me-3">
-          <a href="https://www.linkedin.com/in/s%C3%A9bastien-petit-1874141b9">
+          <a href="https://www.linkedin.com/in/s%C3%A9bastien-petit-1874141b9" target="_blank">
             <font-awesome-icon icon="fa-brands fa-linkedin-in" class="icon" />
           </a>
         </li>
         <li class="me-3">
-          <a href="https://github.com/sebastien358">
+          <a href="https://github.com/sebastien358" target="_blank">
             <font-awesome-icon icon="fa-brands fa-github" class="icon" />
           </a>
         </li>
@@ -91,12 +91,12 @@
             </router-link>
           </li>
           <li class="mb-2">
-            <a href="https://www.linkedin.com/in/s%C3%A9bastien-petit-1874141b9">
+            <a href="https://www.linkedin.com/in/s%C3%A9bastien-petit-1874141b9" target="_blank">
               <font-awesome-icon icon="fa-brands fa-linkedin-in" class="icon" />
             </a>
           </li>
           <li class="mb-2">
-            <a href="https://github.com/sebastien358">
+            <a href="https://github.com/sebastien358" target="_blank">
               <font-awesome-icon icon="fa-brands fa-github" class="icon" />
             </a>
           </li>
@@ -147,6 +147,7 @@ const onClickDisconnect = () => {
 @use '@/assets/css/mixins' as m;
 
 header {
+  z-index: 1;
   position: relative;
   background-color: var(--background-headband-dark);
   color: white;
@@ -187,6 +188,8 @@ header {
 .icon {
   font-size: 24px;
   color: var(--color-light);
+  margin: 0;
+  padding: 0;
   @include m.xl {
     font-size: 22px;
   }
@@ -257,4 +260,7 @@ header {
   opacity: 0;
 }
 
+.router-link-exact-active {
+  color: var(--color-dark) !important;
+}
 </style>

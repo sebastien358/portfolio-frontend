@@ -8,7 +8,7 @@
               <label for="email">Email</label>
               <input ref="email" type="email" name="username" id="username" required>
             </div>
-            <button type="submit" class="sign">Enter Email</button>
+            <button type="submit" class="sign">Enter email</button>
           </form>
         </div>
       </div>

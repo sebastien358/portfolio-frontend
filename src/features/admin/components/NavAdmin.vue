@@ -82,7 +82,6 @@ defineProps<{
   background-color: rgba(255, 255, 255, 0.20);
   min-width: 200px;
   padding: 25px 15px;
-  //height: calc(100vh - 110px);
   height: 100%;
   @include m.lg {
     position: fixed;
@@ -112,7 +111,7 @@ nav {
     }
     li {
       color: white;
-      font-size: 13px;
+      font-size: 14px;
       margin-bottom: 10px;
       @include m.sm {
         margin-bottom: 2px;
@@ -120,11 +119,17 @@ nav {
     }
     .link {
       color:#dfe6e9;
-      font-size: 13px;
+      font-size: 14px;
+      text-decoration: none;
       @include m.sm {
         font-size: 11px;
       }
     }
   }
+}
+
+.router-link-exact-active {
+  color: white !important;
+  text-decoration: underline !important;
 }
 </style>

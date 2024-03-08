@@ -40,9 +40,9 @@
           </div>
         </div>
 
-        <!--<div class="d-flex justify-content-center flex-column flex-lg-row my-5 py-5 container-images">
-          <img :src="editProject.pictures[0].url" class="image-project-details">
-        </div>-->
+        <div class="mt-5">
+          <Carousel :editProject="editProject" />
+        </div>
 
         <nav class="d-flex flex-column align-items-lg-center flex-lg-row justify-content-lg-around container-fonctionnality">
           <ul class="list-inline mb-4 mb-lg-0 fonctionnality">
@@ -90,6 +90,7 @@
 
 <script setup lang="ts">
 import BaseTemplate from "@/BaseTemplate.vue";
+import Carousel from '@/features/portfolio/projects/views/Carousel.vue';
 import {onMounted, ref} from "vue";
 import {useProjectStore} from "@/stores/projectStore";
 import {storeToRefs} from "pinia";
@@ -240,15 +241,8 @@ nav {
   }
 }
 
-.container-images {
-  .image-project-details {
-    width: 100%;
-    height: auto;
-  }
-}
-
 .container-fonctionnality {
-  margin-top: 150px;
+  margin-top: 60px;
   @include m.lg {
     margin-top: 50px;
   }

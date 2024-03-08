@@ -115,7 +115,7 @@ import BaseTemplate from "@/BaseTemplate.vue";
   background: var(--bg-page);
   padding: 40px 20px;
   @include m.lg {
-    padding: 30px 20px;
+    padding: 20px 20px;
   }
 }
 

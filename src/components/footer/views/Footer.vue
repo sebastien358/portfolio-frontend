@@ -34,4 +34,8 @@ footer {
     }
   }
 }
+
+.router-link-exact-active {
+  color: var(--color-dark) !important;
+}
 </style>

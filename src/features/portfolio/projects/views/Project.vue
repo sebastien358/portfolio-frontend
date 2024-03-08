@@ -39,10 +39,20 @@ onMounted(async () => {
 @use '@/assets/css/mixins' as m;
 
 .container-project {
-  padding: 60px 20px 0 20px;
+  margin: 60px 20px 40px 20px;
   gap: 30px;
+  @include m.xl {
+    margin: 40px 10px 40px 10px;
+  }
+  @include m.lg {
+    margin: 40px 10px 40px 10px;
+  }
+  @include m.md {
+    margin: 40px 10px 40px 10px;
+    gap: 20px;
+  }
   @include m.sm {
-    padding: 20px 10px 0 10px;
+    margin: 30px 10px 30px 10px;
     gap: 20px;
   }
 }

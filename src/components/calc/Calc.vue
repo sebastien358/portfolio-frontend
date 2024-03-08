@@ -1,28 +1,29 @@
 <template>
   <Teleport v-if="open" to="body">
-    <div @click="emit('close')" class="calc" :class="{transparent}"></div>
+    <div @click="emit('close')" class="calc" :class="{ transparent }"></div>
   </Teleport>
 </template>
 
 <script setup lang="ts">
 defineProps<{
-  open?: boolean
-  transparent?: boolean
-}>()
+  open: boolean;
+  transparent?: boolean;
+}>();
 
 const emit = defineEmits<{
-  (e: 'close'): void
-}>()
+  (e: "close"): void;
+}>();
 </script>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 .calc {
-  position: absolute;
-  left: 0;
-  top: 0;
+  position: fixed;
+  top: 0px;
+  left: 0px;
   height: 100vh;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.40);
+  background-color: #0000005e;
+  z-index: 0;
 }
 
 .transparent {
