@@ -21,6 +21,9 @@ defineProps<{
   .img {
     transition: all 1s ease;
     height: 100px;
+    @include m.xxl {
+      height: 80px;
+    }
     @include m.lg {
       height: 80px;
     }

@@ -1,16 +1,18 @@
 <template>
   <BaseTemplate>
-    <div class="bg-page">
-      <div v-if="!isLoading" class="container-formation">
-        <h1 class="text-center text-uppercase">Ma formation</h1>
+    <div class="bg-page ">
+
+        <div v-if="!isLoading" class="container-formation">
+          <h1 class="text-center text-uppercase">Ma formation</h1>
           <div class="d-flex flex-wrap justify-content-center align-items-center formation">
             <FormationItem
-              v-for="formation in formations"
-              :key="formation.id"
-              :formation="formation"
+                v-for="formation in formations"
+                :key="formation.id"
+                :formation="formation"
             />
           </div>
         </div>
+
     </div>
   </BaseTemplate>
 </template>
@@ -37,48 +39,59 @@ onMounted(async () => {
 @use '@/assets/css/mixins' as m;
 
 .bg-page {
-  overflow: hidden;
-  padding: 70px 20px 20px 20px;
+  padding: 70px 20px 30px 20px;
   background: var(--bg-page);
   height: 100%;
   @include m.xxl {
-    padding: 40px 20px 0 20px;
+    height: 100%;
+    padding: 40px 20px 30px 20px;
+  }
+  @include m.xl {
+    height: 100%;
+    padding: 40px 20px 30px 20px;
   }
   @include m.lg {
-    padding: 40px 20px 0 20px;
+    height: 100%;
+    padding: 40px 20px 30px 20px;
   }
   @include m.sm {
-    padding: 40px 20px 0 20px;
+    height: 100%;
+    padding: 40px 20px 30px 20px;
   }
   .container-formation {
     h1 {
       color: white;
       font-size: 35px;
       font-family: "Kalam", cursive;
+      height: 100%;
+      @include m.xxl {
+        height: initial;
+      }
       @include m.sm {
         font-size: 23px;
+        height: initial;
       }
     }
     .formation {
       gap: 30px;
       margin-top: 60px;
-      margin-bottom: 40px;
+      height: 100%;
       @include m.xxl {
-        margin-top: 50px;
-        margin-bottom: 40px;
+        height: initial;
+        margin-top: 40px;
       }
       @include m.xl {
-        margin-top: 50px;
-        margin-bottom: 40px;
+        height: initial;
+        margin-top: 40px;
       }
       @include m.lg {
-        margin-top: 50px;
-        margin-bottom: 40px;
+        height: initial;
+        margin-top: 40px;
         gap: 15px;
       }
       @include m.sm {
+        height: initial;
         margin-top: 30px;
-        margin-bottom: 30px;
         gap: 15px;
       }
     }

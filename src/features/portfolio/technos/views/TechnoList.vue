@@ -40,7 +40,7 @@ onMounted(async () => {
 .bg-page {
   background: var(--bg-page);
   padding: 70px 20px 20px 20px;
-  height: calc(100vh - 110px);
+  min-height: 100%;
   @include m.lg {
     min-height: 100%;
     padding-top: 40px;
