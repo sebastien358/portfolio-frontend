@@ -43,9 +43,10 @@
         <div class="mt-5">
           <Carousel :editProject="editProject" />
         </div>
+        <!--d-flex flex-column align-items-lg-center flex-lg-row justify-content-lg-around-->
 
-        <nav class="d-flex flex-column align-items-lg-center flex-lg-row justify-content-lg-around container-fonctionnality">
-          <ul class="list-inline mb-4 mb-lg-0 fonctionnality">
+        <nav class="container-fonctionnality">
+          <ul class="list-inline mb-4 mb-lg-5 fonctionnality">
             <h2>Fonctionnalités</h2>
             <li v-if="editProject.fonctionnality[0]">
               {{editProject.fonctionnality[0]}}

@@ -28,6 +28,12 @@ message ? setTimeout(() => {
   text-align: center;
   font-size: 15px;
   color: white;
+  @include m.mac {
+    font-size: 14px;
+  }
+  @include m.lg {
+    font-size: 13px;
+  }
   @include m.sm {
     font-size: 12px;
     padding: 10px 0;
