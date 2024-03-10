@@ -75,13 +75,17 @@ defineProps<{
 .card-portfolio {
   width: 450px;
   height: 630px;
+  @include m.mac {
+    width: 420px;
+    height: 580px;
+  }
   @include m.xxl {
-    width: 400px;
+    width: 420px;
     height: 560px;
   }
   @include m.xl {
     width: 400px;
-    height: 560px;
+    height: 540px;
   }
   @include m.sm {
     width: 100%;
@@ -210,7 +214,10 @@ defineProps<{
     }
     span {
       font-weight: 500;
-      font-size: 13px;
+      font-size: 14px;
+      @include m.mac {
+        font-size: 12px;
+      }
       @include m.sm {
         font-weight: 400;
         font-size: 11px;

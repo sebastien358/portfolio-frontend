@@ -27,3 +27,9 @@
     @content
   }
 }
+
+@mixin mac {
+  @media (max-width: 1800.98px) {
+    @content
+  }
+}

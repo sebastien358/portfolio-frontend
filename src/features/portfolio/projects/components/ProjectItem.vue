@@ -35,21 +35,25 @@ defineProps<{
   cursor: pointer;
   width: 550px;
   background-color: white;
-  transition: 600ms ease-in-out;
-  @include m.xxl {
-    width: 470px;
-  }
-  @include m.lg {
+  transition: 600ms ease;
+  border: 0;
+  @include m.mac {
     width: 450px;
   }
+  @include m.xxl {
+    width: 400px;
+  }
+  @include m.lg {
+    width: 400px;
+  }
   @include m.sm {
-    transition: 300ms ease-in-out;
+    transition: 300ms ease;
     width: 350px;
   }
   &:hover {
     transform: scale(1.1);
     @include m.sm {
-      transform: scale(1.1);
+      transform: scale(1.2);
     }
   }
   &__title {
@@ -81,11 +85,14 @@ defineProps<{
       height: 230px;
     }
     .img-project-item {
-      height: 300px;
+      height: 280px;
       object-fit: cover;
       width: 100%;
+      @include m.mac {
+        height: 250px;
+      }
       @include m.xxl {
-        height: 270px;
+        height: 250px;
       }
       @include m.lg {
         height: 250px;

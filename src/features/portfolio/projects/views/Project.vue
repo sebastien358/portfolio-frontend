@@ -38,14 +38,44 @@ onMounted(async () => {
 <style scoped lang="scss">
 @use '@/assets/css/mixins' as m;
 
+.bg-page {
+  background: var(--bg-page);
+  height: 100%;
+  margin-bottom: 20px;
+  h1 {
+    padding-top: 70px;
+    font-family: "Kalam", cursive;
+    color: white;
+    font-size: 35px;
+    @include m.mac {
+      font-size: 25px;
+      padding-top: 40px;
+    }
+    @include m.lg {
+      font-size: 25px;
+      padding-top: 40px;
+    }
+    @include m.sm {
+      padding-top: 30px;
+      font-size: 20px;
+    }
+  }
+}
+
 .container-project {
   margin: 60px 20px 40px 20px;
-  gap: 30px;
+  gap: 25px;
+  @include m.mac {
+    margin: 40px 10px 40px 10px;
+    gap: 20px;
+  }
   @include m.xl {
     margin: 40px 10px 40px 10px;
+    gap: 20px;
   }
   @include m.lg {
     margin: 40px 10px 40px 10px;
+    gap: 20px;
   }
   @include m.md {
     margin: 40px 10px 40px 10px;
@@ -54,25 +84,6 @@ onMounted(async () => {
   @include m.sm {
     margin: 30px 10px 30px 10px;
     gap: 20px;
-  }
-}
-
-.bg-page {
-  background: var(--bg-page);
-  height: 100%;
-  margin-bottom: 20px;
-  h1 {
-    padding-top: 70px;
-    font-family: "Kalam", cursive;
-    color: var(--color-light);
-    font-size: 35px;
-    @include m.lg {
-      padding-top: 40px;
-      font-size: 27px;
-    }
-    @include m.sm {
-      font-size: 20px;
-    }
   }
 }
 </style>

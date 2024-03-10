@@ -21,11 +21,14 @@ defineProps<{
   .img {
     transition: all 1s ease;
     height: 100px;
+    @include m.mac {
+      height: 70px;
+    }
     @include m.xxl {
-      height: 80px;
+      height: 70px;
     }
     @include m.lg {
-      height: 80px;
+      height: 60px;
     }
     @include m.sm {
       transition: all 600ms ease;

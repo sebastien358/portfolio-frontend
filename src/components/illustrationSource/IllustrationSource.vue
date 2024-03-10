@@ -1,7 +1,7 @@
 <template>
   <BaseTemplate>
     <div class="bg-page">
-      <div class="mb-4 mb-lg-5">
+      <div class="mb-4 mb-lg-4 mb-xl-5">
         <h3 class="text-white mb-3">Photo :</h3>
         <p class="text-white">Photo fond, bannière : Image libre de droit <span>Pixabay</span></p>
       </div>
@@ -61,8 +61,11 @@ import BaseTemplate from "@/BaseTemplate.vue";
 
 .bg-page {
   background: var(--bg-page);
-  height: calc(100vh - 110px);
+  height: 100%;
   padding: 80px 40px;
+  @include m.mac {
+    padding: 50px 20px;
+  }
   @include m.sm {
     padding: 50px 20px;
   }
@@ -77,6 +80,9 @@ p {
 
 h3 {
   font-size: 23px;
+  @include m.mac {
+    font-size: 20px;
+  }
   @include m.sm {
     font-size: 19px;
   }
@@ -89,6 +95,9 @@ span {
 ul {
   h3 {
     font-size: 23px;
+    @include m.mac {
+      font-size: 20px;
+    }
     @include m.sm {
       font-size: 19px;
     }
@@ -96,6 +105,9 @@ ul {
   li {
     font-size: 19px;
     margin-bottom: 15px;
+    @include m.mac {
+      font-size: 16px;
+    }
     @include m.sm {
       font-size: 13px;
       margin-bottom: 12px;

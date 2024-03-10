@@ -1,6 +1,9 @@
 <template>
   <div class="app-container">
     <Header class="header" />
+    <div v-if="message !== null" class="message">
+      <Alert />
+    </div>
     <div class="components">
       <slot />
     </div>
@@ -11,6 +14,12 @@
 <script setup lang="ts">
 import Header from "@/components/header/views/Header.vue";
 import Footer from "@/components/footer/views/Footer.vue";
+import {useMessageStore} from "@/stores/messageStore";
+import {storeToRefs} from "pinia";
+import Alert from "@/alert/views/Alert.vue";
+
+const messageStore = useMessageStore()
+const { message } = storeToRefs(messageStore)
 </script>
 
 <style scoped lang="scss">
@@ -38,5 +47,10 @@ import Footer from "@/components/footer/views/Footer.vue";
 
 .footer {
   grid-area: footer;
+}
+
+.message {
+  position: relative;
+  top: 60px;
 }
 </style>

@@ -41,6 +41,9 @@ onMounted(async () => {
   background: var(--bg-page);
   padding: 70px 20px 20px 20px;
   min-height: 100%;
+  @include m.mac {
+    padding-top: 40px;
+  }
   @include m.lg {
     min-height: 100%;
     padding-top: 40px;
@@ -55,22 +58,28 @@ h1 {
   color: white;
   font-size: 35px;
   font-family: "Kalam", cursive;
-  @include m.sm {
+  @include m.mac {
     font-size: 25px;
+  }
+  @include m.sm {
+    font-size: 20px;
   }
 }
 
 .container-pictures {
   margin-top: 60px;
   gap: 50px;
+  @include m.mac {
+    margin-top: 40px;
+  }
   @include m.xl {
-    margin-top: 50px;
+    margin-top: 40px;
   }
   @include m.lg {
     margin-top: 40px;
   }
   @include m.sm {
-    margin-top: 35px;
+    margin-top: 40px;
   }
 }
 </style>

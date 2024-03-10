@@ -7,11 +7,11 @@
           <form @submit.prevent="onSubmit" class="form">
             <div class="input-group mb-3">
               <label for="username">Username</label>
-              <input v-model="editLogin.username" type="text" name="username" id="username" required>
+              <input v-model="editLogin.username" type="text" name="username" id="username" maxlength="255" required>
             </div>
             <div class="input-group">
               <label for="password">Password</label>
-              <input v-model="editLogin.password" type="password" name="password" id="password" required>
+              <input v-model="editLogin.password" type="password" name="password" id="password" minlength="8" maxlength="50" required>
               <div class="forgot">
                 <router-link :to="{name: 'request-password'}" class="link">
                   Forgot Password ?

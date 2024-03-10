@@ -1,6 +1,7 @@
 import { defineStore } from 'pinia'
 import axios from "axios";
 import {useUserAdminStore} from "@/stores/admin/userAdminStore";
+import {useMessageStore} from "@/stores/messageStore";
 
 export const useLoginStore = defineStore('loginStore', {
   state: () => {
@@ -16,6 +17,7 @@ export const useLoginStore = defineStore('loginStore', {
       }
     },
     async login() {
+      const messageStore = useMessageStore()
       const userAdminStore = useUserAdminStore()
       try {
         const response = await axios.post(`https://api.dymawonder.fr/api/login_check`, {
@@ -26,6 +28,7 @@ export const useLoginStore = defineStore('loginStore', {
         await userAdminStore.getMe()
       } catch(e) {
         console.error(e)
+        messageStore.addMessage('Email et/ou mot de passe incorrect(s)', 'error')
       }
     }
   }

@@ -5,7 +5,7 @@
         <div class="d-flex align-items-center justify-content-center">
           <!-- Image bannière -->
           <div class="overflow-hidden w-100 container-banniere">
-            <img src="@/assets/images/laptop-5673901_1280%20copie%202.jpg" class="w-100 object-fit-cover position-relative img-banniere">
+            <img src="@/assets/images/laptop-5673901_1280.jpg" class="w-100 object-fit-cover position-relative img-banniere">
           </div>
           <div class="position-absolute dev-web">
             <div class="d-flex flex-column align-items-center">
@@ -97,9 +97,20 @@ onMounted(async () => {
       bottom: 30px;
     }
     .img-banniere {
-      max-height: 1300px;
+      height: 1300px;
+      width: 100%;
+      @include m.mac {
+        height: 690px;
+        width: 100%;
+      }
+      @include m.xxl {
+        max-height: 690px;
+        height: 100%;
+        width: 100%;
+      }
       @include m.sm {
-        height: auto;
+        height: 260px;
+        width: 100%;
       }
     }
   }
@@ -111,8 +122,12 @@ onMounted(async () => {
     background-color: rgba(255, 255, 255, 0.40);
     height: 350px;
     width: 600px;
-    padding: 20px;
+    padding: 20px 20px 0 20px;
     overflow: hidden;
+    @include m.mac {
+      height: 300px;
+      width: 530px;
+    }
     @include m.sm {
       width: 100%;
       height: auto;
@@ -147,17 +162,18 @@ onMounted(async () => {
       text-decoration: none;
       font-size: 13px;
       border-radius: 4px;
+      position: relative;
+      bottom: 19px;
+      &:hover {
+        border: 1px solid #70a1ff;
+        color: white;
+        transform: scale(1.1);
+      }
       @include m.sm {
         padding: 7px;
         font-size: 12px;
         position: relative;
-        bottom: 10px;
-      }
-      &:hover {
-        border: 1px solid #70a1ff;
-        background-color: transparent;
-        color: white;
-        transform: scale(1.07);
+        bottom: 20px;
       }
     }
   }
@@ -172,9 +188,11 @@ onMounted(async () => {
         font-family: "Kalam", cursive;
         white-space: nowrap;
         margin-bottom: 40px;
-
+        @include m.mac {
+          font-size: 30px;
+        }
         @include m.xxl {
-          font-size: 25px;
+          font-size: 30px;
         }
         @include m.sm {
           margin-bottom: 30px;

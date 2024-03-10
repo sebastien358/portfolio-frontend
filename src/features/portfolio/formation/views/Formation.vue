@@ -1,18 +1,16 @@
 <template>
   <BaseTemplate>
     <div class="bg-page ">
-
-        <div v-if="!isLoading" class="container-formation">
-          <h1 class="text-center text-uppercase">Ma formation</h1>
-          <div class="d-flex flex-wrap justify-content-center align-items-center formation">
-            <FormationItem
-                v-for="formation in formations"
-                :key="formation.id"
-                :formation="formation"
-            />
-          </div>
+      <div v-if="!isLoading" class="container-formation">
+        <h1 class="text-center text-uppercase">Ma formation</h1>
+        <div class="d-flex flex-wrap justify-content-center align-items-center formation">
+          <FormationItem
+            v-for="formation in formations"
+            :key="formation.id"
+            :formation="formation"
+          />
         </div>
-
+      </div>
     </div>
   </BaseTemplate>
 </template>
@@ -42,6 +40,10 @@ onMounted(async () => {
   padding: 70px 20px 30px 20px;
   background: var(--bg-page);
   height: 100%;
+  @include m.mac {
+    height: 100%;
+    padding: 40px 20px 30px 20px;
+  }
   @include m.xxl {
     height: 100%;
     padding: 40px 20px 30px 20px;
@@ -56,7 +58,7 @@ onMounted(async () => {
   }
   @include m.sm {
     height: 100%;
-    padding: 40px 20px 30px 20px;
+    padding: 30px 20px 30px 20px;
   }
   .container-formation {
     h1 {
@@ -64,11 +66,11 @@ onMounted(async () => {
       font-size: 35px;
       font-family: "Kalam", cursive;
       height: 100%;
-      @include m.xxl {
-        height: initial;
+      @include m.mac {
+        font-size: 25px;
       }
       @include m.sm {
-        font-size: 23px;
+        font-size: 20px;
         height: initial;
       }
     }
@@ -76,6 +78,10 @@ onMounted(async () => {
       gap: 30px;
       margin-top: 60px;
       height: 100%;
+      @include m.mac {
+        height: initial;
+        margin-top: 40px;
+      }
       @include m.xxl {
         height: initial;
         margin-top: 40px;

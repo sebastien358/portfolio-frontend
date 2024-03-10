@@ -6,7 +6,7 @@
           <form @submit.prevent="onSubmit" class="form">
             <div class="input-group mb-2">
               <label for="email">Email</label>
-              <input ref="email" type="email" name="username" id="username" required>
+              <input ref="email" type="email" name="username" id="username" maxlength="255" required>
             </div>
             <button type="submit" class="sign">Enter email</button>
           </form>
@@ -39,7 +39,7 @@ const onSubmit = async () => {
 
 .bg-page {
   background: var(--bg-page);
-  height: calc(100vh - 110px);
+  height: 100%;
 }
 
 .form-container {
