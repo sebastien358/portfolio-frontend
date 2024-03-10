@@ -16,7 +16,7 @@ import Header from "@/components/header/views/Header.vue";
 import Footer from "@/components/footer/views/Footer.vue";
 import {useMessageStore} from "@/stores/messageStore";
 import {storeToRefs} from "pinia";
-import Alert from "@/alert/views/Alert.vue";
+import Alert from "@/components/alert/views/Alert.vue";
 
 const messageStore = useMessageStore()
 const { message } = storeToRefs(messageStore)

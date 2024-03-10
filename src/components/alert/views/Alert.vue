@@ -1,8 +1,8 @@
 <template>
-  <div v-if="type === 'success'" class="alert alert-success" role="alert">
+  <div v-if="type === 'success'" class="alert" role="alert" :class="{success: type}">
     {{message}}
   </div>
-  <div v-if="type === 'error'" class="alert alert-danger" role="alert">
+  <div v-if="type === 'error'" class="alert" role="alert" :class="{error: type}">
     {{message}}
   </div>
 </template>
@@ -27,9 +27,18 @@ message ? setTimeout(() => {
   border-radius: 0;
   text-align: center;
   font-size: 15px;
+  color: white;
   @include m.sm {
-    font-size: 13px;
+    font-size: 12px;
     padding: 10px 0;
   }
+}
+
+.success {
+  background-color: green;
+}
+
+.error {
+  background-color: red;
 }
 </style>

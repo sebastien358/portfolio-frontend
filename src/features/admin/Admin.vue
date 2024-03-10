@@ -33,7 +33,7 @@
 import BaseTemplate from "@/BaseTemplate.vue";
 import NavAdmin from "@/features/admin/components/NavAdmin.vue";
 import {reactive} from "vue";
-import Calc from "@/components/calc/Calc.vue";
+import Calc from "@/components/calc/views/Calc.vue";
 
 const state = reactive<{
   open: boolean;

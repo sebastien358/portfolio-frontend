@@ -166,6 +166,7 @@ onMounted(async () => {
       bottom: 19px;
       &:hover {
         border: 1px solid #70a1ff;
+        background-color: transparent;
         color: white;
         transform: scale(1.1);
       }
@@ -173,7 +174,7 @@ onMounted(async () => {
         padding: 7px;
         font-size: 12px;
         position: relative;
-        bottom: 20px;
+        bottom: 19px;
       }
     }
   }
