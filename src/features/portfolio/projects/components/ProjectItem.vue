@@ -51,9 +51,9 @@ defineProps<{
     width: 350px;
   }
   &:hover {
-    transform: scale(1.1);
+    transform: scale(1.15);
     @include m.sm {
-      transform: scale(1.2);
+      transform: scale(1.1);
     }
   }
   &__title {
