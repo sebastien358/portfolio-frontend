@@ -71,21 +71,22 @@ defineProps<{
   transform-style: preserve-3d;
   transition: transform 0.999s;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-  .card-front,
-  .card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: var(--background-card-dark);
-    font-size: 24px;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    backface-visibility: hidden;
-  }
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--background-card-dark);
+  font-size: 24px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  backface-visibility: hidden;
 }
 
 .card-front {
@@ -118,33 +119,6 @@ defineProps<{
       font-size: 16px;
     }
   }
-  .container-image {
-    margin: 40px 0;
-    @include m.sm {
-      margin: 25px 0;
-    }
-    .img-card-front {
-      height: 120px;
-      width: 120px;
-      @include m.xxl {
-        width: 100px;
-        height: 100px;
-      }
-    }
-  }
-  .icon {
-    width: 50px;
-    height: 50px;
-    margin: 0 6px;
-    @include m.xxl {
-      width: 45px;
-      height: 45px;
-    }
-    @include m.sm {
-      width: 35px;
-      height: 35px;
-    }
-  }
   p {
     font-size: 17px;
     @include m.xxl {
@@ -153,6 +127,36 @@ defineProps<{
     @include m.sm {
       font-size: 13px;
     }
+  }
+}
+
+.container-image {
+  margin: 40px 0;
+  @include m.sm {
+    margin: 25px 0;
+  }
+}
+
+.img-card-front {
+  height: 120px;
+  width: 120px;
+  @include m.xxl {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 6px;
+  @include m.xxl {
+    width: 45px;
+    height: 45px;
+  }
+  @include m.sm {
+    width: 35px;
+    height: 35px;
   }
 }
 

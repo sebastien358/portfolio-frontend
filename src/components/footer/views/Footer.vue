@@ -15,22 +15,23 @@
 footer {
   background-color: var(--background-headband-dark);
   color: white;
-  .link {
-    font-size: 20px;
-    color: var(--color-light);
-    text-decoration: none;
-    transition: all 250ms ease;
-    p {
-      font-size: 19px;
-      @include m.lg {
-        font-size: 18px;
-      }
-      @include m.sm {
-        font-size: 16px;
-      }
-      &:hover {
-        color: var(--color-dark);
-      }
+}
+
+.link {
+  font-size: 20px;
+  color: var(--color-light);
+  text-decoration: none;
+  transition: all 250ms ease;
+  p {
+    font-size: 19px;
+    @include m.lg {
+      font-size: 18px;
+    }
+    @include m.sm {
+      font-size: 16px;
+    }
+    &:hover {
+      color: var(--color-dark);
     }
   }
 }

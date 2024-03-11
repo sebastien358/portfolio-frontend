@@ -42,23 +42,24 @@ onMounted(async () => {
   background: var(--bg-page);
   height: 100%;
   margin-bottom: 20px;
-  h1 {
-    padding-top: 70px;
-    font-family: "Kalam", cursive;
-    color: white;
-    font-size: 35px;
-    @include m.mac {
-      font-size: 25px;
-      padding-top: 40px;
-    }
-    @include m.lg {
-      font-size: 25px;
-      padding-top: 40px;
-    }
-    @include m.sm {
-      padding-top: 30px;
-      font-size: 20px;
-    }
+}
+
+h1 {
+  padding-top: 70px;
+  font-family: "Kalam", cursive;
+  color: white;
+  font-size: 35px;
+  @include m.mac {
+    font-size: 25px;
+    padding-top: 40px;
+  }
+  @include m.lg {
+    font-size: 25px;
+    padding-top: 40px;
+  }
+  @include m.sm {
+    padding-top: 30px;
+    font-size: 20px;
   }
 }
 

@@ -3,9 +3,9 @@
     <div class="bg-page">
       <div class="mb-4 mb-lg-4 mb-xl-5 pixabay">
         <h3 class="text-white mb-3">Photos :</h3>
-        <p class="text-white m-0">Photo fond, bannière : Image libre de droit <span>Pixabay</span></p>
-        <p class="text-white m-0">Photo, escalier : Image libre de droit <span>Pixabay</span></p>
-        <p class="text-white m-0">Photo, Oops : Image libre de droit <span>Pixabay</span></p>
+        <p class="text-white m-0">• Photo fond, bannière : Image libre de droit <span>Pixabay</span></p>
+        <p class="text-white m-0">• Photo, escalier : Image libre de droit <span>Pixabay</span></p>
+        <p class="text-white m-0">• Photo, Oops : Image libre de droit <span>Pixabay</span></p>
       </div>
 
       <ul class="list-inline text-white">
@@ -68,8 +68,11 @@ import BaseTemplate from "@/BaseTemplate.vue";
   @include m.mac {
     padding: 50px 20px;
   }
+  @include m.lg {
+    padding: 40px 20px;
+  }
   @include m.sm {
-    padding: 50px 20px;
+    padding: 40px 20px;
   }
 }
 

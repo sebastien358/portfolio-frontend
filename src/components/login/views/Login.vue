@@ -63,18 +63,17 @@ const onSubmit = async () => {
   }
 }
 
-form {
-  .sign {
-    @include m.sm {
-      font-size: 13px;
-      padding: 8px;
-    }
+.sign {
+  @include m.sm {
+    font-size: 13px;
+    padding: 8px;
   }
-  .input-group {
-    .forgot a {
-      @include m.sm {
-        font-size: 12px;
-      }
+}
+
+.input-group {
+  .forgot a {
+    @include m.sm {
+      font-size: 12px;
     }
   }
 }

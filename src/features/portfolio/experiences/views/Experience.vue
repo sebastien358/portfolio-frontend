@@ -24,11 +24,9 @@
           <div class="title-h1">
             <h1 class="text-white text-center w-100">Mon expérience</h1>
           </div>
-
           <!--<div v-if="isLoading">
             <Spinner />
           </div>-->
-
           <!-- Card expériences -->
           <div v-if="!isLoading" class="d-flex flex-wrap align-items-center justify-content-center experience-card">
             <ExperienceItem
@@ -40,7 +38,6 @@
         </div>
       </div>
     </div>
-
   </BaseTemplate>
 </template>
 
@@ -89,121 +86,114 @@ onMounted(async () => {
   }
 }
 
-.home {
-  .container-banniere {
-    position: relative;
-    bottom: 40px;
-    @include m.sm {
-      bottom: 30px;
-    }
-    .img-banniere {
-      height: 1300px;
-      width: 100%;
-      @include m.mac {
-        height: 690px;
-        width: 100%;
-      }
-      @include m.xxl {
-        max-height: 690px;
-        height: 100%;
-        width: 100%;
-      }
-      @include m.sm {
-        height: 260px;
-        width: 100%;
-      }
-    }
+
+.container-banniere {
+  position: relative;
+  bottom: 40px;
+  @include m.sm {
+    bottom: 30px;
   }
-  .dev-web {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    background-color: rgba(255, 255, 255, 0.40);
-    height: 350px;
-    width: 600px;
-    padding: 20px 20px 0 20px;
-    overflow: hidden;
+  .img-banniere {
+    max-height: 1300px;
+    width: 100%;
+    height: 100%;
+    @media screen and (max-width: 2300px) {
+      max-height: 1140px;
+    }
     @include m.mac {
-      height: 300px;
-      width: 530px;
+      max-height: 795px;
     }
     @include m.sm {
-      width: 100%;
-      height: auto;
-    }
-    @include m.lg {
-      width: 100%;
-      height: auto;
-      background-color: transparent;
-    }
-    h3 {
-      color: white;
-      font-weight: 900;
-      font-size: 22px;
-      @include m.xxl {
-        font-size: 17px;
-      }
-      @include m.sm {
-        font-size: 16px;
-      }
-    }
-    h4 {
-      color: white;
-      font-size: 16px;
-      font-weight: 800;
-    }
-    .button {
-      border: 1px solid #70a1ff;
-      background-color: #70a1ff;
-      color: white;
-      padding: 10px;
-      transition: all 250ms ease;
-      text-decoration: none;
-      font-size: 13px;
-      border-radius: 4px;
-      position: relative;
-      bottom: 19px;
-      &:hover {
-        border: 1px solid #70a1ff;
-        background-color: transparent;
-        color: white;
-        transform: scale(1.1);
-      }
-      @include m.sm {
-        padding: 7px;
-        font-size: 12px;
-        position: relative;
-        bottom: 19px;
-      }
+      max-height: 260px;
     }
   }
 }
 
-.home {
-  .container-card {
-    padding: 0 20px;
-    .title-h1 {
-      h1 {
-        font-size: 40px;
-        font-family: "Kalam", cursive;
-        white-space: nowrap;
-        margin-bottom: 40px;
-        @include m.mac {
-          font-size: 30px;
-        }
-        @include m.xxl {
-          font-size: 30px;
-        }
-        @include m.sm {
-          margin-bottom: 30px;
-          font-size: 22px;
-        }
-      }
+.dev-web {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.40);
+  height: 350px;
+  width: 600px;
+  padding: 20px 20px 0 20px;
+  overflow: hidden;
+  @include m.mac {
+    height: 300px;
+    width: 530px;
+  }
+  @include m.sm {
+    width: 100%;
+    height: auto;
+  }
+  @include m.lg {
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+  }
+  h3 {
+    color: white;
+    font-weight: 900;
+    font-size: 22px;
+    @include m.xxl {
+      font-size: 17px;
     }
-    .experience-card {
-      gap: 20px;
+    @include m.sm {
+      font-size: 16px;
     }
+  }
+  h4 {
+    color: white;
+    font-size: 16px;
+    font-weight: 800;
+  }
+  .button {
+    border: 1px solid #70a1ff;
+    background-color: #70a1ff;
+    color: white;
+    padding: 10px;
+    transition: all 250ms ease;
+    text-decoration: none;
+    font-size: 13px;
+    border-radius: 4px;
+    position: relative;
+    bottom: 19px;
+    @include m.sm {
+      padding: 7px;
+      font-size: 12px;
+      position: relative;
+      bottom: 19px;
+    }
+    &:hover {
+      border: 1px solid #70a1ff;
+      background-color: transparent;
+      color: white;
+      transform: scale(1.1);
+    }
+  }
+}
+
+.container-card {
+  padding: 0 20px;
+  .title-h1 h1 {
+    font-size: 40px;
+    font-family: "Kalam", cursive;
+    white-space: nowrap;
+    margin-bottom: 40px;
+    @include m.mac {
+      font-size: 30px;
+    }
+    @include m.xxl {
+      font-size: 30px;
+    }
+    @include m.sm {
+      margin-bottom: 30px;
+      font-size: 22px;
+    }
+  }
+  .experience-card {
+    gap: 20px;
   }
 }
 </style>

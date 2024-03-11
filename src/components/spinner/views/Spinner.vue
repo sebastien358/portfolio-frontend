@@ -25,6 +25,7 @@
     height: 40px;
   }
 }
+
 .loader:after {
   content: '';
   position: absolute;

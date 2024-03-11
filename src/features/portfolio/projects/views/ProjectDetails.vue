@@ -13,7 +13,7 @@
           <span>Voir le dépot</span>
         </a>
 
-        <div class="mt-5 project-details__objectif">
+        <div class="mt-5 project-details-objectif">
           <h2>Objectif</h2>
           <div class="d-flex flex-column flex-lg-row align-items-lg-center justify-content-between">
             <div class="d-flex flex-column mb-5 mb-lg-0 me-0 me-lg-5">
@@ -136,53 +136,54 @@ onMounted(async () => {
   h1 {
     color: white;
     font-size: 35px;
-    @include m.xxl {
+    @include m.mac {
       font-size: 25px;
     }
     @include m.sm {
       font-size: 22px;
     }
   }
-  &__objectif {
-    h2, p {
-      color: white;
-    }
-    h2 {
-      font-weight: 700;
-      font-size: 24px;
-      @include m.xxl {
-        font-size: 18px;
-      }
-      @include m.sm {
-        font-size: 16px;
-      }
-    }
-    p {
+}
+
+.project-details-objectif {
+  h2, p {
+    color: white;
+  }
+  h2 {
+    font-weight: 700;
+    font-size: 24px;
+    @include m.mac {
       font-size: 18px;
-      @include m.xxl {
-        font-size: 16px;
-      }
-      @include m.lg {
-        font-size: 14px;
-      }
-      @include m.sm {
-        font-size: 13px;
-      }
     }
-    img {
-      height: 45px;
-      width: 45px;
-      margin: 0 10px;
-      @include m.lg {
-        height: 40px;
-        width: 40px;
-        margin: 0 8px;
-      }
-      @include m.sm {
-        height: 35px;
-        width: 35px;
-        margin: 0 8px;
-      }
+    @include m.sm {
+      font-size: 16px;
+    }
+  }
+  p {
+    font-size: 18px;
+    @include m.mac {
+      font-size: 16px;
+    }
+    @include m.lg {
+      font-size: 14px;
+    }
+    @include m.sm {
+      font-size: 13px;
+    }
+  }
+  img {
+    height: 45px;
+    width: 45px;
+    margin: 0 10px;
+    @include m.lg {
+      height: 40px;
+      width: 40px;
+      margin: 0 8px;
+    }
+    @include m.sm {
+      height: 35px;
+      width: 35px;
+      margin: 0 8px;
     }
   }
 }
@@ -193,7 +194,7 @@ onMounted(async () => {
   font-size: 22px;
   color: var(--color-light);
   text-decoration: none;
-  @include m.xxl {
+  @include m.mac {
     font-size: 20px;
   }
   @include m.sm {
@@ -206,38 +207,8 @@ onMounted(async () => {
     font-size: 16px;
     margin-left: 5px;
     color: var(--color-light);
-    @include m.xxl {
+    @include m.mac {
       font-size: 14px;
-    }
-  }
-}
-
-nav {
-  .fonctionnality,
-  .competence {
-    h2 {
-      color: white;
-      font-weight: 700;
-      font-size: 24px;
-      @include m.xxl {
-        font-size: 18px;
-      }
-      @include m.sm {
-        font-size: 16px;
-      }
-    }
-    li {
-      font-size: 18px;
-      color: white;
-      @include m.xxl {
-        font-size: 16px;
-      }
-      @include m.lg {
-        font-size: 14px;
-      }
-      @include m.sm {
-        font-size: 13px;
-      }
     }
   }
 }
@@ -249,6 +220,33 @@ nav {
   }
   @include m.sm {
     margin-top: 50px;
+  }
+  .fonctionnality,
+  .competence {
+    h2 {
+      color: white;
+      font-weight: 700;
+      font-size: 24px;
+      @include m.mac {
+        font-size: 18px;
+      }
+      @include m.sm {
+        font-size: 16px;
+      }
+    }
+    li {
+      font-size: 18px;
+      color: white;
+      @include m.mac {
+        font-size: 16px;
+      }
+      @include m.lg {
+        font-size: 14px;
+      }
+      @include m.sm {
+        font-size: 13px;
+      }
+    }
   }
 }
 </style>

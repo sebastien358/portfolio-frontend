@@ -49,10 +49,11 @@ const onSubmit = async () => {
     margin: 0 10px;
     width: 100%;
   }
-  .input-group {
-    #username {
-      border-radius: 3px;
-    }
+}
+
+.input-group {
+  #username {
+    border-radius: 3px;
   }
 }
 

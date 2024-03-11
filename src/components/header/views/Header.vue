@@ -153,34 +153,36 @@ header {
   color: white;
   width: 100%;
   height: 60px;
-  .menu-desktop {
-    li {
-      cursor: pointer;
-      font-size: 22px;
-      color: var(--color-light);
-      transition: all 250ms ease;
-      &:hover {
-        color: var(--color-dark);
-      }
+
+}
+
+.menu-desktop {
+  li {
+    cursor: pointer;
+    font-size: 22px;
+    color: var(--color-light);
+    transition: all 250ms ease;
+    &:hover {
+      color: var(--color-dark);
     }
-    .link {
-      text-decoration: none;
-      cursor: pointer;
-      font-size: 22px;
-      color: var(--color-light);
-      transition: all 250ms ease;
-      @include m.xxl {
-        font-size: 19px;
-      }
-      @include m.xl {
-        font-size: 19px;
-      }
-      @include m.lg {
-        font-size: 18px;
-      }
-      &:hover {
-        color: var(--color-dark);
-      }
+  }
+  .link {
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 22px;
+    color: var(--color-light);
+    transition: all 250ms ease;
+    @include m.xxl {
+      font-size: 19px;
+    }
+    @include m.xl {
+      font-size: 19px;
+    }
+    @include m.lg {
+      font-size: 18px;
+    }
+    &:hover {
+      color: var(--color-dark);
     }
   }
 }

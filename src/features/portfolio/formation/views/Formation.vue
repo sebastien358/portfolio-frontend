@@ -60,47 +60,49 @@ onMounted(async () => {
     height: 100%;
     padding: 30px 20px 30px 20px;
   }
-  .container-formation {
-    h1 {
-      color: white;
-      font-size: 35px;
-      font-family: "Kalam", cursive;
-      height: 100%;
-      @include m.mac {
-        font-size: 25px;
-      }
-      @include m.sm {
-        font-size: 20px;
-        height: initial;
-      }
+}
+
+.container-formation {
+  h1 {
+    color: white;
+    font-size: 35px;
+    font-family: "Kalam", cursive;
+    height: 100%;
+    @include m.mac {
+      font-size: 25px;
     }
-    .formation {
-      gap: 30px;
-      margin-top: 60px;
-      height: 100%;
-      @include m.mac {
-        height: initial;
-        margin-top: 40px;
-      }
-      @include m.xxl {
-        height: initial;
-        margin-top: 40px;
-      }
-      @include m.xl {
-        height: initial;
-        margin-top: 40px;
-      }
-      @include m.lg {
-        height: initial;
-        margin-top: 40px;
-        gap: 15px;
-      }
-      @include m.sm {
-        height: initial;
-        margin-top: 30px;
-        gap: 15px;
-      }
+    @include m.sm {
+      font-size: 20px;
+      height: initial;
     }
+  }
+}
+
+.formation {
+  gap: 30px;
+  margin-top: 60px;
+  height: 100%;
+  @include m.mac {
+    height: initial;
+    margin-top: 40px;
+  }
+  @include m.xxl {
+    height: initial;
+    margin-top: 40px;
+  }
+  @include m.xl {
+    height: initial;
+    margin-top: 40px;
+  }
+  @include m.lg {
+    height: initial;
+    margin-top: 40px;
+    gap: 15px;
+  }
+  @include m.sm {
+    height: initial;
+    margin-top: 30px;
+    gap: 15px;
   }
 }
 </style>

@@ -189,10 +189,9 @@ h2 {
     display: initial;
     width: 100%;
   }
-}
-
-.section {
-  margin-bottom: 1.5rem;
+  .section {
+    margin-bottom: 1.5rem;
+  }
 }
 
 /* LEFT COLUMN */
@@ -313,13 +312,14 @@ h2 {
         font-size: 15px;
       }
     }
-    .description-formation {
-      position: relative;
-      bottom: 8px;
-      .superProf {
-        color: #079992;
-      }
-    }
+  }
+}
+
+.description-formation {
+  position: relative;
+  bottom: 8px;
+  .superProf {
+    color: #079992;
   }
 }
 

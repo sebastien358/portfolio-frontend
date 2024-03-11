@@ -153,26 +153,6 @@ defineProps<{
       font-size: 14px;
     }
   }
-  .container-image {
-    margin: 40px 0;
-    @include m.sm {
-      margin: 25px 0;
-    }
-    .img-card-front {
-      height: 40px;
-      width: auto;
-      @include m.lg {
-        color: white;
-        height: 35px;
-        width: auto;
-      }
-      @include m.sm {
-        color: white;
-        height: 30px;
-        width: auto;
-      }
-    }
-  }
   .icon {
     height: 42px;
     margin: 0 7px;
@@ -190,6 +170,27 @@ defineProps<{
     font-size: 17px;
     @include m.sm {
       font-size: 14px;
+    }
+  }
+}
+
+.container-image {
+  margin: 40px 0;
+  @include m.sm {
+    margin: 25px 0;
+  }
+  .img-card-front {
+    height: 40px;
+    width: auto;
+    @include m.lg {
+      color: white;
+      height: 35px;
+      width: auto;
+    }
+    @include m.sm {
+      color: white;
+      height: 30px;
+      width: auto;
     }
   }
 }
