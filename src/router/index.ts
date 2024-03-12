@@ -11,7 +11,7 @@ import {useUserAdminStore} from "@/stores/admin/userAdminStore";
 import {ADMIN_ROUTES} from "@/features/admin/router/admin.routes";
 import RequestPassword from "@/components/resetPassword/views/requestPassword.vue";
 import ResetPassword from "@/components/resetPassword/views/ResetPassword.vue";
-import TechnoList from "@/features/portfolio/technos/views/TechnoList.vue";
+import Techno from "@/features/portfolio/technos/views/Techno.vue";
 import IllustrationSource from "@/components/illustrationSource/IllustrationSource.vue";
 
 export const router = createRouter({
@@ -21,7 +21,7 @@ export const router = createRouter({
         {path: '/experience', name: 'experience', component: Experience},
         {path: '/projects', name: 'projects', component: Project},
         {path: '/project-details/:id', name: 'project-details', component: ProjectDetails},
-        {path: '/techno', name: 'techno', component: TechnoList},
+        {path: '/techno', name: 'techno', component: Techno},
         {path: '/components', name: 'cv', component: Cv},
         {path: '/formation', name: 'formation', component: Formation},
         {path: '/login', name: 'login', component: Login},

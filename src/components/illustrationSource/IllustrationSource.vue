@@ -1,7 +1,7 @@
 <template>
   <BaseTemplate>
     <div class="bg-page">
-      <div class="mb-4 mb-lg-4 mb-xl-5 pixabay">
+      <div class="pixabay">
         <h3 class="text-white mb-3">Photos :</h3>
         <p class="text-white m-0">• Photo fond, bannière : Image libre de droit <span>Pixabay</span></p>
         <p class="text-white m-0">• Photo, escalier : Image libre de droit <span>Pixabay</span></p>
@@ -64,7 +64,7 @@ import BaseTemplate from "@/BaseTemplate.vue";
 .bg-page {
   background: var(--bg-page);
   height: 100%;
-  padding: 80px 40px;
+  padding: 60px 40px;
   @include m.mac {
     padding: 50px 20px;
   }
@@ -77,8 +77,15 @@ import BaseTemplate from "@/BaseTemplate.vue";
 }
 
 .pixabay {
+  margin-bottom: 40px;
+  @include m.mac {
+    margin-bottom: 30px;
+  }
+  @include m.sm {
+    margin-bottom: 30px;
+  }
   p {
-    font-size: 19px;
+    font-size: 18px;
     padding-bottom: 12px;
     @include m.mac {
       font-size: 16px;
@@ -91,14 +98,14 @@ import BaseTemplate from "@/BaseTemplate.vue";
 }
 
 p {
-  font-size: 19px;
+  font-size: 18px;
   @include m.sm {
     font-size: 13px;
   }
 }
 
 h3 {
-  font-size: 23px;
+  font-size: 22px;
   @include m.mac {
     font-size: 20px;
   }
@@ -113,7 +120,7 @@ span {
 
 ul {
   h3 {
-    font-size: 23px;
+    font-size: 22px;
     @include m.mac {
       font-size: 20px;
     }
@@ -122,7 +129,7 @@ ul {
     }
   }
   li {
-    font-size: 19px;
+    font-size: 18px;
     margin-bottom: 15px;
     @include m.mac {
       font-size: 16px;

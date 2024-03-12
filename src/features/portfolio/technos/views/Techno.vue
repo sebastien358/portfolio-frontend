@@ -70,10 +70,10 @@ h1 {
   margin-top: 60px;
   gap: 50px;
   @include m.mac {
-    margin-top: 40px;
+    margin-top: 50px;
   }
   @include m.xl {
-    margin-top: 40px;
+    margin-top: 50px;
   }
   @include m.lg {
     margin-top: 40px;

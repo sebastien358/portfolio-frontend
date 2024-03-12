@@ -33,9 +33,9 @@
     <nav class="d-none d-lg-block">
       <ul class="list-inline m-0 p-0 d-flex align-items-center menu-desktop">
         <li class="me-3 icon">
-          <router-link :to="{name: 'cv'}" class="link">
+          <a href="http://www.curriculumvitae.dymawonder.fr" target="_blank" class="link">
             CV
-          </router-link>
+          </a>
         </li>
         <li class="me-3">
           <a href="https://www.linkedin.com/in/s%C3%A9bastien-petit-1874141b9" target="_blank">
@@ -86,9 +86,9 @@
             </router-link>
           </li>
           <li class="mb-2 icon">
-            <router-link :to="{name: 'cv'}" class="link">
+            <a href="http://www.curriculumvitae.dymawonder.fr" target="_blank" class="link">
               CV
-            </router-link>
+            </a>
           </li>
           <li class="mb-2">
             <a href="https://www.linkedin.com/in/s%C3%A9bastien-petit-1874141b9" target="_blank">
@@ -153,7 +153,6 @@ header {
   color: white;
   width: 100%;
   height: 60px;
-
 }
 
 .menu-desktop {

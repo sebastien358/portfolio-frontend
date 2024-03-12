@@ -52,5 +52,6 @@ const { message } = storeToRefs(messageStore)
 .message {
   position: relative;
   top: 60px;
+  width: 100%;
 }
 </style>

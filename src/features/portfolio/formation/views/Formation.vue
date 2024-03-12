@@ -1,6 +1,6 @@
 <template>
   <BaseTemplate>
-    <div class="bg-page ">
+    <div class="bg-page">
       <div v-if="!isLoading" class="container-formation">
         <h1 class="text-center text-uppercase">Ma formation</h1>
         <div class="d-flex flex-wrap justify-content-center align-items-center formation">
@@ -37,37 +37,36 @@ onMounted(async () => {
 @use '@/assets/css/mixins' as m;
 
 .bg-page {
-  padding: 70px 20px 30px 20px;
+  padding: 50px 20px 30px 20px;
   background: var(--bg-page);
   height: 100%;
   @include m.mac {
-    height: 100%;
     padding: 40px 20px 30px 20px;
   }
   @include m.xxl {
-    height: 100%;
+
     padding: 40px 20px 30px 20px;
   }
   @include m.xl {
-    height: 100%;
+
     padding: 40px 20px 30px 20px;
   }
   @include m.lg {
-    height: 100%;
+
     padding: 40px 20px 30px 20px;
   }
   @include m.sm {
-    height: 100%;
+
     padding: 30px 20px 30px 20px;
   }
 }
 
 .container-formation {
+  height: 100%;
   h1 {
     color: white;
     font-size: 35px;
     font-family: "Kalam", cursive;
-    height: 100%;
     @include m.mac {
       font-size: 25px;
     }
@@ -80,27 +79,22 @@ onMounted(async () => {
 
 .formation {
   gap: 30px;
-  margin-top: 60px;
   height: 100%;
   @include m.mac {
     height: initial;
-    margin-top: 40px;
+    margin-top: 50px;
   }
   @include m.xxl {
-    height: initial;
-    margin-top: 40px;
+    margin-top: 50px;
   }
   @include m.xl {
-    height: initial;
-    margin-top: 40px;
+    margin-top: 50px;
   }
   @include m.lg {
-    height: initial;
     margin-top: 40px;
     gap: 15px;
   }
   @include m.sm {
-    height: initial;
     margin-top: 30px;
     gap: 15px;
   }

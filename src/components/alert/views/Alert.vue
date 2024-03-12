@@ -28,6 +28,7 @@ message ? setTimeout(() => {
   text-align: center;
   font-size: 15px;
   color: white;
+  width: 100%;
   @include m.mac {
     font-size: 14px;
   }
