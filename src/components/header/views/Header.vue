@@ -85,6 +85,11 @@
               Formation
             </router-link>
           </li>
+          <li v-if="userAdminStore.isLogged()">
+            <router-link :to="{name: 'admin'}" class="link">
+              Administration
+            </router-link>
+          </li>
           <li class="mb-2 icon">
             <a href="http://www.curriculumvitae.dymawonder.fr" target="_blank" class="link">
               CV
