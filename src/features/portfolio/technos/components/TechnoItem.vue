@@ -19,7 +19,7 @@ defineProps<{
 
 .techno {
   .img {
-    transition: all 1s ease;
+    transition: all 800ms ease;
     height: 100px;
     @include m.mac {
       height: 70px;
@@ -31,11 +31,11 @@ defineProps<{
       height: 60px;
     }
     @include m.sm {
-      transition: all 600ms ease;
+      transition: all 400ms ease;
       height: 45px;
     }
     &:hover {
-      transform: scale(2);
+      transform: scale(1.7);
     }
   }
 }

@@ -3,8 +3,8 @@
     <div class="bg-page">
       <div class="pixabay">
         <h3 class="text-white mb-3">Photos :</h3>
-        <p class="text-white m-0">• Photo fond, bannière : Image libre de droit <span>Pixabay</span></p>
-        <p class="text-white m-0">• Photo, escalier : Image libre de droit <span>Pixabay</span></p>
+        <p class="text-white m-0">• Photo fond, MacBook : Image libre de droit <span>Pixabay</span></p>
+        <p class="text-white m-0">• Photo, Escalier : Image libre de droit <span>Pixabay</span></p>
         <p class="text-white m-0">• Photo, Oops : Image libre de droit <span>Pixabay</span></p>
       </div>
 
@@ -17,13 +17,25 @@
           • <span>HTML5</span> Public domain, via Wikimedia Commons
         </li>
         <li>
+          • <span>Bootstrap</span> Public domain, via Wikimedia Commons
+        </li>
+        <li>
           • <span>CSS3</span> Public domain, via Wikimedia Commons
         </li>
         <li>
-          • <span>PHP</span> Public domain, via Wikimedia Commons
+          • <span>Sass</span> Public domain, via Wikimedia Commons
         </li>
         <li>
           • <span>JavaScript</span> Public domain, via Wikimedia Commons
+        </li>
+        <li>
+          • <span>VueJS</span> Public domain, via Wikimedia Commons
+        </li>
+        <li>
+          • <span>TypeScript</span> Public domain, via Wikimedia Commons
+        </li>
+        <li>
+          • <span>Pinia</span> Public domain, via Wikimedia Commons
         </li>
         <li>
           • <span>MySQL</span> Public domain, via Wikimedia Commons
@@ -32,16 +44,7 @@
           • <span>SQL</span> Public domain, via Wikimedia Commons
         </li>
         <li>
-          • <span>Bootstrap</span> Public domain, via Wikimedia Commons
-        </li>
-        <li>
-          • <span>VueJS</span> Public domain, via Wikimedia Commons
-        </li>
-        <li>
-          • <span>Pinia</span> Public domain, via Wikimedia Commons
-        </li>
-        <li>
-          • <span>Sass</span> Public domain, via Wikimedia Commons
+          • <span>PHP</span> Public domain, via Wikimedia Commons
         </li>
         <li>
           • <span>Symfony</span> Public domain, via Wikimedia Commons
@@ -82,7 +85,7 @@ import BaseTemplate from "@/BaseTemplate.vue";
     margin-bottom: 30px;
   }
   @include m.sm {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
   p {
     font-size: 18px;
@@ -92,7 +95,7 @@ import BaseTemplate from "@/BaseTemplate.vue";
     }
     @include m.sm {
       font-size: 13px;
-      padding-bottom: 9px;
+      padding-bottom: 8px;
     }
   }
 }
@@ -136,7 +139,7 @@ ul {
     }
     @include m.sm {
       font-size: 13px;
-      margin-bottom: 12px;
+      margin-bottom: 8px;
     }
     span {
       color: var(--background-card-light);

@@ -55,6 +55,12 @@ const onSubmit = async () => {
   #username {
     border-radius: 3px;
   }
+  input {
+    font-size: 15px;
+    @include m.sm {
+      font-size: 14px;
+    }
+  }
 }
 
 .sign {

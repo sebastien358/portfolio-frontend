@@ -1,10 +1,9 @@
 <template>
-  <div v-if="!isLoading" class="mx-3 mt-4 w-100 z-0">
+  <div v-if="!isLoading" class="w-100 z-0">
     <div class="d-flex justify-content-center">
-      <table class="table table-sm table-secondary text-center">
+      <table class="rwd-table">
         <thead>
         <tr>
-          <th scope="col">Id</th>
           <th scope="col">Name</th>
           <th scope="col">Création</th>
           <th scope="col">Actions</th>
@@ -12,7 +11,6 @@
         </thead>
         <tbody v-for="project in projects" :key="project.id">
         <tr>
-          <td>{{project.id}}</td>
           <td>{{project.name}}</td>
           <td>{{new Date(project.createdAt).toLocaleDateString('fr-FR')}}</td>
           <td>
@@ -45,7 +43,16 @@ onMounted(async () => {
 </script>
 
 <style scoped lang="scss">
-.icon {
-  margin: 0 2px;
+@use '@/assets/css/mixins' as m;
+
+table {
+  width: 600px;
+  @include m.lg {
+    width: 100%;
+  }
+  .icon {
+    cursor: pointer;
+    margin: 0 5px;
+  }
 }
 </style>

@@ -39,7 +39,7 @@
         </div>
       </div>
 
-      <div class="d-flex justify-content-center mb-3">
+      <div class="d-flex justify-content-center">
         <button @click="onClickDelete" class="button-delete-pictures">Delete</button>
       </div>
     </div>
@@ -94,8 +94,10 @@ const onClickDeletePicture = async (id: number) => {
 
 .formation-update {
   height: 100%;
+  margin: 0 20px;
   @include m.sm {
     height: initial;
+    margin: 20px;
   }
 }
 
@@ -141,7 +143,7 @@ const onClickDeletePicture = async (id: number) => {
   .pictures {
     height: 80px;
     @include m.sm {
-      height: 40px;
+      height: 45px;
       width: 100%;
     }
   }
@@ -149,6 +151,10 @@ const onClickDeletePicture = async (id: number) => {
     cursor: pointer;
     margin-top: 15px;
     color: #d63031;
+    @include m.sm {
+      height: 11px;
+      width: 100%;
+    }
   }
 }
 
@@ -157,6 +163,10 @@ const onClickDeletePicture = async (id: number) => {
   padding: 8px;
   font-size: 14px;
   color: white;
+  border-radius: 4px;
   border: 0;
+  @include m.sm {
+    font-size: 12px;
+  }
 }
 </style>

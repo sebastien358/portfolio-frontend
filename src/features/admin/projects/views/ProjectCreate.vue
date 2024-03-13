@@ -76,10 +76,35 @@ const onClickInputFiles = () => {
 @use '@/assets/css/mixins' as m;
 
 .form-container {
-  width: 650px;
+  width: 550px;
   padding: 60px 20px 30px 20px;
+  margin: 0 10px;
+  @include m.lg {
+    width: 450px;
+  }
   @include m.sm {
+    padding: 20px 20px 20px 20px;
     width: 100%;
+  }
+  button {
+    padding: 8px;
+    font-size: 13px;
+    @include m.lg {
+      padding: 6px;
+      font-size: 13px;
+    }
+    @include m.sm {
+      padding: 6px;
+      font-size: 12px;
+    }
+  }
+  .label-file {
+    color: var(--color-light);
+    font-size: 13px;
+  }
+  input[type="file"] {
+    color: var(--color-light);
+    font-size: 13px;
   }
 }
 </style>

@@ -13,7 +13,7 @@
           <span>Voir le dépot</span>
         </a>
 
-        <div class="mt-5 project-details-objectif">
+        <div class="mt-4 mt-lg-5 project-details-objectif">
           <h2>Objectif</h2>
           <div class="d-flex flex-column flex-lg-row align-items-lg-center justify-content-between">
             <div class="d-flex flex-column mb-5 mb-lg-0 me-0 me-lg-5">
@@ -23,6 +23,7 @@
               <p v-if="editProject.objectif[3]" class="m-0">{{editProject.objectif[3]}}</p>
               <p v-if="editProject.objectif[4]" class="m-0">{{editProject.objectif[4]}}</p>
               <p v-if="editProject.objectif[5]" class="m-0">{{editProject.objectif[5]}}</p>
+              <p v-if="editProject.objectif[6]" class="m-0">{{editProject.objectif[6]}}</p>
             </div>
 
             <div class="d-flex align-items-center flex-row">
@@ -34,15 +35,13 @@
                   <img v-if="editProject.pictures[3]" :src="editProject.pictures[3].url" class="logo-techno">
                   <img v-if="editProject.pictures[4]" :src="editProject.pictures[4].url" class="logo-techno">
                   <img v-if="editProject.pictures[5]" :src="editProject.pictures[5].url" class="logo-techno">
+                  <img v-if="editProject.pictures[6]" :src="editProject.pictures[6].url" class="logo-techno">
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="mt-5">
-          <Carousel :editProject="editProject" />
-        </div>
         <!--d-flex flex-column align-items-lg-center flex-lg-row justify-content-lg-around-->
 
         <nav class="container-fonctionnality">
@@ -63,6 +62,18 @@
             <li v-if="editProject.fonctionnality[4]">
               {{editProject.fonctionnality[4]}}
             </li>
+            <li v-if="editProject.fonctionnality[5]">
+              {{editProject.fonctionnality[5]}}
+            </li>
+            <li v-if="editProject.fonctionnality[6]">
+              {{editProject.fonctionnality[6]}}
+            </li>
+            <li v-if="editProject.fonctionnality[7]">
+              {{editProject.fonctionnality[7]}}
+            </li>
+            <li v-if="editProject.fonctionnality[8]">
+              {{editProject.fonctionnality[8]}}
+            </li>
           </ul>
 
           <ul class="list-inline competence">
@@ -81,6 +92,12 @@
             </li>
             <li v-if="editProject.competence[4]">
               {{editProject.competence[4]}}
+            </li>
+            <li v-if="editProject.competence[5]">
+              {{editProject.competence[5]}}
+            </li>
+            <li v-if="editProject.competence[6]">
+              {{editProject.competence[6]}}
             </li>
           </ul>
         </nav>

@@ -3,12 +3,14 @@
     <div class="bg-page">
       <div v-if="!isLoading">
         <h1 class="text-uppercase text-center">Mes technos</h1>
-        <div class="d-flex flex-wrap justify-content-center w-100 container-pictures">
-          <TechnoItem
-            v-for="techno in technos"
-            :key="techno.id"
-            :techno="techno"
-          />
+        <div class="container-1200">
+          <div class="d-flex flex-wrap justify-content-center w-100 container-pictures">
+            <TechnoItem
+              v-for="techno in technos"
+              :key="techno.id"
+              :techno="techno"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -66,9 +68,18 @@ h1 {
   }
 }
 
+.container-1200 {
+  display: block;
+  max-width: 1600px;
+  margin: auto;
+  @include m.mac {
+    max-width: 1200px;
+  }
+}
+
 .container-pictures {
-  margin-top: 60px;
   gap: 50px;
+  margin-top: 60px;
   @include m.mac {
     margin-top: 50px;
   }

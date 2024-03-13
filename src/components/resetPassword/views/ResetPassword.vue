@@ -59,9 +59,16 @@ const onSubmit = async () => {
     margin: 0 10px;
     width: 100%;
   }
-  .input-group {
-    #username {
-      border-radius: 3px;
+}
+
+.input-group {
+  #username {
+    border-radius: 3px;
+  }
+  input {
+    font-size: 15px;
+    @include m.sm {
+      font-size: 14px;
     }
   }
 }

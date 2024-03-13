@@ -1,17 +1,15 @@
 <template>
-  <div v-if="!isLoading" class="mx-3 mt-4 w-100 z-0">
+  <div v-if="!isLoading" class="w-100 z-0">
     <div class="d-flex justify-content-center">
-      <table class="table table-sm table-secondary text-center">
+      <table>
         <thead>
         <tr>
-          <th scope="col">id</th>
           <th scope="col">Création</th>
           <th scope="col">Actions</th>
         </tr>
         </thead>
         <tbody v-for="techno in technos">
         <tr>
-          <td>{{techno.id}}</td>
           <td>{{new Date(techno.createdAt).toLocaleDateString('fr-FR')}}</td>
           <td>
             <router-link :to="{name: 'admin-techno-details', params: {id: techno.id}}">
@@ -42,11 +40,15 @@ onMounted(async () => {
 </script>
 
 <style scoped lang="scss">
+@use '@/assets/css/mixins' as m;
+
 table {
-  //background-color: rgba(17, 24, 39, 0.30);
+  width: 350px;
+  @include m.lg {
+    width: 100%;
+  }
   .icon {
     cursor: pointer;
-    margin: 0 3px;
   }
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div v-if="!isLoading" class="w-100 h-100">
-      <div class="d-flex flex-column justify-content-center align-items-center w-100 project-update">
+      <div class="d-flex flex-column justify-content-center align-items-center w-100 h-100 project-update">
         <div class="form-container">
           <p class="title">Project Update</p>
           <form @submit.prevent="onSubmit" class="form">
@@ -45,7 +45,7 @@
           </div>
         </div>
 
-        <div class="d-flex justify-content-center mb-4">
+        <div class="d-flex justify-content-center">
           <button @click="onClickDelete" class="button-delete">Delete</button>
         </div>
       </div>
@@ -99,35 +99,70 @@ const onClickDeletePicture = async (id: number) => {
 
 .project-update {
   height: 100%;
-  //margin: 0 20px 40px 20px;
-  @include m.sm {
-    //margin: 0 20px 40px 20px;
+  padding: 40px 20px 40px 20px;
+  @include m.lg {
+    padding: 0 20px 50px 20px;
     height: initial;
-    margin-right: 20px;
   }
-  .container-pictures {
-    //margin: 40px 20px 40px 20px;
-    gap: 20px;
-    .img-update {
-      height: 300px;
-      width: 300px;
-      @include m.sm {
-        width: 100%;
-      }
-    }
-    .icon-delete-picture {
-      color: red;
-      margin-top: 10px;
-      cursor: pointer;
-    }
+  @include m.sm {
+   padding: 0 20px 50px 20px;
+    height: initial;
   }
 }
 
 .form-container {
   width: 550px;
   padding: 60px 20px 30px 20px;
+  margin: 0 10px;
+  @include m.lg {
+    width: 450px;
+  }
   @include m.sm {
+    padding: 20px 20px 20px 20px;
     width: 100%;
+  }
+  button {
+    padding: 8px;
+    font-size: 13px;
+    @include m.lg {
+      padding: 6px;
+      font-size: 13px;
+    }
+    @include m.sm {
+      padding: 6px;
+      font-size: 12px;
+    }
+  }
+  .label-file {
+    color: var(--color-light);
+    font-size: 13px;
+  }
+  input[type="file"] {
+    color: var(--color-light);
+    font-size: 13px;
+  }
+}
+
+.container-pictures {
+  margin: 50px 0 50px 0;
+  gap: 40px;
+  @include m.sm {
+    gap: 30px;
+  }
+  .img-update {
+    height: 80px;
+    @include m.sm {
+      height: 45px;
+      width: 100%;
+    }
+  }
+  .icon-delete-picture {
+    color: red;
+    margin-top: 10px;
+    cursor: pointer;
+    @include m.sm {
+     font-size: 11px;
+    }
   }
 }
 
@@ -137,5 +172,6 @@ const onClickDeletePicture = async (id: number) => {
   font-size: 13px;
   padding: 7px;
   border: 0;
+  border-radius: 4px;
 }
 </style>

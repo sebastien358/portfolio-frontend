@@ -23,6 +23,7 @@ message ? setTimeout(() => {
 @use '@/assets/css/mixins' as m;
 
 .alert {
+  z-index: 1;
   margin: 0;
   border-radius: 0;
   text-align: center;

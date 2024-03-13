@@ -1,10 +1,11 @@
 <template>
   <BaseTemplate>
-    <div class="bg-page">
+    <div class="bg-page overflow-hidden position-relative">
       <!-- Image bannière -->
-      <div class="position-relative d-flex justify-content-center align-items-center container-banner">
-        <img src="@/assets/images/laptop-5673901_1920%20(1).jpg" class="img-banner">
-          <div class="position-absolute dev-web">
+      <div v-if="!isLoading">
+        <div class="d-flex justify-content-center align-items-center overflow-hidden position-relative">
+          <img src="@/assets/images/laptop-5673901_1920%20(1).jpg" class="img-banner overflow-hidden position-relative">
+          <div class="dev-web">
             <!-- texte animation -->
             <div class="d-flex flex-column align-items-center">
               <TextAnimation />
@@ -15,20 +16,20 @@
             </div>
             <a @click="onClickTextButton" href="mailto:sebastienpetit27330@gmail.com" class="button">{{txt}}</a>
           </div>
-
-      </div>
-      <!-- container card -->
-      <div class="container-card">
-        <!-- Title de la page -->
-        <div class="title-h1">
-          <h1 class="text-white text-center w-100">Mon expérience</h1>
         </div>
-        <div v-if="!isLoading" class="d-flex flex-wrap align-items-center justify-content-center experience-card">
-          <ExperienceItem
-            v-for="experience in experiences"
-            :key="experience.id"
-            :experience="experience"
-          />
+        <!-- container card -->
+        <div class="container-card overflow-hidden position-relative">
+          <!-- Title de la page -->
+          <div class="title-h1 overflow-hidden position-relative">
+            <h1 class="text-white text-center w-100">Mon expérience</h1>
+          </div>
+          <div class="d-flex flex-wrap align-items-center justify-content-center experience-card">
+            <ExperienceItem
+              v-for="experience in experiences"
+              :key="experience.id"
+              :experience="experience"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -73,37 +74,35 @@ onMounted(async () => {
   height: 100%;
 }
 
-.container-banner {
-  .img-banner {
-    background: url("@/assets/images/laptop-5673901_1920 (1).jpg") no-repeat center / cover;
-    max-height: 1400px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 0;
-    @media screen and (max-width: 2300px) {
-      max-height: 1180px;
-    }
-    @include m.mac {
-      max-height: 810px;
-    }
-    @include m.xxl {
-      max-height: 700px;
-    }
-    @include m.xl {
-      max-height: 650px;
-    }
-    @include m.lg {
-      max-height: 650px;
-    }
-    @include m.md {
-      max-height: 700px;
-    }
-    @include m.sm {
-      height: 260px;
-      max-height: 260px;
-    }
+.img-banner {
+  max-height: 1400px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+  position: relative;
+  @media screen and (max-width: 2300px) {
+    max-height: 1180px;
+  }
+  @include m.mac {
+    max-height: 810px;
+  }
+  @include m.xxl {
+    max-height: 700px;
+  }
+  @include m.xl {
+    max-height: 650px;
+  }
+  @include m.lg {
+    max-height: 650px;
+  }
+  @include m.md {
+    max-height: 700px;
+  }
+  @include m.sm {
+    height: 260px;
+    max-height: 260px;
   }
 }
 
@@ -117,6 +116,8 @@ onMounted(async () => {
   width: 600px;
   padding: 20px 20px 0 20px;
   overflow: hidden;
+
+  position: absolute;
   @include m.mac {
     height: 300px;
     width: 530px;
@@ -134,7 +135,6 @@ onMounted(async () => {
     width: 100%;
     height: auto;
   }
-
   h3 {
     color: white;
     font-weight: 900;
@@ -162,6 +162,9 @@ onMounted(async () => {
     border-radius: 4px;
     position: relative;
     bottom: 19px;
+    @include m.mac {
+      padding: 8px;
+    }
     @include m.sm {
       padding: 6px;
       font-size: 12px;

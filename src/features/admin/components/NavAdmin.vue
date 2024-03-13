@@ -85,13 +85,14 @@ defineProps<{
   height: 100%;
   @include m.lg {
     position: fixed;
-    background-color: rgba(0, 0, 0, 0.40);
+    background-color: rgba(0, 0, 0, 0.80);
     height: initial;
     top: 60px;
   }
-  @include m.lg {
-    background-color: rgba(0, 0, 0, 0.40);
-    min-width: 170px;
+  @include m.sm {
+    background-color: rgba(0, 0, 0, 0.80);
+    min-width: 150px;
+    padding: 25px 10px;
     top: 60px;
   }
 }
