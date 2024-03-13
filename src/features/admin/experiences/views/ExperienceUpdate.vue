@@ -31,16 +31,16 @@
       </div>
 
       <div class="d-flex flex-wrap justify-content-center container-pictures">
-        <div v-for="picture in editExperience.pictures" class="images">
+        <div v-for="picture in editExperience.pictures">
           <div class="d-flex flex-column align-items-center">
-            <img :src="picture.url">
-            <font-awesome-icon @click="onClickDeletePicture(picture.id)" class="logo-delete-picture" icon="fa-solid fa-trash" />
+            <img :src="picture.url" class="pictures">
+            <font-awesome-icon @click="onClickDeletePicture(picture.id)" class="icon-delete-picture" icon="fa-solid fa-trash" />
           </div>
         </div>
       </div>
 
-      <div class="d-flex justify-content-center mt-5 mb-3">
-        <button @click="onclickDelete" class="btn-delete">Delete</button>
+      <div class="d-flex justify-content-center">
+        <button @click="onclickDelete" class="button">Delete</button>
       </div>
     </div>
   </div>
@@ -94,7 +94,9 @@ const onClickDeletePicture = async (id: number) => {
 
 .experience-update {
   height: 100%;
+  margin: 0 20px;
   @include m.sm {
+    margin: 30px 20px;
     height: initial;
   }
 }
@@ -102,37 +104,70 @@ const onClickDeletePicture = async (id: number) => {
 .form-container {
   width: 550px;
   padding: 60px 20px 30px 20px;
-  margin-bottom: 60px;
+  margin: 0 10px;
+  @include m.lg {
+    width: 450px;
+  }
   @include m.sm {
+    padding: 20px 20px 20px 20px;
     width: 100%;
-    height: 100%;
+  }
+  button {
+    padding: 8px;
+    font-size: 13px;
+    @include m.lg {
+      padding: 6px;
+      font-size: 13px;
+    }
+    @include m.sm {
+      padding: 6px;
+      font-size: 12px;
+    }
+  }
+  .label-file {
+    color: var(--color-light);
+    font-size: 13px;
+  }
+  input[type="file"] {
+    color: var(--color-light);
+    font-size: 13px;
   }
 }
 
 .container-pictures {
-  .images {
+  margin: 50px 0 50px 0;
+  gap: 40px;
+  @include m.sm {
     gap: 30px;
-    img {
-      width: 170px;
-      height: 170px;
-      margin: 10px 15px;
-      @include m.sm {
-        width: 140px;
-        height: 140px;
-      }
+  }
+  .pictures {
+    height: 80px;
+    @include m.sm {
+      height: 45px;
+      width: 100%;
     }
   }
-  .logo-delete-picture {
+  .icon-delete-picture {
+    color: red;
+    margin-top: 10px;
     cursor: pointer;
-    color: #d63031;
+    @include m.sm {
+      font-size: 11px;
+    }
   }
 }
 
-.btn-delete {
-  background: red;
+.button {
+  background-color: red;
   color: white;
-  font-size: 14px;
-  padding: 8px;
   border: 0;
+  outline: none;
+  font-size: 13px;
+  padding: 7px;
+  border-radius: 3px;
+  @include m.sm {
+    padding: 6px;
+    font-size: 12px;
+  }
 }
 </style>

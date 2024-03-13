@@ -46,7 +46,7 @@
         </div>
 
         <div class="d-flex justify-content-center">
-          <button @click="onClickDelete" class="button-delete">Delete</button>
+          <button @click="onClickDelete" class="button">Delete</button>
         </div>
       </div>
   </div>
@@ -166,12 +166,17 @@ const onClickDeletePicture = async (id: number) => {
   }
 }
 
-.button-delete {
+button {
   background-color: red;
   color: white;
+  border: 0;
+  outline: none;
   font-size: 13px;
   padding: 7px;
-  border: 0;
-  border-radius: 4px;
+  border-radius: 3px;
+  @include m.sm {
+    padding: 6px;
+    font-size: 12px;
+  }
 }
 </style>

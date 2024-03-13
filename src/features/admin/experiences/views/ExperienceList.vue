@@ -47,10 +47,18 @@ import {onMounted, ref} from "vue";
 </script>
 
 <style scoped lang="scss">
+@use '@/assets/css/mixins' as m;
+
 table {
-  .icon {
-    cursor: pointer;
-    margin: 0 3px;
+  width: 1000px;
+  @include m.sm {
+    width: 100%;
   }
 }
+
+.icon {
+  cursor: pointer;
+  margin: 0 3px;
+}
+
 </style>

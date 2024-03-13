@@ -1,7 +1,7 @@
 <template>
   <div v-if="!isLoading" class="w-100 z-0">
     <div class="d-flex justify-content-center">
-      <table class="rwd-table">
+      <table>
         <thead>
         <tr>
           <th scope="col">Year</th>

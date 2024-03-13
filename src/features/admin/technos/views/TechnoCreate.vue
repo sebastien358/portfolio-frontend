@@ -1,6 +1,6 @@
 <template>
-  <div v-if="!isLoading" class="w-100">
-    <div class="d-flex align-items-center justify-content-center h-100">
+  <div v-if="!isLoading" class="w-100 h-100">
+    <div class="d-flex align-items-center justify-content-center techno-create">
       <form @submit.prevent="onSubmit">
         <div class="d-flex flex-column">
           <input @change="onClickInputFiles" ref="inputFiles" type="file" required>
@@ -35,14 +35,23 @@ const onSubmit = async () => {
   await router.push({name: 'admin-techno-list'})
 }
 
-
-
 const onClickInputFiles = () => {
   pictures.value = inputFiles.value.files
 }
 </script>
 
 <style scoped lang="scss">
+@use '@/assets/css/mixins' as m;
+
+.techno-create {
+  height: 100%;
+  padding: 0 10px 0 10px;
+  @include m.mac {
+    padding: 50px 10px 30px 10px;
+    height: initial;
+  }
+}
+
 input[type=file] {
   width: 350px;
   max-width: 100%;

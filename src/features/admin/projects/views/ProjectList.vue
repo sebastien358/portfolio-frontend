@@ -46,7 +46,7 @@ onMounted(async () => {
 @use '@/assets/css/mixins' as m;
 
 table {
-  width: 600px;
+  width: 700px;
   @include m.lg {
     width: 100%;
   }
